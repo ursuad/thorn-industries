@@ -1,0 +1,222 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { u } from '../../lib/url';
+---
+
+<BaseLayout
+  title="Thorn Industries — Data platforms, custom software, digitalisation consultancy"
+  description="We build the data and software infrastructure that Romanian public administration and B2B companies need. Plain pricing, named accountability, no fragmented contracts."
+  lang="en"
+>
+  <!-- Hero -->
+  <section class="container-wide pt-20 pb-16">
+    <div class="max-w-3xl">
+      <p class="text-sm uppercase tracking-widest text-forest-700 font-medium mb-6">
+        Public sector · B2B · Romania
+      </p>
+      <h1 class="text-5xl md:text-6xl font-semibold tracking-tight text-ink-900 leading-[1.1] mb-8">
+        We build the data and software<br />infrastructure that actually works.
+      </h1>
+      <p class="text-xl text-ink-700 leading-relaxed mb-10 max-w-2xl">
+        For Romanian public administration and B2B companies. Three services, plain pricing, a named team that delivers what it sells.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a href={u('/en/contact')} class="btn-primary">
+          Start a conversation
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href={u('/en/how-we-work')} class="btn-ghost">How we work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Three services -->
+  <section class="border-t border-forest-100 py-20 bg-cream-100">
+    <div class="container-wide">
+      <div class="max-w-2xl mb-14">
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-ink-900 mb-4">
+          Three services. Each a complete answer to a real question.
+        </h2>
+        <p class="text-lg text-ink-600">
+          We don't sell bundles. Each service is sold and priced on its own. Most engagements start with the consultancy assessment.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Consultancy -->
+        <article class="bg-cream-50 border border-forest-100 card p-8 flex flex-col">
+          <div class="text-xs uppercase tracking-widest text-forest-700 font-medium mb-4">
+            01 · Consultancy
+          </div>
+          <h3 class="text-2xl font-semibold text-ink-900 mb-3">Digitalisation assessment</h3>
+          <p class="text-ink-700 mb-6 flex-1">
+            One to two weeks on the ground. We map your current systems, identify funding lines you qualify for, and deliver a written roadmap your council or board can act on.
+          </p>
+          <p class="text-sm text-ink-500 mb-4">Fixed deliverable. Fixed fee.</p>
+          <a href={u('/en/services#consultancy')} class="text-sm text-forest-800 no-underline hover:text-forest-900">
+            Read more →
+          </a>
+        </article>
+
+        <!-- Software -->
+        <article class="bg-cream-50 border border-forest-100 card p-8 flex flex-col">
+          <div class="text-xs uppercase tracking-widest text-forest-700 font-medium mb-4">
+            02 · Software
+          </div>
+          <h3 class="text-2xl font-semibold text-ink-900 mb-3">Custom software & integrations</h3>
+          <p class="text-ink-700 mb-6 flex-1">
+            We build the modules and integrations that close the gap between the systems you have and the outcomes you need. ANAF, SEAP, ERP, sector platforms — connected, audited, maintained.
+          </p>
+          <p class="text-sm text-ink-500 mb-4">Single team. Single accountable lead.</p>
+          <a href={u('/en/services#software')} class="text-sm text-forest-800 no-underline hover:text-forest-900">
+            Read more →
+          </a>
+        </article>
+
+        <!-- Data -->
+        <article class="bg-cream-50 border border-forest-100 card p-8 flex flex-col">
+          <div class="text-xs uppercase tracking-widest text-forest-700 font-medium mb-4">
+            03 · Data
+          </div>
+          <h3 class="text-2xl font-semibold text-ink-900 mb-3">Data platforms & insights</h3>
+          <p class="text-ink-700 mb-6 flex-1">
+            Decisions need numbers you trust. We connect your data sources, build the dashboards that matter, and set up the analytics that turn operational data into management decisions.
+          </p>
+          <p class="text-sm text-ink-500 mb-4">Open standards. Your data stays yours.</p>
+          <a href={u('/en/services#data')} class="text-sm text-forest-800 no-underline hover:text-forest-900">
+            Read more →
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who we serve -->
+  <section class="py-20">
+    <div class="container-wide grid md:grid-cols-2 gap-10">
+      <a href={u('/en/public-sector')} class="block bg-forest-800 text-cream-50 card p-10 no-underline hover:bg-forest-900 group">
+        <div class="text-xs uppercase tracking-widest text-forest-300 font-medium mb-4">
+          For public administration
+        </div>
+        <h3 class="text-3xl font-semibold mb-4 leading-tight">
+          City halls, county councils, deconcentrated services.
+        </h3>
+        <p class="text-cream-100/90 mb-8 leading-relaxed">
+          PNRR Component 7. Regional Programme Nord-Vest. DigiLocal. The money is there. The strategy usually isn't. We help bridge that gap, from feasibility study to live system.
+        </p>
+        <span class="text-cream-200 inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+          See our public-sector offer
+          <span aria-hidden="true">→</span>
+        </span>
+      </a>
+
+      <a href={u('/en/companies')} class="block bg-cream-100 border border-forest-200 card p-10 no-underline hover:bg-cream-200 group">
+        <div class="text-xs uppercase tracking-widest text-forest-700 font-medium mb-4">
+          For B2B companies
+        </div>
+        <h3 class="text-3xl font-semibold mb-4 leading-tight text-ink-900">
+          Mid-size businesses with real data problems.
+        </h3>
+        <p class="text-ink-700 mb-8 leading-relaxed">
+          You have an ERP that doesn't talk to production. A reporting layer that nobody trusts. Integration debt that grew faster than you did. We've shipped fixes for problems exactly like that, at companies you've heard of.
+        </p>
+        <span class="text-forest-800 inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+          See our B2B offer
+          <span aria-hidden="true">→</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- How we work -->
+  <section class="py-20 border-t border-forest-100">
+    <div class="container-wide grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-5">
+        <p class="text-sm uppercase tracking-widest text-forest-700 font-medium mb-4">
+          How we work
+        </p>
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-ink-900 mb-6 leading-tight">
+          We're a small team. By design.
+        </h2>
+        <p class="text-ink-700 leading-relaxed mb-6">
+          Most agencies sell you to one team, then subcontract delivery to another. We don't. The people who scope the work are the people who build it. The people who build it are the people you can call.
+        </p>
+        <a href={u('/en/how-we-work')} class="text-forest-800 no-underline">
+          Read our working principles →
+        </a>
+      </div>
+      <div class="md:col-span-7 space-y-6">
+        <div class="flex gap-5">
+          <div class="text-3xl font-serif text-forest-300 leading-none w-12 shrink-0">01</div>
+          <div>
+            <h4 class="font-semibold text-ink-900 mb-2">Plain pricing, published ranges</h4>
+            <p class="text-ink-600 leading-relaxed">No bespoke quotes hidden until the last page of a 40-page proposal. Our pricing fits within Romanian procurement thresholds and we say so up front.</p>
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <div class="text-3xl font-serif text-forest-300 leading-none w-12 shrink-0">02</div>
+          <div>
+            <h4 class="font-semibold text-ink-900 mb-2">Named accountability</h4>
+            <p class="text-ink-600 leading-relaxed">One technical lead per engagement. They sign the proposal. They show up on site. They stay on the project end to end.</p>
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <div class="text-3xl font-serif text-forest-300 leading-none w-12 shrink-0">03</div>
+          <div>
+            <h4 class="font-semibold text-ink-900 mb-2">No fragmented contracts</h4>
+            <p class="text-ink-600 leading-relaxed">Article 11 of Law 98/2016 prohibits splitting contracts to dodge procurement thresholds. We won't propose it. If your project is bigger than one threshold, we run the right procedure for the right size.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team / Direct contact -->
+  <section class="py-20 bg-cream-100 border-t border-forest-100">
+    <div class="container-wide">
+      <div class="max-w-2xl mb-12">
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-ink-900 mb-4">
+          Small team. Direct line.
+        </h2>
+        <p class="text-lg text-ink-600">
+          You'll work directly with one of us from the first conversation. No account managers, no handoffs.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <article class="bg-cream-50 border border-forest-100 card-flat p-8">
+          <div class="w-16 h-16 rounded-full bg-forest-200 mb-5"></div>
+          <h3 class="text-xl font-semibold text-ink-900 mb-1">Adrian Ursu</h3>
+          <p class="text-sm text-forest-700 mb-4">Founder · Principal architect</p>
+          <p class="text-ink-700 leading-relaxed text-[15px]">
+            15 years building data platforms and integration architecture for companies including Rolls-Royce, Centrica and Toyota Connected Europe. Based in Cluj. Leads technical delivery across all engagements.
+          </p>
+        </article>
+        <article class="bg-cream-50 border border-forest-100 card-flat p-8">
+          <div class="w-16 h-16 rounded-full bg-forest-200 mb-5"></div>
+          <h3 class="text-xl font-semibold text-ink-900 mb-1">Ioana Drăghici</h3>
+          <p class="text-sm text-forest-700 mb-4">Sales lead</p>
+          <p class="text-ink-700 leading-relaxed text-[15px]">
+            Business operations and sales background. Based in Iași. Primary contact for first-line discovery conversations and public-sector engagements across Romania.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24">
+    <div class="container-wide text-center max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-ink-900 mb-6 leading-tight">
+        Have a problem worth solving?
+      </h2>
+      <p class="text-lg text-ink-600 mb-10">
+        Write us. Tell us what you're trying to fix. One of us replies, usually within a working day.
+      </p>
+      <a href={u('/en/contact')} class="btn-primary">
+        Get in touch
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

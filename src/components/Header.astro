@@ -1,0 +1,53 @@
+---
+import { u } from '../lib/url';
+
+interface Props {
+  lang?: 'ro' | 'en';
+}
+const { lang = 'ro' } = Astro.props;
+
+const nav = {
+  ro: [
+    { href: '/servicii', label: 'Servicii' },
+    { href: '/primarii', label: 'Primării' },
+    { href: '/companii', label: 'Companii' },
+    { href: '/cum-lucram', label: 'Cum lucrăm' },
+    { href: '/despre', label: 'Despre' },
+  ],
+  en: [
+    { href: '/en/services', label: 'Services' },
+    { href: '/en/public-sector', label: 'Public sector' },
+    { href: '/en/companies', label: 'Companies' },
+    { href: '/en/how-we-work', label: 'How we work' },
+    { href: '/en/about', label: 'About' },
+  ],
+};
+
+const contactLabel = lang === 'ro' ? 'Contact' : 'Contact';
+const items = nav[lang];
+const altHref = lang === 'ro' ? '/en/' : '/';
+const altLabel = lang === 'ro' ? 'EN' : 'RO';
+const homeHref = lang === 'ro' ? '/' : '/en/';
+const contactHref = lang === 'ro' ? '/contact' : '/en/contact';
+---
+
+<header class="border-b border-forest-100 bg-cream-50/80 backdrop-blur sticky top-0 z-10">
+  <div class="container-wide flex items-center justify-between py-5">
+    <a href={u(homeHref)} class="no-underline flex items-baseline gap-2">
+      <span class="font-semibold text-lg tracking-tight text-forest-900">Thorn Industries</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-7">
+      {items.map((item) => (
+        <a href={u(item.href)} class="text-sm text-ink-700 no-underline hover:text-forest-800 transition-colors">
+          {item.label}
+        </a>
+      ))}
+      <a href={u(contactHref)} class="text-sm text-ink-700 no-underline hover:text-forest-800 transition-colors">
+        {contactLabel}
+      </a>
+      <a href={u(altHref)} class="text-xs text-ink-500 no-underline border border-ink-300 rounded px-2 py-1 hover:border-forest-600 hover:text-forest-800 transition-colors">
+        {altLabel}
+      </a>
+    </nav>
+  </div>
+</header>

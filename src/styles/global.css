@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-cream-50 text-ink-900;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+  h1, h2, h3, h4 {
+    @apply font-sans tracking-tight;
+  }
+  a {
+    @apply text-forest-700 underline-offset-4 decoration-forest-300;
+  }
+  a:hover {
+    @apply decoration-forest-600;
+  }
+}
+
+@layer components {
+  .container-prose {
+    @apply max-w-3xl mx-auto px-6;
+  }
+  .container-wide {
+    @apply max-w-6xl mx-auto px-6;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-forest-800 text-cream-50 px-5 py-3 rounded-xl font-medium hover:bg-forest-900 transition-all no-underline shadow-sm hover:shadow-md hover:-translate-y-[1px];
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 text-forest-800 px-5 py-3 rounded-xl font-medium hover:bg-forest-50 transition-all no-underline border border-forest-200 shadow-sm hover:shadow-md hover:-translate-y-[1px];
+  }
+  .card {
+    @apply rounded-2xl shadow-sm hover:shadow-md transition-all hover:-translate-y-[2px];
+  }
+  .card-flat {
+    @apply rounded-2xl shadow-sm;
+  }
+}

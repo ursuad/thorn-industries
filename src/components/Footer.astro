@@ -1,0 +1,67 @@
+---
+import { u } from '../lib/url';
+
+interface Props {
+  lang?: 'ro' | 'en';
+}
+const { lang = 'ro' } = Astro.props;
+
+const text = {
+  ro: {
+    tagline: 'Construim infrastructura digitală pentru administrația publică și companii B2B din România.',
+    contact: 'Contact',
+    address: 'Sediu social: Str. Traian Vuia 95, Cluj-Napoca, jud. Cluj',
+    company: 'Operat de Tech Camp Pro SRL · CUI RO__________',
+    rights: '© 2026 Thorn Industries. Toate drepturile rezervate.',
+    links: [
+      { href: '/servicii', label: 'Servicii' },
+      { href: '/primarii', label: 'Primării' },
+      { href: '/companii', label: 'Companii' },
+      { href: '/despre', label: 'Despre' },
+      { href: '/contact', label: 'Contact' },
+    ],
+  },
+  en: {
+    tagline: 'Digital infrastructure for Romanian public administration and B2B companies.',
+    contact: 'Contact',
+    address: 'Registered office: Str. Traian Vuia 95, Cluj-Napoca, Romania',
+    company: 'Operated by Tech Camp Pro SRL · VAT RO__________',
+    rights: '© 2026 Thorn Industries. All rights reserved.',
+    links: [
+      { href: '/en/services', label: 'Services' },
+      { href: '/en/public-sector', label: 'Public sector' },
+      { href: '/en/companies', label: 'Companies' },
+      { href: '/en/about', label: 'About' },
+      { href: '/en/contact', label: 'Contact' },
+    ],
+  },
+};
+
+const t = text[lang];
+---
+
+<footer class="border-t border-forest-100 bg-cream-100 mt-24">
+  <div class="container-wide py-12 grid md:grid-cols-3 gap-10">
+    <div>
+      <div class="font-semibold text-forest-900 mb-3">Thorn Industries</div>
+      <p class="text-sm text-ink-600 leading-relaxed">{t.tagline}</p>
+    </div>
+    <div>
+      <div class="text-sm font-medium text-ink-800 mb-3">{lang === 'ro' ? 'Navigare' : 'Navigation'}</div>
+      <ul class="space-y-2">
+        {t.links.map((l) => (
+          <li><a href={u(l.href)} class="text-sm text-ink-600 no-underline hover:text-forest-800">{l.label}</a></li>
+        ))}
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-medium text-ink-800 mb-3">{t.contact}</div>
+      <ul class="space-y-2 text-sm text-ink-600">
+        <li><a href="mailto:contact@thornindustries.ro" class="no-underline hover:text-forest-800">contact@thornindustries.ro</a></li>
+        <li>{t.address}</li>
+        <li class="text-ink-500">{t.company}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container-wide pb-8 text-xs text-ink-500">{t.rights}</div>
+</footer>

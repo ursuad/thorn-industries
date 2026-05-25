@@ -1,0 +1,219 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { u } from '../lib/url';
+---
+
+<BaseLayout
+  title="Thorn Industries — Platforme de date, software custom și consultanță în digitalizare"
+  description="Construim infrastructura de date și software de care au nevoie administrația publică și companiile B2B din România. Prețuri transparente, responsabilitate nominală, fără contracte fragmentate."
+  lang="ro"
+>
+  <!-- Hero -->
+  <section class="container-wide pt-20 pb-16">
+    <div class="max-w-3xl">
+      <p class="text-sm uppercase tracking-widest text-forest-700 font-medium mb-6">
+        Sector public · B2B · România
+      </p>
+      <h1 class="text-5xl md:text-6xl font-semibold tracking-tight text-ink-900 leading-[1.1] mb-8">
+        Construim infrastructura<br />de date și software care funcționează.
+      </h1>
+      <p class="text-xl text-ink-700 leading-relaxed mb-10 max-w-2xl">
+        Pentru administrația publică și companii B2B din România. Trei servicii, prețuri transparente, o echipă cu nume care livrează ce vinde.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a href={u('/contact')} class="btn-primary">
+          Începeți o discuție
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href={u('/cum-lucram')} class="btn-ghost">Cum lucrăm</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Three services -->
+  <section class="border-t border-forest-100 py-20 bg-cream-100">
+    <div class="container-wide">
+      <div class="max-w-2xl mb-14">
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-ink-900 mb-4">
+          Trei servicii. Fiecare un răspuns complet la o întrebare reală.
+        </h2>
+        <p class="text-lg text-ink-600">
+          Nu vindem pachete. Fiecare serviciu este vândut și taxat separat. Majoritatea angajamentelor încep cu o evaluare de consultanță.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <article class="bg-cream-50 border border-forest-100 card p-8 flex flex-col">
+          <div class="text-xs uppercase tracking-widest text-forest-700 font-medium mb-4">
+            01 · Consultanță
+          </div>
+          <h3 class="text-2xl font-semibold text-ink-900 mb-3">Evaluare de digitalizare</h3>
+          <p class="text-ink-700 mb-6 flex-1">
+            Una-două săptămâni pe teren. Cartografiem sistemele actuale, identificăm liniile de finanțare la care vă calificați și livrăm un raport scris pe care consiliul local sau board-ul îl poate aproba direct.
+          </p>
+          <p class="text-sm text-ink-500 mb-4">Livrabil fix. Tarif fix.</p>
+          <a href={u('/servicii#consultanta')} class="text-sm text-forest-800 no-underline hover:text-forest-900">
+            Detalii →
+          </a>
+        </article>
+
+        <article class="bg-cream-50 border border-forest-100 card p-8 flex flex-col">
+          <div class="text-xs uppercase tracking-widest text-forest-700 font-medium mb-4">
+            02 · Software
+          </div>
+          <h3 class="text-2xl font-semibold text-ink-900 mb-3">Software custom și integrări</h3>
+          <p class="text-ink-700 mb-6 flex-1">
+            Construim modulele și integrările care închid distanța dintre sistemele pe care le aveți și rezultatele de care aveți nevoie. ANAF, SEAP, ERP, platforme sectoriale — conectate, auditate, întreținute.
+          </p>
+          <p class="text-sm text-ink-500 mb-4">O singură echipă. Un singur responsabil.</p>
+          <a href={u('/servicii#software')} class="text-sm text-forest-800 no-underline hover:text-forest-900">
+            Detalii →
+          </a>
+        </article>
+
+        <article class="bg-cream-50 border border-forest-100 card p-8 flex flex-col">
+          <div class="text-xs uppercase tracking-widest text-forest-700 font-medium mb-4">
+            03 · Date
+          </div>
+          <h3 class="text-2xl font-semibold text-ink-900 mb-3">Platforme de date și analiză</h3>
+          <p class="text-ink-700 mb-6 flex-1">
+            Deciziile bune au nevoie de cifre în care aveți încredere. Conectăm sursele de date, construim tablourile de bord care contează și instalăm analiza care transformă datele operaționale în decizii manageriale.
+          </p>
+          <p class="text-sm text-ink-500 mb-4">Standarde deschise. Datele dvs. rămân ale dvs.</p>
+          <a href={u('/servicii#date')} class="text-sm text-forest-800 no-underline hover:text-forest-900">
+            Detalii →
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who we serve -->
+  <section class="py-20">
+    <div class="container-wide grid md:grid-cols-2 gap-10">
+      <a href={u('/primarii')} class="block bg-forest-800 text-cream-50 card p-10 no-underline hover:bg-forest-900 group">
+        <div class="text-xs uppercase tracking-widest text-forest-300 font-medium mb-4">
+          Pentru administrația publică
+        </div>
+        <h3 class="text-3xl font-semibold mb-4 leading-tight">
+          Primării, consilii județene, servicii deconcentrate.
+        </h3>
+        <p class="text-cream-100/90 mb-8 leading-relaxed">
+          PNRR Componenta 7. PR Nord-Vest. DigiLocal. Banii sunt acolo. Strategia, de obicei, nu este. Ajutăm la închiderea acestei distanțe, de la studiul de fezabilitate până la sistemul live.
+        </p>
+        <span class="text-cream-200 inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+          Oferta pentru sectorul public
+          <span aria-hidden="true">→</span>
+        </span>
+      </a>
+
+      <a href={u('/companii')} class="block bg-cream-100 border border-forest-200 card p-10 no-underline hover:bg-cream-200 group">
+        <div class="text-xs uppercase tracking-widest text-forest-700 font-medium mb-4">
+          Pentru companii B2B
+        </div>
+        <h3 class="text-3xl font-semibold mb-4 leading-tight text-ink-900">
+          Companii medii cu probleme reale de date.
+        </h3>
+        <p class="text-ink-700 mb-8 leading-relaxed">
+          Aveți un ERP care nu vorbește cu producția. Un strat de raportare în care nu mai are nimeni încredere. O datorie tehnică în integrări care a crescut mai repede decât compania. Am construit soluții exact pentru astfel de probleme.
+        </p>
+        <span class="text-forest-800 inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+          Oferta pentru companii
+          <span aria-hidden="true">→</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- How we work -->
+  <section class="py-20 border-t border-forest-100">
+    <div class="container-wide grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-5">
+        <p class="text-sm uppercase tracking-widest text-forest-700 font-medium mb-4">
+          Cum lucrăm
+        </p>
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-ink-900 mb-6 leading-tight">
+          Suntem o echipă mică. Intenționat.
+        </h2>
+        <p class="text-ink-700 leading-relaxed mb-6">
+          Majoritatea agențiilor vă vând o echipă și subcontractează livrarea către alta. Noi nu. Oamenii care definesc proiectul sunt aceiași care îl construiesc. Și aceiași pe care îi puteți suna.
+        </p>
+        <a href={u('/cum-lucram')} class="text-forest-800 no-underline">
+          Principiile noastre de lucru →
+        </a>
+      </div>
+      <div class="md:col-span-7 space-y-6">
+        <div class="flex gap-5">
+          <div class="text-3xl font-serif text-forest-300 leading-none w-12 shrink-0">01</div>
+          <div>
+            <h4 class="font-semibold text-ink-900 mb-2">Prețuri transparente, intervale publicate</h4>
+            <p class="text-ink-600 leading-relaxed">Fără oferte personalizate ascunse până la ultima pagină a unei propuneri de 40 de pagini. Prețurile noastre se încadrează în pragurile de achiziții publice din România și spunem asta de la început.</p>
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <div class="text-3xl font-serif text-forest-300 leading-none w-12 shrink-0">02</div>
+          <div>
+            <h4 class="font-semibold text-ink-900 mb-2">Responsabilitate nominală</h4>
+            <p class="text-ink-600 leading-relaxed">Un singur lead tehnic per angajament. El semnează propunerea. El vine pe teren. El rămâne pe proiect de la început până la final.</p>
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <div class="text-3xl font-serif text-forest-300 leading-none w-12 shrink-0">03</div>
+          <div>
+            <h4 class="font-semibold text-ink-900 mb-2">Fără contracte fragmentate</h4>
+            <p class="text-ink-600 leading-relaxed">Articolul 11 din Legea 98/2016 interzice divizarea contractelor pentru a evita pragurile de achiziție. Nu vom propune asta. Dacă proiectul depășește un prag, derulăm procedura corectă pentru dimensiunea corectă.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team / Direct contact -->
+  <section class="py-20 bg-cream-100 border-t border-forest-100">
+    <div class="container-wide">
+      <div class="max-w-2xl mb-12">
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-ink-900 mb-4">
+          Echipă mică. Linie directă.
+        </h2>
+        <p class="text-lg text-ink-600">
+          Veți lucra direct cu unul dintre noi de la prima discuție. Fără account manageri, fără pase de minge.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <article class="bg-cream-50 border border-forest-100 card-flat p-8">
+          <div class="w-16 h-16 rounded-full bg-forest-200 mb-5"></div>
+          <h3 class="text-xl font-semibold text-ink-900 mb-1">Adrian Ursu</h3>
+          <p class="text-sm text-forest-700 mb-4">Fondator · Arhitect principal</p>
+          <p class="text-ink-700 leading-relaxed text-[15px]">
+            15 ani construind platforme de date și arhitectură de integrare pentru companii precum Rolls-Royce, Centrica și Toyota Connected Europe. Bazat în Cluj. Conduce livrarea tehnică pentru toate angajamentele.
+          </p>
+        </article>
+        <article class="bg-cream-50 border border-forest-100 card-flat p-8">
+          <div class="w-16 h-16 rounded-full bg-forest-200 mb-5"></div>
+          <h3 class="text-xl font-semibold text-ink-900 mb-1">Ioana Drăghici</h3>
+          <p class="text-sm text-forest-700 mb-4">Sales lead</p>
+          <p class="text-ink-700 leading-relaxed text-[15px]">
+            Background în operațiuni comerciale și vânzări. Bazată în Iași. Contact principal pentru primele discuții exploratorii și pentru angajamentele din sectorul public.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24">
+    <div class="container-wide text-center max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-ink-900 mb-6 leading-tight">
+        Aveți o problemă care merită rezolvată?
+      </h2>
+      <p class="text-lg text-ink-600 mb-10">
+        Scrieți-ne. Spuneți-ne ce încercați să reparați. Unul dintre noi vă răspunde, de obicei într-o zi lucrătoare.
+      </p>
+      <a href={u('/contact')} class="btn-primary">
+        Contactați-ne
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
