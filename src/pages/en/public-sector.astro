@@ -1,0 +1,193 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { u } from '../../lib/url';
+---
+
+<BaseLayout
+  title="For public administration — Thorn Industries"
+  description="Digitalisation work for Romanian city halls, county councils and deconcentrated services. Funding-aligned, procurement-compliant, named accountability."
+  lang="en"
+>
+  <!-- Page header -->
+  <section class="container-wide pt-20 pb-12">
+    <p class="text-sm uppercase tracking-widest text-forest-700 font-medium mb-6">For public administration</p>
+    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-ink-900 leading-tight mb-6 max-w-3xl">
+      The money is there. The strategy usually isn't. We help close that gap.
+    </h1>
+    <p class="text-lg text-ink-700 max-w-2xl leading-relaxed">
+      PNRR Component 7. Regional Programme Nord-Vest. DigiLocal. NIS2 compliance funding. Hundreds of millions of euros flowing into municipal digitalisation, often unspent or spent on the wrong thing because the gap between "we need to digitalise" and "here is the project that earns the grant" is wider than it looks.
+    </p>
+  </section>
+
+  <!-- The three-step path -->
+  <section class="border-t border-forest-100 py-20 bg-cream-100">
+    <div class="container-wide">
+      <div class="max-w-2xl mb-14">
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-ink-900 mb-4">
+          How an engagement runs.
+        </h2>
+        <p class="text-lg text-ink-600">
+          Three steps. Each is a separate, properly procured contract. No fragmentation, no surprises, no commitment to step two until step one delivers something useful.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <article class="bg-cream-50 border border-forest-100 card-flat p-8">
+          <div class="text-3xl font-serif text-forest-300 leading-none mb-5">01</div>
+          <h3 class="text-xl font-semibold text-ink-900 mb-3">Assessment</h3>
+          <p class="text-ink-700 text-[15px] leading-relaxed mb-4">
+            One to three days on site. A written 15 to 25 page report your Local Council can review. Identifies the funding lines you currently qualify for and what the realistic next interventions are.
+          </p>
+          <p class="text-sm text-ink-500">1 to 2 weeks · fixed fee · single procurement</p>
+        </article>
+
+        <article class="bg-cream-50 border border-forest-100 card-flat p-8">
+          <div class="text-3xl font-serif text-forest-300 leading-none mb-5">02</div>
+          <h3 class="text-xl font-semibold text-ink-900 mb-3">Funding application</h3>
+          <p class="text-ink-700 text-[15px] leading-relaxed mb-4">
+            If the assessment surfaces a clear funding fit, we draft the technical sections of the grant application. Submitted by your team or with our support, depending on what's allowed by the procedure.
+          </p>
+          <p class="text-sm text-ink-500">2 to 4 weeks · fixed fee · optional</p>
+        </article>
+
+        <article class="bg-cream-50 border border-forest-100 card-flat p-8">
+          <div class="text-3xl font-serif text-forest-300 leading-none mb-5">03</div>
+          <h3 class="text-xl font-semibold text-ink-900 mb-3">Implementation</h3>
+          <p class="text-ink-700 text-[15px] leading-relaxed mb-4">
+            When funding lands, we deliver. Single team, named technical lead, end-to-end accountability. Recurring maintenance included for the first year.
+          </p>
+          <p class="text-sm text-ink-500">3 to 9 months · single contract · the right SEAP procedure for the right scope</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Funding lines -->
+  <section class="py-20">
+    <div class="container-wide">
+      <div class="max-w-2xl mb-12">
+        <p class="text-sm uppercase tracking-widest text-forest-700 font-medium mb-4">Funding context</p>
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-ink-900 mb-4">
+          What's actually fundable right now.
+        </h2>
+        <p class="text-lg text-ink-600">
+          The landscape changes every few months. This is the current map. We update it as windows open and close.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-cream-100 border border-forest-100 card-flat p-7">
+          <h3 class="font-semibold text-ink-900 mb-2">DigiLocal (OUG 56/2024)</h3>
+          <p class="text-sm text-forest-700 mb-3">75,000 — 175,000 RON per commune</p>
+          <p class="text-ink-700 text-[15px] leading-relaxed">
+            Direct grants for digitalisation in communes. Open windows tied to the OUG calendar. Most accessible funding line right now for smaller administrations.
+          </p>
+        </div>
+        <div class="bg-cream-100 border border-forest-100 card-flat p-7">
+          <h3 class="font-semibold text-ink-900 mb-2">PNRR Component 7</h3>
+          <p class="text-sm text-forest-700 mb-3">Variable, up to several million RON per project</p>
+          <p class="text-ink-700 text-[15px] leading-relaxed">
+            "Digital transformation" envelope. Tighter eligibility, longer application, larger scope. Best for cities and counties with a digitalisation strategy already in place or under development.
+          </p>
+        </div>
+        <div class="bg-cream-100 border border-forest-100 card-flat p-7">
+          <h3 class="font-semibold text-ink-900 mb-2">Regional Programme Nord-Vest 2021–2027</h3>
+          <p class="text-sm text-forest-700 mb-3">Project-dependent</p>
+          <p class="text-ink-700 text-[15px] leading-relaxed">
+            Region-specific operational programme covering Cluj, Bistrița-Năsăud, Maramureș, Sălaj, Satu Mare and Bihor counties. Smart-specialisation, public administration modernisation, citizen services.
+          </p>
+        </div>
+        <div class="bg-cream-100 border border-forest-100 card-flat p-7">
+          <h3 class="font-semibold text-ink-900 mb-2">NIS2 cybersecurity (Law 124/2025)</h3>
+          <p class="text-sm text-forest-700 mb-3">Compliance-driven, varies by entity tier</p>
+          <p class="text-ink-700 text-[15px] leading-relaxed">
+            Administrations classified as "essential entities" under NIS2 face hard compliance deadlines. Dedicated funding lines are being announced through DNSC. Worth assessing your classification before the deadline becomes the strategy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="border-t border-forest-100 py-20 bg-cream-100">
+    <div class="container-wide max-w-4xl">
+      <p class="text-sm uppercase tracking-widest text-forest-700 font-medium mb-4">Common questions</p>
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-ink-900 mb-12 leading-tight">
+        What we get asked first.
+      </h2>
+
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-xl font-semibold text-ink-900 mb-3">"We already have Regista / Avansis / CityManager. Why do we need anything else?"</h3>
+          <p class="text-ink-700 leading-relaxed">
+            You probably don't need a replacement. You need the system you have to talk to ANAF, to the cadastre, to your accounting layer, to the dashboards a Mayor actually reads. Most of our work for primării is integration and data layer, not rip-and-replace.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-ink-900 mb-3">"We don't have a budget."</h3>
+          <p class="text-ink-700 leading-relaxed">
+            Worth checking that. DigiLocal grants, PNRR Component 7, Regional Programme Nord-Vest and NIS2 compliance lines all have active or imminent windows. Our assessment identifies the lines you currently qualify for. If the answer is none, we say so on the first day.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-ink-900 mb-3">"Our systems aren't online. Our staff aren't ready."</h3>
+          <p class="text-ink-700 leading-relaxed">
+            That's exactly the starting position the assessment is built for. Staff training is included in any implementation scope, and we sequence the technical work so the operational change is gradual rather than abrupt.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-ink-900 mb-3">"How long does this actually take?"</h3>
+          <p class="text-ink-700 leading-relaxed">
+            Assessment: one to two weeks. Funding application: two to four weeks. Implementation: three to nine months depending on scope. Recurring maintenance: ongoing once the system is live.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-ink-900 mb-3">"Will you fragment the contract to fit it under a threshold?"</h3>
+          <p class="text-ink-700 leading-relaxed">
+            No. Article 11 of Law 98/2016 prohibits splitting contracts to dodge procurement thresholds and we won't propose it. If your scope is bigger than one threshold, we run the right SEAP procedure for the right size. It takes a few weeks longer and it stays clean.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compliance bar -->
+  <section class="py-14 bg-forest-800 text-cream-50">
+    <div class="container-wide">
+      <div class="grid md:grid-cols-4 gap-6 text-center md:text-left">
+        <div>
+          <div class="text-xs uppercase tracking-widest text-forest-300 mb-2">Procurement</div>
+          <div class="font-medium">SEAP registered, DUAE-ready</div>
+        </div>
+        <div>
+          <div class="text-xs uppercase tracking-widest text-forest-300 mb-2">Legal compliance</div>
+          <div class="font-medium">Law 242/2022 specialised</div>
+        </div>
+        <div>
+          <div class="text-xs uppercase tracking-widest text-forest-300 mb-2">Contract integrity</div>
+          <div class="font-medium">Article 11, Law 98/2016</div>
+        </div>
+        <div>
+          <div class="text-xs uppercase tracking-widest text-forest-300 mb-2">Data protection</div>
+          <div class="font-medium">GDPR, Romanian data residency</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24">
+    <div class="container-wide text-center max-w-2xl mx-auto">
+      <h2 class="text-3xl font-semibold tracking-tight text-ink-900 mb-6 leading-tight">
+        Worth a half-hour conversation?
+      </h2>
+      <p class="text-lg text-ink-600 mb-10">
+        Tell us your primărie, the rough scope of what you're thinking about, and what (if anything) has been tried before. We'll come back with the funding lines that look like a fit and what an assessment would cover.
+      </p>
+      <a href={u('/en/contact')} class="btn-primary">
+        Start a conversation
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

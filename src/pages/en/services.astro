@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { u } from '../../lib/url';
+---
+
+<BaseLayout
+  title="Services — Thorn Industries"
+  description="Three services: digitalisation consultancy, custom software and integrations, data platforms and insights. Plain pricing, mapped to Romanian procurement thresholds."
+  lang="en"
+>
+  <!-- Page header -->
+  <section class="container-wide pt-20 pb-12">
+    <p class="text-sm uppercase tracking-widest text-forest-700 font-medium mb-6">Services</p>
+    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-ink-900 leading-tight mb-6 max-w-3xl">
+      Three services. Each sold and priced on its own.
+    </h1>
+    <p class="text-lg text-ink-700 max-w-2xl leading-relaxed">
+      We don't bundle. Most engagements start with the consultancy assessment because it forces clarity before money moves. From there, the work that needs building gets built, and the data that needs surfacing gets surfaced.
+    </p>
+  </section>
+
+  <!-- Consultancy -->
+  <section id="consultancy" class="border-t border-forest-100 py-20 bg-cream-100">
+    <div class="container-wide grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-4">
+        <p class="text-xs uppercase tracking-widest text-forest-700 font-medium mb-3">01 · Consultancy</p>
+        <h2 class="text-3xl font-semibold tracking-tight text-ink-900 leading-tight mb-4">
+          Digitalisation assessment
+        </h2>
+        <p class="text-ink-600 leading-relaxed">
+          A written roadmap your council or board can act on. One to two weeks of work. Fixed deliverable, fixed fee.
+        </p>
+      </div>
+      <div class="md:col-span-8 space-y-6">
+        <div class="bg-cream-50 border border-forest-100 card-flat p-8">
+          <h3 class="font-semibold text-ink-900 mb-3">What you get</h3>
+          <ul class="space-y-2 text-ink-700 text-[15px] leading-relaxed">
+            <li>· On-site assessment (one to three days) covering current systems, data flows and bottlenecks</li>
+            <li>· Mapping of funding lines you currently qualify for: PNRR Component 7, Regional Programme Nord-Vest, DigiLocal, NIS2 compliance grants</li>
+            <li>· A prioritised list of three to seven concrete interventions, costed against procurement thresholds</li>
+            <li>· A 15 to 25 page written report your decision-makers can review without us in the room</li>
+            <li>· One follow-up working session to walk decision-makers through the findings</li>
+          </ul>
+        </div>
+        <div class="bg-cream-50 border border-forest-100 card-flat p-8">
+          <h3 class="font-semibold text-ink-900 mb-3">Pricing</h3>
+          <p class="text-ink-700 text-[15px] leading-relaxed mb-3">
+            From <strong>8,000 RON</strong> (small commune, single system focus) to <strong>40,000 RON</strong> (county-level scope, multiple systems).
+          </p>
+          <p class="text-sm text-ink-500 leading-relaxed">
+            Sits within the Achiziție Directă threshold (up to 270,120 RON). Single procurement, no fragmentation.
+          </p>
+        </div>
+        <div class="bg-cream-50 border border-forest-100 card-flat p-8">
+          <h3 class="font-semibold text-ink-900 mb-3">What we don't do here</h3>
+          <ul class="space-y-2 text-ink-700 text-[15px] leading-relaxed">
+            <li>· We don't write grant applications you've already decided on without independent review</li>
+            <li>· We don't certify the work of another consultancy</li>
+            <li>· We don't deliver a deck. We deliver a written document with named responsibilities and timelines</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Software -->
+  <section id="software" class="py-20">
+    <div class="container-wide grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-4">
+        <p class="text-xs uppercase tracking-widest text-forest-700 font-medium mb-3">02 · Software</p>
+        <h2 class="text-3xl font-semibold tracking-tight text-ink-900 leading-tight mb-4">
+          Custom software & integrations
+        </h2>
+        <p class="text-ink-600 leading-relaxed">
+          Modules that close real operational gaps. Built on open standards. Maintained as part of the engagement.
+        </p>
+      </div>
+      <div class="md:col-span-8 space-y-6">
+        <div class="bg-cream-50 border border-forest-100 card-flat p-8">
+          <h3 class="font-semibold text-ink-900 mb-3">Where we focus</h3>
+          <ul class="space-y-2 text-ink-700 text-[15px] leading-relaxed">
+            <li>· <strong>Public-sector modules</strong>: debt collection (executări silite), equipment & fleet (utilaje), funding tracker (fond-watcher). Designed to slot alongside Regista, Sobis, Avansis without ripping them out.</li>
+            <li>· <strong>Integrations</strong>: ANAF (SPV, PatrimVen), SEAP, ERP and accounting platforms, document management, GIS systems.</li>
+            <li>· <strong>Web applications</strong>: internal tools, citizen-facing portals, dashboards. Built for maintainability, not novelty.</li>
+          </ul>
+        </div>
+        <div class="bg-cream-50 border border-forest-100 card-flat p-8">
+          <h3 class="font-semibold text-ink-900 mb-3">Pricing & procurement</h3>
+          <div class="space-y-4">
+            <div>
+              <div class="text-sm font-medium text-ink-800 mb-1">Module licence + setup</div>
+              <p class="text-ink-700 text-[15px] leading-relaxed">From <strong>15,000 RON</strong> (single-module, small commune) to <strong>130,000 RON</strong> (multi-module, mid-sized city). Fits Ofertă Unică or Achiziție Directă.</p>
+            </div>
+            <div>
+              <div class="text-sm font-medium text-ink-800 mb-1">Custom build</div>
+              <p class="text-ink-700 text-[15px] leading-relaxed">From <strong>40,000 RON</strong> for a focused integration to <strong>250,000 RON</strong> for multi-system delivery. Mapped to the right SEAP procedure for the right scope.</p>
+            </div>
+            <div>
+              <div class="text-sm font-medium text-ink-800 mb-1">Recurring maintenance</div>
+              <p class="text-ink-700 text-[15px] leading-relaxed">Typically <strong>3,500 to 6,000 RON / month</strong> per primărie. Covers hosting, security updates, regulatory alignment, support during business hours, two minor feature additions per quarter.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-cream-50 border border-forest-100 card-flat p-8">
+          <h3 class="font-semibold text-ink-900 mb-3">Open standards, your data stays yours</h3>
+          <p class="text-ink-700 text-[15px] leading-relaxed">
+            Public-sector deployments run on Romanian infrastructure (Romarg or ClausWeb for the data layer, compute scaled on demand). Open formats, exportable schemas, no vendor lock-in clauses. If you ever want to migrate away, we hand you everything that's yours.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data -->
+  <section id="data" class="border-t border-forest-100 py-20 bg-cream-100">
+    <div class="container-wide grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-4">
+        <p class="text-xs uppercase tracking-widest text-forest-700 font-medium mb-3">03 · Data</p>
+        <h2 class="text-3xl font-semibold tracking-tight text-ink-900 leading-tight mb-4">
+          Data platforms & insights
+        </h2>
+        <p class="text-ink-600 leading-relaxed">
+          The reporting and analytics layer that turns operational data into management decisions.
+        </p>
+      </div>
+      <div class="md:col-span-8 space-y-6">
+        <div class="bg-cream-50 border border-forest-100 card-flat p-8">
+          <h3 class="font-semibold text-ink-900 mb-3">What we deliver</h3>
+          <ul class="space-y-2 text-ink-700 text-[15px] leading-relaxed">
+            <li>· <strong>Data platform foundation</strong>: ingestion from your operational systems, a single trusted layer for reporting, governance built in from day one.</li>
+            <li>· <strong>Dashboards that get used</strong>: built with the people who need them, not for them. Two or three core views, refreshed nightly, that answer the questions you actually ask in meetings.</li>
+            <li>· <strong>Targeted analytics</strong>: forecasting, anomaly detection, segmentation. We start from a business question and work backwards, not the other way round.</li>
+          </ul>
+        </div>
+        <div class="bg-cream-50 border border-forest-100 card-flat p-8">
+          <h3 class="font-semibold text-ink-900 mb-3">Pricing</h3>
+          <p class="text-ink-700 text-[15px] leading-relaxed mb-3">
+            Projects typically range from <strong>€8,000</strong> (single-source dashboard pilot) to <strong>€60,000</strong> (multi-source platform with governance and three to five dashboards in production).
+          </p>
+          <p class="text-sm text-ink-500 leading-relaxed">
+            For private-sector clients no SEAP thresholds apply. For public-sector clients we map the same scope to the appropriate procurement procedure.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24">
+    <div class="container-wide text-center max-w-2xl mx-auto">
+      <h2 class="text-3xl font-semibold tracking-tight text-ink-900 mb-6 leading-tight">
+        Not sure which service fits?
+      </h2>
+      <p class="text-lg text-ink-600 mb-10">
+        Tell us the problem in plain language. We'll tell you what we'd start with, what we wouldn't, and what it would cost.
+      </p>
+      <a href={u('/en/contact')} class="btn-primary">
+        Start a conversation
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { u } from '../lib/url';
+---
+
+<BaseLayout
+  title="Despre — Thorn Industries"
+  description="Adrian Ursu a fondat Thorn Industries pentru a aduce inginerie de nivel EU în administrația publică și companiile B2B din România. Operat ca serviciu al Tech Camp Pro SRL."
+  lang="ro"
+>
+  <!-- Page header -->
+  <section class="container-wide pt-20 pb-12">
+    <p class="text-sm uppercase tracking-widest text-forest-700 font-medium mb-6">Despre</p>
+    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-ink-900 leading-tight mb-6 max-w-3xl">
+      O companie românească mică, pe un drum deliberat.
+    </h1>
+    <p class="text-lg text-ink-700 max-w-2xl leading-relaxed">
+      Thorn Industries a fost fondată în 2026 pentru a aduce inginerie de date și software de nivel EU în administrația publică românească și în companiile B2B medii. Suntem mici intenționat și plănuim să rămânem așa.
+    </p>
+  </section>
+
+  <!-- De ce existăm -->
+  <section class="border-t border-forest-100 py-20 bg-cream-100">
+    <div class="container-wide max-w-3xl">
+      <h2 class="text-3xl font-semibold tracking-tight text-ink-900 mb-6 leading-tight">
+        De ce existăm
+      </h2>
+      <div class="space-y-5 text-ink-700 leading-relaxed">
+        <p>
+          Două observații au dus la această companie.
+        </p>
+        <p>
+          Prima: administrația publică din România are acces la finanțare substanțială pentru digitalizare, în mare parte prin PNRR, Programele Regionale și linii dedicate precum DigiLocal. Banii rămân adesea necheltuiți sau sunt cheltuiți pe lucrul greșit pentru că distanța dintre „trebuie să ne digitalizăm" și „acesta este un proiect corect definit care câștigă grantul" este mai mare decât pare. Majoritatea consultanțelor fie nu lucrează la acest capăt al pieței, fie se prezintă cu o abordare de vânzare în loc de una de inginerie.
+        </p>
+        <p>
+          A doua: există un val de companii B2B medii românești și europene care stau pe datorii tehnice substanțiale în integrări și straturi de raportare în care nu mai are nimeni încredere. Munca de a repara aceste lucruri este bine în zona unei echipe mici de ingineri seniori. Piața le oferă fie consultanțe mari (scumpe, generice), fie freelanceri individuali (inginerie bună, fără continuitate). Există un gol la mijloc.
+        </p>
+        <p>
+          Lucrăm în acel gol. Trei servicii, prețuri transparente, responsabilitate nominală. Aceeași calitate de inginerie care se livrează la companii precum Rolls-Royce și Toyota, aplicată la o scară și un punct de preț pe care cumpărătorii medii români și europeni le pot consuma efectiv.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Echipa -->
+  <section class="py-20">
+    <div class="container-wide">
+      <div class="max-w-2xl mb-12">
+        <h2 class="text-3xl font-semibold tracking-tight text-ink-900 mb-4 leading-tight">
+          Echipa
+        </h2>
+        <p class="text-lg text-ink-600">
+          Mici intenționat. Oricare dintre noi poate fi contactat direct de la prima discuție.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <article class="bg-cream-100 border border-forest-100 card-flat p-8">
+          <div class="w-20 h-20 rounded-full bg-forest-200 mb-5"></div>
+          <h3 class="text-2xl font-semibold text-ink-900 mb-1">Adrian Ursu</h3>
+          <p class="text-sm text-forest-700 mb-5">Fondator · Arhitect principal</p>
+          <div class="space-y-3 text-ink-700 text-[15px] leading-relaxed">
+            <p>
+              Cincisprezece ani construind platforme de date și arhitectură de integrare. Roluri senior de inginerie la Rolls-Royce (Strategic Architect pe platforma de date), Centrica, Toyota Connected Europe și Mesh-AI.
+            </p>
+            <p>
+              Focus tehnic: platforme de date în cloud (Snowflake, BigQuery), design de integrare (API-first, event-driven), arhitectură pentru sisteme care supraviețuiesc schimbării echipei. Bazat în Cluj-Napoca. Conduce livrarea tehnică pentru fiecare angajament Thorn Industries.
+            </p>
+          </div>
+        </article>
+
+        <article class="bg-cream-100 border border-forest-100 card-flat p-8">
+          <div class="w-20 h-20 rounded-full bg-forest-200 mb-5"></div>
+          <h3 class="text-2xl font-semibold text-ink-900 mb-1">Ioana Drăghici</h3>
+          <p class="text-sm text-forest-700 mb-5">Sales lead</p>
+          <div class="space-y-3 text-ink-700 text-[15px] leading-relaxed">
+            <p>
+              Background în operațiuni comerciale și vânzări. Experiență de mai mulți ani în coordonarea unui IMM românesc, cu responsabilitate zilnică pentru relații cu clienții, coordonare cu furnizorii și continuitate operațională printr-o creștere finanțată prin granturi.
+            </p>
+            <p>
+              Bazată în Iași. Contact principal pentru primele discuții exploratorii și pentru angajamentele din sectorul public din toată România.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Date companie -->
+  <section class="border-t border-forest-100 py-16 bg-cream-100">
+    <div class="container-wide max-w-4xl">
+      <h2 class="text-2xl font-semibold tracking-tight text-ink-900 mb-8">Date despre companie</h2>
+      <div class="grid sm:grid-cols-2 gap-x-12 gap-y-6 text-[15px]">
+        <div>
+          <div class="text-sm text-ink-500 mb-1">Denumire comercială</div>
+          <div class="text-ink-900 font-medium">Thorn Industries</div>
+        </div>
+        <div>
+          <div class="text-sm text-ink-500 mb-1">Operat de</div>
+          <div class="text-ink-900 font-medium">Tech Camp Pro SRL</div>
+        </div>
+        <div>
+          <div class="text-sm text-ink-500 mb-1">CUI</div>
+          <div class="text-ink-900 font-medium">RO__________</div>
+        </div>
+        <div>
+          <div class="text-sm text-ink-500 mb-1">Sediu social</div>
+          <div class="text-ink-900 font-medium">Str. Traian Vuia 95, Cluj-Napoca</div>
+        </div>
+        <div>
+          <div class="text-sm text-ink-500 mb-1">Fondată</div>
+          <div class="text-ink-900 font-medium">2026</div>
+        </div>
+        <div>
+          <div class="text-sm text-ink-500 mb-1">Status SEAP</div>
+          <div class="text-ink-900 font-medium">Înregistrat, DUAE-ready</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24">
+    <div class="container-wide text-center max-w-2xl mx-auto">
+      <h2 class="text-3xl font-semibold tracking-tight text-ink-900 mb-6 leading-tight">
+        Vreți să aflați mai multe?
+      </h2>
+      <p class="text-lg text-ink-600 mb-10">
+        Scrieți-ne cu ce aveți în minte. Răspundem de obicei într-o zi lucrătoare.
+      </p>
+      <a href={u('/contact')} class="btn-primary">
+        Începeți o discuție
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

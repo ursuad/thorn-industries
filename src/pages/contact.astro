@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact — Thorn Industries"
+  description="Contactați Thorn Industries. Email sau formular de contact, răspunsuri într-o zi lucrătoare."
+  lang="ro"
+>
+  <!-- Page header -->
+  <section class="container-wide pt-20 pb-12">
+    <p class="text-sm uppercase tracking-widest text-forest-700 font-medium mb-6">Contact</p>
+    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-ink-900 leading-tight mb-6 max-w-3xl">
+      Spuneți-ne la ce lucrați.
+    </h1>
+    <p class="text-lg text-ink-700 max-w-2xl leading-relaxed">
+      Cu cât sunteți mai concret, cu atât primul nostru răspuns va fi mai util. O descriere a problemei în două paragrafe este suficientă pentru a primi un răspuns real.
+    </p>
+  </section>
+
+  <!-- Contact options -->
+  <section class="border-t border-forest-100 py-16">
+    <div class="container-wide grid md:grid-cols-12 gap-10">
+      <!-- Canale directe -->
+      <div class="md:col-span-5">
+        <div class="space-y-8">
+          <div>
+            <div class="text-xs uppercase tracking-widest text-forest-700 font-medium mb-3">Email</div>
+            <a href="mailto:contact@thornindustries.ro" class="text-2xl font-semibold text-ink-900 no-underline hover:text-forest-800 transition-colors">
+              contact@thornindustries.ro
+            </a>
+            <p class="text-sm text-ink-500 mt-2">Răspundem într-o zi lucrătoare, de obicei mai repede.</p>
+          </div>
+
+          <div>
+            <div class="text-xs uppercase tracking-widest text-forest-700 font-medium mb-3">Pentru sectorul public</div>
+            <a href="mailto:ioana@thornindustries.ro" class="text-xl font-medium text-ink-900 no-underline hover:text-forest-800 transition-colors">
+              ioana@thornindustries.ro
+            </a>
+            <p class="text-sm text-ink-500 mt-2">Ioana Drăghici, Sales lead — linie directă pentru discuții cu primării.</p>
+          </div>
+
+          <div>
+            <div class="text-xs uppercase tracking-widest text-forest-700 font-medium mb-3">Tehnic și B2B</div>
+            <a href="mailto:adrian@thornindustries.ro" class="text-xl font-medium text-ink-900 no-underline hover:text-forest-800 transition-colors">
+              adrian@thornindustries.ro
+            </a>
+            <p class="text-sm text-ink-500 mt-2">Adrian Ursu, Fondator & Arhitect principal — linie directă pentru definirea scopului tehnic.</p>
+          </div>
+
+          <div class="pt-8 border-t border-forest-100">
+            <div class="text-xs uppercase tracking-widest text-forest-700 font-medium mb-3">Sediu social</div>
+            <p class="text-ink-700 leading-relaxed">
+              Tech Camp Pro SRL<br />
+              Str. Traian Vuia 95<br />
+              Cluj-Napoca, România
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <div class="md:col-span-7">
+        <form
+          action="https://formspree.io/f/__REPLACE_WITH_FORM_ID__"
+          method="POST"
+          class="bg-cream-100 border border-forest-100 card-flat p-8 space-y-5"
+        >
+          <div>
+            <label for="name" class="block text-sm font-medium text-ink-800 mb-2">Numele dvs.</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              required
+              class="w-full px-4 py-3 border border-forest-200 rounded-xl bg-cream-50 text-ink-900 focus:outline-none focus:border-forest-600 focus:ring-1 focus:ring-forest-600"
+            />
+          </div>
+
+          <div>
+            <label for="organisation" class="block text-sm font-medium text-ink-800 mb-2">Organizație</label>
+            <input
+              id="organisation"
+              name="organisation"
+              type="text"
+              class="w-full px-4 py-3 border border-forest-200 rounded-xl bg-cream-50 text-ink-900 focus:outline-none focus:border-forest-600 focus:ring-1 focus:ring-forest-600"
+            />
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-ink-800 mb-2">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              class="w-full px-4 py-3 border border-forest-200 rounded-xl bg-cream-50 text-ink-900 focus:outline-none focus:border-forest-600 focus:ring-1 focus:ring-forest-600"
+            />
+          </div>
+
+          <div>
+            <label for="topic" class="block text-sm font-medium text-ink-800 mb-2">Subiect</label>
+            <select
+              id="topic"
+              name="topic"
+              class="w-full px-4 py-3 border border-forest-200 rounded-xl bg-cream-50 text-ink-900 focus:outline-none focus:border-forest-600 focus:ring-1 focus:ring-forest-600"
+            >
+              <option>Angajament în sectorul public</option>
+              <option>Date sau integrare B2B</option>
+              <option>Evaluare de consultanță</option>
+              <option>Întrebare generală</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-ink-800 mb-2">Ce aveți în minte?</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              required
+              placeholder="Câteva paragrafe despre problemă, ce ați încercat și cum ar arăta succesul."
+              class="w-full px-4 py-3 border border-forest-200 rounded-xl bg-cream-50 text-ink-900 focus:outline-none focus:border-forest-600 focus:ring-1 focus:ring-forest-600 resize-none"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary w-full justify-center">
+            Trimiteți mesajul
+            <span aria-hidden="true">→</span>
+          </button>
+
+          <p class="text-xs text-ink-500 text-center pt-2">
+            Răspundem direct, nu prin pâlnii automate. Mesajul ajunge într-o singură căsuță pe care o citim amândoi.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

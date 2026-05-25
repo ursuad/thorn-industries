@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { u } from '../../lib/url';
+---
+
+<BaseLayout
+  title="About — Thorn Industries"
+  description="Adrian Ursu founded Thorn Industries to bring EU-grade engineering to Romanian public administration and B2B companies. Operated as a service of Tech Camp Pro SRL."
+  lang="en"
+>
+  <!-- Page header -->
+  <section class="container-wide pt-20 pb-12">
+    <p class="text-sm uppercase tracking-widest text-forest-700 font-medium mb-6">About</p>
+    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-ink-900 leading-tight mb-6 max-w-3xl">
+      A small Romanian company taking a deliberate path.
+    </h1>
+    <p class="text-lg text-ink-700 max-w-2xl leading-relaxed">
+      Thorn Industries was founded in 2026 to bring EU-grade data and software engineering to Romanian public administration and mid-size B2B companies. We're small by design and we plan to stay that way.
+    </p>
+  </section>
+
+  <!-- Why -->
+  <section class="border-t border-forest-100 py-20 bg-cream-100">
+    <div class="container-wide max-w-3xl">
+      <h2 class="text-3xl font-semibold tracking-tight text-ink-900 mb-6 leading-tight">
+        Why we exist
+      </h2>
+      <div class="space-y-5 text-ink-700 leading-relaxed">
+        <p>
+          Two observations led to this company.
+        </p>
+        <p>
+          The first: Romanian public administration has access to substantial digitalisation funding, mostly through PNRR, Regional Programmes and dedicated lines like DigiLocal. The money is often unspent, or spent on the wrong thing, because the gap between "we need to digitalise" and "here is a properly scoped project that earns the grant" is wider than it looks. Most consultancies either don't engage at this end of the market or they show up with a sales motion rather than an engineering one.
+        </p>
+        <p>
+          The second: there's a wave of mid-size Romanian and EU B2B companies sitting on substantial integration debt and reporting layers that nobody trusts. The work to fix this is well within the reach of a small senior engineering team. The market keeps offering them either large consultancies (expensive, generic) or single freelancers (good engineering, no continuity). There's a gap in the middle.
+        </p>
+        <p>
+          We work in that gap. Three services, plain pricing, named accountability. The same engineering quality that gets shipped at companies like Rolls-Royce and Toyota, applied at a scale and price point that mid-size Romanian and EU buyers can actually consume.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="py-20">
+    <div class="container-wide">
+      <div class="max-w-2xl mb-12">
+        <h2 class="text-3xl font-semibold tracking-tight text-ink-900 mb-4 leading-tight">
+          The team
+        </h2>
+        <p class="text-lg text-ink-600">
+          Small by design. Either of us is reachable directly from the first conversation.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <article class="bg-cream-100 border border-forest-100 card-flat p-8">
+          <div class="w-20 h-20 rounded-full bg-forest-200 mb-5"></div>
+          <h3 class="text-2xl font-semibold text-ink-900 mb-1">Adrian Ursu</h3>
+          <p class="text-sm text-forest-700 mb-5">Founder · Principal architect</p>
+          <div class="space-y-3 text-ink-700 text-[15px] leading-relaxed">
+            <p>
+              Fifteen years building data platforms and integration architecture. Senior engineering roles at Rolls-Royce (Strategic Architect on the Enterprise Data Platform), Centrica, Toyota Connected Europe and Mesh-AI.
+            </p>
+            <p>
+              Technical focus: cloud data platforms (Snowflake, BigQuery), integration design (API-first, event-driven), architecture for systems that survive team turnover. Based in Cluj-Napoca. Leads technical delivery on every Thorn Industries engagement.
+            </p>
+          </div>
+        </article>
+
+        <article class="bg-cream-100 border border-forest-100 card-flat p-8">
+          <div class="w-20 h-20 rounded-full bg-forest-200 mb-5"></div>
+          <h3 class="text-2xl font-semibold text-ink-900 mb-1">Ioana Drăghici</h3>
+          <p class="text-sm text-forest-700 mb-5">Sales lead</p>
+          <div class="space-y-3 text-ink-700 text-[15px] leading-relaxed">
+            <p>
+              Business operations and sales background. Multi-year experience running a Romanian SME with day-to-day responsibility for client relationships, supplier coordination, and operational continuity through grant-funded growth.
+            </p>
+            <p>
+              Based in Iași. Primary contact for first-line discovery conversations and for public-sector engagements across Romania.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company facts -->
+  <section class="border-t border-forest-100 py-16 bg-cream-100">
+    <div class="container-wide max-w-4xl">
+      <h2 class="text-2xl font-semibold tracking-tight text-ink-900 mb-8">Company facts</h2>
+      <div class="grid sm:grid-cols-2 gap-x-12 gap-y-6 text-[15px]">
+        <div>
+          <div class="text-sm text-ink-500 mb-1">Trading name</div>
+          <div class="text-ink-900 font-medium">Thorn Industries</div>
+        </div>
+        <div>
+          <div class="text-sm text-ink-500 mb-1">Operated by</div>
+          <div class="text-ink-900 font-medium">Tech Camp Pro SRL</div>
+        </div>
+        <div>
+          <div class="text-sm text-ink-500 mb-1">VAT</div>
+          <div class="text-ink-900 font-medium">RO__________</div>
+        </div>
+        <div>
+          <div class="text-sm text-ink-500 mb-1">Registered office</div>
+          <div class="text-ink-900 font-medium">Str. Traian Vuia 95, Cluj-Napoca</div>
+        </div>
+        <div>
+          <div class="text-sm text-ink-500 mb-1">Founded</div>
+          <div class="text-ink-900 font-medium">2026</div>
+        </div>
+        <div>
+          <div class="text-sm text-ink-500 mb-1">SEAP status</div>
+          <div class="text-ink-900 font-medium">Registered, DUAE-ready</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24">
+    <div class="container-wide text-center max-w-2xl mx-auto">
+      <h2 class="text-3xl font-semibold tracking-tight text-ink-900 mb-6 leading-tight">
+        Want to know more?
+      </h2>
+      <p class="text-lg text-ink-600 mb-10">
+        Write us with whatever's on your mind. We tend to reply within a working day.
+      </p>
+      <a href={u('/en/contact')} class="btn-primary">
+        Start a conversation
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

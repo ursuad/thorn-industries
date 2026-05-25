@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { u } from '../lib/url';
+---
+
+<BaseLayout
+  title="Cum lucrăm — Thorn Industries"
+  description="Principiile din spatele fiecărui angajament Thorn Industries. Prețuri transparente, responsabilitate nominală, fără contracte fragmentate, fără mită, fără surprize."
+  lang="ro"
+>
+  <!-- Page header -->
+  <section class="container-wide pt-20 pb-12">
+    <p class="text-sm uppercase tracking-widest text-forest-700 font-medium mb-6">Cum lucrăm</p>
+    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-ink-900 leading-tight mb-6 max-w-3xl">
+      Principiile pe care rulează fiecare angajament.
+    </h1>
+    <p class="text-lg text-ink-700 max-w-2xl leading-relaxed">
+      Acestea nu sunt aspirații. Sunt reguli de operare. Dacă nu le putem respecta într-un anumit angajament, spunem asta înainte de semnare.
+    </p>
+  </section>
+
+  <!-- Principii -->
+  <section class="border-t border-forest-100 py-16">
+    <div class="container-wide max-w-4xl space-y-16">
+      <div class="grid md:grid-cols-12 gap-8">
+        <div class="md:col-span-2 text-4xl font-serif text-forest-300 leading-none">01</div>
+        <div class="md:col-span-10">
+          <h3 class="text-2xl font-semibold text-ink-900 mb-3">Prețuri transparente, intervale publicate</h3>
+          <p class="text-ink-700 leading-relaxed">
+            Paginile noastre de servicii numesc intervalele de preț pentru fiecare ofertă. Fără oferte personalizate ascunse până la pagina 40 a unei propuneri. Când vă trimitem o propunere cu tarif fix, cifrele se vor încadra în intervalele publicate sau vă vom spune din timp de ce acest angajament este o excepție.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-8">
+        <div class="md:col-span-2 text-4xl font-serif text-forest-300 leading-none">02</div>
+        <div class="md:col-span-10">
+          <h3 class="text-2xl font-semibold text-ink-900 mb-3">Responsabilitate nominală, de la început până la final</h3>
+          <p class="text-ink-700 leading-relaxed">
+            Fiecare angajament are un singur lead tehnic. El semnează propunerea. El derulează discovery-ul. El vine pe teren. El rămâne pe proiect de la kickoff până la predare. Nu vă vindem o echipă și subcontractăm livrarea către alta.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-8">
+        <div class="md:col-span-2 text-4xl font-serif text-forest-300 leading-none">03</div>
+        <div class="md:col-span-10">
+          <h3 class="text-2xl font-semibold text-ink-900 mb-3">Fără contracte fragmentate</h3>
+          <p class="text-ink-700 leading-relaxed">
+            Articolul 11 din Legea 98/2016 interzice divizarea contractelor pentru a evita pragurile de achiziție. Nu vom propune asta. Dacă scopul dvs. depășește un prag, derulăm procedura SEAP corectă pentru dimensiunea corectă. Durează cu câteva săptămâni mai mult. Rămâne curată.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-8">
+        <div class="md:col-span-2 text-4xl font-serif text-forest-300 leading-none">04</div>
+        <div class="md:col-span-10">
+          <h3 class="text-2xl font-semibold text-ink-900 mb-3">Fără mită. Fără licitații pre-decise.</h3>
+          <p class="text-ink-700 leading-relaxed">
+            Nu plătim pentru a câștiga contracte. Nu participăm la licitații decise în avans. Dacă o achiziție pare proiectată pentru un anumit furnizor, ori o semnalăm la ANAP, ori ne retragem. Aceasta este o linie roșie, nu un slogan.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-8">
+        <div class="md:col-span-2 text-4xl font-serif text-forest-300 leading-none">05</div>
+        <div class="md:col-span-10">
+          <h3 class="text-2xl font-semibold text-ink-900 mb-3">Standarde deschise, datele dvs. rămân ale dvs.</h3>
+          <p class="text-ink-700 leading-relaxed">
+            Formate deschise, scheme exportabile, fără clauze de vendor lock-in. Dacă vreți vreodată să migrați de la noi, vă predăm tot ce vă aparține. Cod, date, infrastructure-as-code, runbook-uri. Tipul de predare pe care l-am vrea dacă am fi de partea cealaltă a mesei.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-8">
+        <div class="md:col-span-2 text-4xl font-serif text-forest-300 leading-none">06</div>
+        <div class="md:col-span-10">
+          <h3 class="text-2xl font-semibold text-ink-900 mb-3">Rezidența datelor în România, implicit</h3>
+          <p class="text-ink-700 leading-relaxed">
+            Stratele de date pentru sectorul public rulează pe infrastructură românească (Romarg, ClausWeb). Acolo unde calculul poate sta în altă parte fără a expune date, folosim furnizori EU eficienți (Hetzner) și vă spunem exact unde stă fiecare componentă. Fără mister, fără surprize offshore.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-8">
+        <div class="md:col-span-2 text-4xl font-serif text-forest-300 leading-none">07</div>
+        <div class="md:col-span-10">
+          <h3 class="text-2xl font-semibold text-ink-900 mb-3">Spunem ce nu facem</h3>
+          <p class="text-ink-700 leading-relaxed">
+            Fiecare pagină de serviciu are o secțiune „ce nu facem". Nu este modestie de fațadă. Este cel mai rapid mod de a ne asigura că ambele părți știu ce cumpără. Dacă problema dvs. este în afara scopului nostru, vă spunem la primul apel și, unde putem, vă îndrumăm către cineva mai potrivit.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-8">
+        <div class="md:col-span-2 text-4xl font-serif text-forest-300 leading-none">08</div>
+        <div class="md:col-span-10">
+          <h3 class="text-2xl font-semibold text-ink-900 mb-3">Documentația ca livrabil</h3>
+          <p class="text-ink-700 leading-relaxed">
+            Fiecare angajament include documentație scrisă: arhitectură, runbook-uri, jurnal de decizii, note de predare. Nu pentru că este plăcut să le ai, ci pentru că următoarea persoană care atinge acest sistem trebuie să îl înțeleagă fără ca noi să fim în cameră.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-cream-100 border-t border-forest-100">
+    <div class="container-wide text-center max-w-2xl mx-auto">
+      <h2 class="text-3xl font-semibold tracking-tight text-ink-900 mb-6 leading-tight">
+        Aceste principii par o potrivire?
+      </h2>
+      <p class="text-lg text-ink-600 mb-10">
+        Atunci o discuție merită probabil treizeci de minute. Spuneți-ne la ce lucrați.
+      </p>
+      <a href={u('/contact')} class="btn-primary">
+        Începeți o discuție
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

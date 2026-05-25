@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { u } from '../../lib/url';
+---
+
+<BaseLayout
+  title="For B2B companies — Thorn Industries"
+  description="Data platforms, custom software and integrations for mid-size B2B companies. Open standards, named accountability, EU-grade engineering."
+  lang="en"
+>
+  <!-- Page header -->
+  <section class="container-wide pt-20 pb-12">
+    <p class="text-sm uppercase tracking-widest text-forest-700 font-medium mb-6">For B2B companies</p>
+    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-ink-900 leading-tight mb-6 max-w-3xl">
+      Mid-size businesses with real data and integration problems.
+    </h1>
+    <p class="text-lg text-ink-700 max-w-2xl leading-relaxed">
+      You have an ERP that doesn't talk to production. A reporting layer that nobody trusts. Integration debt that grew faster than the company did. The systems you bought five years ago that solved one problem and created three more. We've shipped fixes for problems exactly like these.
+    </p>
+  </section>
+
+  <!-- Three offers -->
+  <section class="border-t border-forest-100 py-20 bg-cream-100">
+    <div class="container-wide">
+      <div class="max-w-2xl mb-14">
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-ink-900 mb-4">
+          What we typically deliver.
+        </h2>
+        <p class="text-lg text-ink-600">
+          No off-the-shelf packages. Each engagement starts with a short paid discovery to scope properly, then a fixed-fee delivery with named accountability.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <article class="bg-cream-50 border border-forest-100 card p-8 flex flex-col">
+          <div class="text-xs uppercase tracking-widest text-forest-700 font-medium mb-4">01 · Discovery</div>
+          <h3 class="text-2xl font-semibold text-ink-900 mb-3">Data & architecture audit</h3>
+          <p class="text-ink-700 mb-6 flex-1 text-[15px] leading-relaxed">
+            Two to four weeks. We map your data flows, integration architecture and reporting layer. You get a written assessment with a prioritised list of what to fix, in what order, at what cost.
+          </p>
+          <p class="text-sm text-ink-500 mb-4"><strong>€4,000 — €12,000</strong> · fixed fee</p>
+        </article>
+
+        <article class="bg-cream-50 border border-forest-100 card p-8 flex flex-col">
+          <div class="text-xs uppercase tracking-widest text-forest-700 font-medium mb-4">02 · Build</div>
+          <h3 class="text-2xl font-semibold text-ink-900 mb-3">Data platform & dashboards</h3>
+          <p class="text-ink-700 mb-6 flex-1 text-[15px] leading-relaxed">
+            Foundation for trusted reporting. Ingestion from your operational systems, a single source of truth for downstream consumers, two or three core dashboards that get used in management meetings.
+          </p>
+          <p class="text-sm text-ink-500 mb-4"><strong>€15,000 — €60,000</strong> · scope-dependent</p>
+        </article>
+
+        <article class="bg-cream-50 border border-forest-100 card p-8 flex flex-col">
+          <div class="text-xs uppercase tracking-widest text-forest-700 font-medium mb-4">03 · Integrate</div>
+          <h3 class="text-2xl font-semibold text-ink-900 mb-3">Custom integrations</h3>
+          <p class="text-ink-700 mb-6 flex-1 text-[15px] leading-relaxed">
+            ERP, accounting, production systems, third-party APIs. We design and build the integration layer that makes your existing tools work together. Open standards, exportable, maintainable.
+          </p>
+          <p class="text-sm text-ink-500 mb-4"><strong>€8,000 — €40,000</strong> · per integration</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Where we're strong -->
+  <section class="py-20">
+    <div class="container-wide grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-5">
+        <p class="text-sm uppercase tracking-widest text-forest-700 font-medium mb-4">Where we're strong</p>
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-ink-900 mb-6 leading-tight">
+          We're not generalists. Here's the work we do well.
+        </h2>
+        <p class="text-ink-700 leading-relaxed">
+          Fifteen years of engineering at companies like Rolls-Royce, Centrica and Toyota Connected Europe. We bring that bar of work to mid-size Romanian and EU businesses, at a fraction of the cost of equivalent UK or German consultancies.
+        </p>
+      </div>
+      <div class="md:col-span-7 grid sm:grid-cols-2 gap-6">
+        <div class="bg-cream-100 border border-forest-100 card-flat p-6">
+          <h4 class="font-semibold text-ink-900 mb-2">Cloud data platforms</h4>
+          <p class="text-sm text-ink-700 leading-relaxed">Snowflake, BigQuery, modern lakehouse architectures. Ingestion via Airbyte, transformation via dbt, governance built in.</p>
+        </div>
+        <div class="bg-cream-100 border border-forest-100 card-flat p-6">
+          <h4 class="font-semibold text-ink-900 mb-2">Integration design</h4>
+          <p class="text-sm text-ink-700 leading-relaxed">API-first, event-driven, contracts-as-code. The kind of integration layer that survives team turnover.</p>
+        </div>
+        <div class="bg-cream-100 border border-forest-100 card-flat p-6">
+          <h4 class="font-semibold text-ink-900 mb-2">Operational dashboards</h4>
+          <p class="text-sm text-ink-700 leading-relaxed">Metabase, Superset, Looker Studio. We build the two or three views that get used, not the twenty that nobody opens.</p>
+        </div>
+        <div class="bg-cream-100 border border-forest-100 card-flat p-6">
+          <h4 class="font-semibold text-ink-900 mb-2">Custom backends</h4>
+          <p class="text-sm text-ink-700 leading-relaxed">Python, TypeScript, Postgres. Kubernetes when it earns its keep, simpler stacks when it doesn't.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 border-t border-forest-100">
+    <div class="container-wide text-center max-w-2xl mx-auto">
+      <h2 class="text-3xl font-semibold tracking-tight text-ink-900 mb-6 leading-tight">
+        Have a problem worth solving?
+      </h2>
+      <p class="text-lg text-ink-600 mb-10">
+        Tell us what's broken, what you've tried, and what good looks like. We'll come back with what we'd start with, and what we wouldn't.
+      </p>
+      <a href={u('/en/contact')} class="btn-primary">
+        Start a conversation
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
