@@ -2,45 +2,288 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================
+   BASE — typography, colors, fundamentals
+   ============================================ */
+
 @layer base {
   html {
+    @apply text-ink-900 bg-cream-50;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern', 'liga', 'calt', 'ss01', 'cv11';
   }
+
   body {
-    @apply bg-cream-50 text-ink-900;
-    font-feature-settings: 'ss01', 'cv11';
+    line-height: 1.65;
   }
-  h1, h2, h3, h4 {
+
+  h1, h2, h3, h4, h5, h6 {
     @apply font-sans tracking-tight;
   }
+
+  /* Eyebrow labels — small caps, mono, controlled tracking */
+  .eyebrow {
+    @apply font-mono text-eyebrow uppercase font-medium;
+    font-feature-settings: 'tnum', 'ss01';
+  }
+
+  /* Tabular numbers for data display */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum';
+  }
+
+  /* Link defaults — subtle underline that thickens on hover */
   a {
-    @apply text-forest-700 underline-offset-4 decoration-forest-300;
+    @apply text-ink-900 underline decoration-forest-300 decoration-[1.5px] underline-offset-[3px];
+    transition: text-decoration-color 0.2s ease;
   }
   a:hover {
-    @apply decoration-forest-600;
+    @apply decoration-forest-700;
+  }
+
+  /* Focus ring — forest accent, not browser blue */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-forest-600 ring-offset-2 ring-offset-cream-50 rounded-sm;
+  }
+
+  /* Selection highlight */
+  ::selection {
+    @apply bg-forest-200 text-forest-900;
   }
 }
 
+/* ============================================
+   COMPONENT PRIMITIVES
+   ============================================ */
+
 @layer components {
-  .container-prose {
-    @apply max-w-3xl mx-auto px-6;
+
+  /* --- Containers --- */
+
+  .container-page {
+    @apply max-w-[1240px] mx-auto px-6 md:px-10;
   }
+
+  /* Legacy alias — old pages still use this; keeps Servicii/Primării/Companii/Cum lucrăm/Despre/Contact working until they're rebuilt with the new component system */
   .container-wide {
-    @apply max-w-6xl mx-auto px-6;
+    @apply max-w-[1240px] mx-auto px-6 md:px-10;
   }
+
+  .container-narrow {
+    @apply max-w-[840px] mx-auto px-6 md:px-10;
+  }
+
+  .container-prose {
+    @apply max-w-prose mx-auto px-6 md:px-10;
+  }
+
+  /* --- Section rhythm --- */
+
+  .section {
+    @apply py-section;
+  }
+
+  .section-sm {
+    @apply py-section-sm;
+  }
+
+  .surface-light { @apply bg-cream-50 text-ink-900; }
+  .surface-medium { @apply bg-cream-100 text-ink-900; }
+  .surface-dark { @apply bg-forest-900 text-cream-100; }
+
+  .surface-dark a {
+    @apply text-cream-50 decoration-forest-400;
+  }
+  .surface-dark a:hover {
+    @apply decoration-cream-200;
+  }
+  .surface-dark .eyebrow {
+    @apply text-forest-300;
+  }
+
+  /* Hairline dividers */
+  .divider-hairline {
+    @apply border-t border-forest-100;
+  }
+  .divider-hairline-dark {
+    @apply border-t border-forest-700;
+  }
+
+  /* --- Buttons (4 variants) --- */
+
+  .btn {
+    @apply inline-flex items-center gap-2 font-sans font-medium text-[15px] leading-none transition-all;
+    text-decoration: none;
+  }
+
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-forest-800 text-cream-50 px-5 py-3 rounded-xl font-medium hover:bg-forest-900 transition-all no-underline shadow-sm hover:shadow-md hover:-translate-y-[1px];
+    @apply btn px-6 py-4 bg-forest-900 text-cream-50 rounded-full hover:bg-ink-900;
+    text-decoration: none;
   }
-  .btn-ghost {
-    @apply inline-flex items-center gap-2 text-forest-800 px-5 py-3 rounded-xl font-medium hover:bg-forest-50 transition-all no-underline border border-forest-200 shadow-sm hover:shadow-md hover:-translate-y-[1px];
+  .btn-primary:hover {
+    @apply -translate-y-px shadow-[0_8px_24px_-12px_rgba(36,62,47,0.4)];
   }
+
+  .btn-secondary {
+    @apply btn px-6 py-4 bg-transparent text-forest-900 rounded-full border border-forest-300 hover:border-forest-700 hover:bg-forest-50;
+    text-decoration: none;
+  }
+
+  .btn-link {
+    @apply btn text-forest-800 underline decoration-forest-300 decoration-[1.5px] underline-offset-4 hover:decoration-forest-700 hover:text-forest-900;
+    padding: 0;
+  }
+
+  .btn-quiet {
+    @apply btn text-ink-700 hover:text-forest-800;
+    text-decoration: none;
+    padding: 0;
+  }
+
+  /* Button arrow slides on hover */
+  .btn-arrow {
+    @apply inline-block transition-transform;
+  }
+  .btn:hover .btn-arrow,
+  a:hover .btn-arrow {
+    transform: translateX(3px);
+  }
+
+  /* --- Cards (3 tiers) --- */
+
+  /* Primary — hero cards, generous padding, elevation */
+  .card-primary {
+    @apply bg-cream-50 rounded-2xl p-8 md:p-10 transition-all;
+    box-shadow:
+      0 1px 2px rgba(36, 62, 47, 0.04),
+      0 8px 24px -12px rgba(36, 62, 47, 0.08);
+  }
+  .card-primary:hover {
+    box-shadow:
+      0 1px 2px rgba(36, 62, 47, 0.06),
+      0 16px 32px -16px rgba(36, 62, 47, 0.12);
+    transform: translateY(-2px);
+  }
+
+  /* Primary card on dark surface */
+  .surface-dark .card-primary {
+    @apply bg-forest-800;
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+      0 8px 32px -8px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Secondary — sectional, hairline border, no shadow */
+  .card-secondary {
+    @apply bg-cream-50 rounded-xl border border-forest-100 p-6 md:p-8;
+  }
+
+  .surface-medium .card-secondary {
+    @apply bg-white;
+  }
+  .surface-dark .card-secondary {
+    @apply bg-forest-800/60 border-forest-700;
+  }
+
+  /* Legacy card aliases — old pages still use these; remove once all pages migrated to the new card-primary / card-secondary tiers */
   .card {
     @apply rounded-2xl shadow-sm hover:shadow-md transition-all hover:-translate-y-[2px];
   }
   .card-flat {
     @apply rounded-2xl shadow-sm;
+  }
+
+  /* Tabular — data display */
+  .card-tabular {
+    @apply bg-cream-50 rounded-xl border border-forest-100 overflow-hidden;
+  }
+  .card-tabular-row {
+    @apply flex items-baseline justify-between gap-6 px-6 py-4 border-t border-forest-100 first:border-t-0;
+  }
+  .card-tabular-label {
+    @apply eyebrow text-ink-500;
+  }
+  .card-tabular-value {
+    @apply font-mono tabular text-ink-900 text-[15px];
+  }
+
+  /* --- Step indicator (sans, light weight, forest-300) --- */
+
+  .step-numeral {
+    @apply font-sans font-light text-forest-300 leading-none tabular;
+    letter-spacing: -0.04em;
+  }
+
+  .step-numeral-lg {
+    @apply step-numeral text-6xl md:text-7xl;
+  }
+
+  .step-numeral-md {
+    @apply step-numeral text-4xl md:text-5xl;
+  }
+
+  .surface-dark .step-numeral {
+    @apply text-forest-600;
+  }
+
+  /* --- Form refinement --- */
+
+  .form-label {
+    @apply eyebrow text-ink-700 block mb-3;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    @apply w-full px-4 py-3.5 bg-transparent border-0 border-b border-ink-300 text-base text-ink-900 placeholder:text-ink-400 transition-all;
+    border-radius: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    @apply outline-none border-forest-700 ring-0;
+  }
+  .form-textarea {
+    @apply resize-none;
+  }
+  .form-select {
+    @apply appearance-none bg-no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='none' stroke='%233d3d3d' stroke-width='1.5' d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
+    background-position: right 0.5rem center;
+    padding-right: 2rem;
+  }
+
+  /* --- Hanging punctuation helper --- */
+  .hang {
+    hanging-punctuation: first last;
+  }
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .scroll-lock { overflow: hidden; }
+}
+
+/* ============================================
+   MOTION REDUCTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

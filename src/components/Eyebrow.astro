@@ -1,0 +1,17 @@
+---
+interface Props {
+  tone?: 'default' | 'dark' | 'rust';
+  class?: string;
+}
+const { tone = 'default', class: extraClass = '' } = Astro.props;
+
+const toneClasses = {
+  default: 'text-forest-700',
+  dark: 'text-forest-300',
+  rust: 'text-rust-500',
+};
+---
+
+<div class={`eyebrow ${toneClasses[tone]} ${extraClass}`}>
+  <slot />
+</div>

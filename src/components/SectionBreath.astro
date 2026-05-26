@@ -1,0 +1,25 @@
+---
+/**
+ * SectionBreath — minimal breathing space between dense sections.
+ * A single eyebrow label centered on the surface, with a hairline rule above.
+ * No oversized decorative glyphs (too magazine-y for engineering tone).
+ */
+interface Props {
+  label: string;
+  tone?: 'light' | 'dark';
+}
+const { label, tone = 'light' } = Astro.props;
+
+const surface = tone === 'dark' ? 'bg-forest-900 text-cream-50' : 'bg-cream-50 text-ink-900';
+const eyebrowTone = tone === 'dark' ? 'text-forest-300' : 'text-forest-700';
+const ruleTone = tone === 'dark' ? 'border-forest-700' : 'border-forest-100';
+---
+
+<section class={`${surface} py-section-sm`}>
+  <div class="container-page flex flex-col items-center">
+    <div class={`w-12 border-t ${ruleTone} mb-8`} aria-hidden="true"></div>
+    <div class={`eyebrow ${eyebrowTone}`}>
+      {label}
+    </div>
+  </div>
+</section>

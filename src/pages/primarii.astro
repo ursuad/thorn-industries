@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { u } from '../lib/url';
+import SectionBreath from '../components/SectionBreath.astro';
 ---
 
 <BaseLayout
@@ -8,99 +9,229 @@ import { u } from '../lib/url';
   description="Digitalizare pentru primării, consilii județene și servicii deconcentrate din România. Aliniere la finanțare, conformare cu achizițiile publice, responsabilitate nominală."
   lang="ro"
 >
-  <!-- Page header -->
-  <section class="container-wide pt-20 pb-12">
-    <p class="text-sm uppercase tracking-widest text-forest-700 font-medium mb-6">Pentru administrația publică</p>
-    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-ink-900 leading-tight mb-6 max-w-3xl">
-      Banii sunt acolo. Strategia, de obicei, nu este. Ajutăm la închiderea acestei distanțe.
-    </h1>
-    <p class="text-lg text-ink-700 max-w-2xl leading-relaxed">
-      PNRR Componenta 7. Programul Regional Nord-Vest. DigiLocal. Finanțare pentru conformare NIS2. Sute de milioane de euro destinate digitalizării municipale, adesea necheltuite sau cheltuite pe lucrul greșit pentru că distanța dintre „trebuie să ne digitalizăm" și „acesta este proiectul care câștigă grantul" este mai mare decât pare.
-    </p>
-  </section>
 
-  <!-- Cei trei pași -->
-  <section class="border-t border-forest-100 py-20 bg-cream-100">
-    <div class="container-wide">
-      <div class="max-w-2xl mb-14">
-        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-ink-900 mb-4">
-          Cum se desfășoară un angajament.
-        </h2>
-        <p class="text-lg text-ink-600">
-          Trei pași. Fiecare este un contract separat, achiziționat corect. Fără fragmentare, fără surprize, fără angajament la pasul doi până când pasul unu nu livrează ceva util.
-        </p>
+  <!-- HERO -->
+  <section class="surface-light pt-12 md:pt-20 pb-16 md:pb-24">
+    <div class="container-page">
+      <div class="grid md:grid-cols-12 gap-y-8 md:gap-x-10">
+        <div class="md:col-span-9">
+          <div class="eyebrow text-forest-700 mb-8 md:mb-10">
+            <span class="font-mono">001</span>
+            <span class="mx-3 text-ink-300">·</span>
+            Pentru administrația publică
+          </div>
+          <h1 class="font-sans font-medium text-display-1 text-ink-900 hang tracking-tight">
+            Banii sunt acolo.<br/>
+            <span class="text-ink-400">Strategia, de obicei, nu.</span>
+          </h1>
+        </div>
+
+        <aside class="md:col-span-3 md:pt-32 md:border-l md:border-forest-100 md:pl-6">
+          <div class="eyebrow text-ink-500 mb-3">Audiență</div>
+          <div class="text-ink-900 text-body-sm mb-6 leading-relaxed">
+            Primării<br/>
+            Consilii județene<br/>
+            Servicii deconcentrate
+          </div>
+
+          <div class="eyebrow text-ink-500 mb-3">Acoperire</div>
+          <div class="text-ink-900 text-body-sm mb-6 leading-relaxed">
+            Națională
+          </div>
+
+          <div class="eyebrow text-ink-500 mb-3">Contact principal</div>
+          <div class="text-ink-900 text-body-sm leading-relaxed">
+            Ioana Drăghici
+          </div>
+        </aside>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <article class="bg-cream-50 border border-forest-100 card-flat p-8">
-          <div class="text-3xl font-serif text-forest-300 leading-none mb-5">01</div>
-          <h3 class="text-xl font-semibold text-ink-900 mb-3">Evaluare</h3>
-          <p class="text-ink-700 text-[15px] leading-relaxed mb-4">
-            Una-trei zile pe teren. Un raport scris de 15-25 de pagini pe care Consiliul Local îl poate analiza. Identifică liniile de finanțare la care vă calificați în prezent și care sunt următoarele intervenții realiste.
-          </p>
-          <p class="text-sm text-ink-500">1-2 săptămâni · tarif fix · o singură achiziție</p>
-        </article>
-
-        <article class="bg-cream-50 border border-forest-100 card-flat p-8">
-          <div class="text-3xl font-serif text-forest-300 leading-none mb-5">02</div>
-          <h3 class="text-xl font-semibold text-ink-900 mb-3">Cerere de finanțare</h3>
-          <p class="text-ink-700 text-[15px] leading-relaxed mb-4">
-            Dacă evaluarea identifică o potrivire clară de finanțare, redactăm secțiunile tehnice ale cererii de grant. Depusă de echipa dvs. sau cu suportul nostru, în funcție de ce permite procedura.
-          </p>
-          <p class="text-sm text-ink-500">2-4 săptămâni · tarif fix · opțional</p>
-        </article>
-
-        <article class="bg-cream-50 border border-forest-100 card-flat p-8">
-          <div class="text-3xl font-serif text-forest-300 leading-none mb-5">03</div>
-          <h3 class="text-xl font-semibold text-ink-900 mb-3">Implementare</h3>
-          <p class="text-ink-700 text-[15px] leading-relaxed mb-4">
-            Când finanțarea ajunge, livrăm. O echipă, un lead tehnic nominal, responsabilitate de la început până la final. Mentenanță recurentă inclusă pentru primul an.
-          </p>
-          <p class="text-sm text-ink-500">3-9 luni · contract unic · procedura SEAP corectă pentru scopul corect</p>
-        </article>
+      <div class="mt-12 md:mt-16 max-w-2xl">
+        <p class="text-body-lg text-ink-700 leading-relaxed">
+          PNRR Componenta 7. Programul Regional Nord-Vest. DigiLocal. Finanțare pentru conformare NIS2. Sute de milioane de euro destinate digitalizării municipale, adesea necheltuite sau cheltuite pe lucrul greșit pentru că distanța dintre „trebuie să ne digitalizăm" și „acesta este proiectul care câștigă grantul" este mai mare decât pare.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Linii de finanțare -->
-  <section class="py-20">
-    <div class="container-wide">
-      <div class="max-w-2xl mb-12">
-        <p class="text-sm uppercase tracking-widest text-forest-700 font-medium mb-4">Contextul finanțării</p>
-        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-ink-900 mb-4">
-          Ce se poate finanța în prezent.
-        </h2>
-        <p class="text-lg text-ink-600">
-          Peisajul se schimbă la fiecare câteva luni. Aceasta este harta curentă. O actualizăm pe măsură ce ferestrele se deschid și se închid.
-        </p>
+  <!-- 3-step path -->
+  <section class="surface-medium section">
+    <div class="container-page">
+
+      <div class="grid md:grid-cols-12 gap-10 mb-12 md:mb-16">
+        <div class="md:col-span-4">
+          <div class="eyebrow text-forest-700 mb-3">002 · Angajament</div>
+          <h2 class="font-sans font-medium text-display-2 text-ink-900 leading-tight tracking-tight hang">
+            Trei pași.<br/>
+            <span class="text-ink-400">Trei contracte.</span>
+          </h2>
+        </div>
+        <div class="md:col-span-8 md:pt-4">
+          <p class="text-body-lg text-ink-700 leading-relaxed">
+            Fiecare pas este un contract separat, achiziționat corect. Fără fragmentare, fără surprize, fără angajament la pasul doi până când pasul unu nu livrează ceva util.
+          </p>
+        </div>
+      </div>
+
+      <div class="space-y-6">
+
+        <article class="card-secondary">
+          <div class="grid md:grid-cols-12 gap-6 md:gap-10">
+            <div class="md:col-span-3 flex flex-col">
+              <div class="step-numeral-lg mb-4">01</div>
+              <div class="eyebrow text-forest-700">Evaluare</div>
+            </div>
+            <div class="md:col-span-6">
+              <p class="text-ink-800 text-body leading-relaxed mb-5">
+                Una-trei zile pe teren. Un raport scris de 15-25 de pagini pe care Consiliul Local îl poate analiza. Identifică liniile de finanțare la care vă calificați în prezent și care sunt următoarele intervenții realiste.
+              </p>
+              <dl class="grid grid-cols-3 gap-4 text-body-sm">
+                <div>
+                  <dt class="font-mono text-eyebrow text-ink-500 mb-1">Durată</dt>
+                  <dd class="text-ink-900">1—2 săptămâni</dd>
+                </div>
+                <div>
+                  <dt class="font-mono text-eyebrow text-ink-500 mb-1">Tarif</dt>
+                  <dd class="text-ink-900">Fix</dd>
+                </div>
+                <div>
+                  <dt class="font-mono text-eyebrow text-ink-500 mb-1">Achiziție</dt>
+                  <dd class="text-ink-900">Unică</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="md:col-span-3 md:pl-6 md:border-l md:border-forest-100">
+              <div class="eyebrow text-ink-500 mb-2">Livrabil</div>
+              <p class="text-ink-700 text-body-sm leading-relaxed">
+                Raport scris. Plan. Listă prioritizată de intervenții costate la praguri.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-secondary">
+          <div class="grid md:grid-cols-12 gap-6 md:gap-10">
+            <div class="md:col-span-3 flex flex-col">
+              <div class="step-numeral-lg mb-4">02</div>
+              <div class="eyebrow text-forest-700">Cerere de finanțare</div>
+            </div>
+            <div class="md:col-span-6">
+              <p class="text-ink-800 text-body leading-relaxed mb-5">
+                Dacă evaluarea identifică o potrivire clară de finanțare, redactăm secțiunile tehnice ale cererii de grant. Depusă de echipa dvs. sau cu suportul nostru, în funcție de ce permite procedura.
+              </p>
+              <dl class="grid grid-cols-3 gap-4 text-body-sm">
+                <div>
+                  <dt class="font-mono text-eyebrow text-ink-500 mb-1">Durată</dt>
+                  <dd class="text-ink-900">2—4 săptămâni</dd>
+                </div>
+                <div>
+                  <dt class="font-mono text-eyebrow text-ink-500 mb-1">Tarif</dt>
+                  <dd class="text-ink-900">Fix</dd>
+                </div>
+                <div>
+                  <dt class="font-mono text-eyebrow text-ink-500 mb-1">Etapă</dt>
+                  <dd class="text-ink-900">Opțional</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="md:col-span-3 md:pl-6 md:border-l md:border-forest-100">
+              <div class="eyebrow text-ink-500 mb-2">Livrabil</div>
+              <p class="text-ink-700 text-body-sm leading-relaxed">
+                Secțiunile tehnice ale cererii. Plan de proiect. Documentație de conformare.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-secondary">
+          <div class="grid md:grid-cols-12 gap-6 md:gap-10">
+            <div class="md:col-span-3 flex flex-col">
+              <div class="step-numeral-lg mb-4">03</div>
+              <div class="eyebrow text-forest-700">Implementare</div>
+            </div>
+            <div class="md:col-span-6">
+              <p class="text-ink-800 text-body leading-relaxed mb-5">
+                Când finanțarea ajunge, livrăm. O echipă, un lead tehnic nominal, responsabilitate de la început până la final. Mentenanță recurentă inclusă pentru primul an.
+              </p>
+              <dl class="grid grid-cols-3 gap-4 text-body-sm">
+                <div>
+                  <dt class="font-mono text-eyebrow text-ink-500 mb-1">Durată</dt>
+                  <dd class="text-ink-900">3—9 luni</dd>
+                </div>
+                <div>
+                  <dt class="font-mono text-eyebrow text-ink-500 mb-1">Contract</dt>
+                  <dd class="text-ink-900">Unic</dd>
+                </div>
+                <div>
+                  <dt class="font-mono text-eyebrow text-ink-500 mb-1">SEAP</dt>
+                  <dd class="text-ink-900">Scop corect</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="md:col-span-3 md:pl-6 md:border-l md:border-forest-100">
+              <div class="eyebrow text-ink-500 mb-2">Livrabil</div>
+              <p class="text-ink-700 text-body-sm leading-relaxed">
+                Sistem funcțional, documentație, runbook-uri, mentenanță în primul an.
+              </p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Funding lines — dark inversion -->
+  <section class="surface-dark section">
+    <div class="container-page">
+      <div class="grid md:grid-cols-12 gap-10 mb-12 md:mb-16">
+        <div class="md:col-span-4">
+          <div class="eyebrow text-forest-300 mb-3">003 · Contextul finanțării</div>
+          <h2 class="font-sans font-medium text-display-2 text-cream-50 leading-tight tracking-tight hang">
+            Ce se poate<br/>finanța.
+          </h2>
+        </div>
+        <div class="md:col-span-8 md:pt-4">
+          <p class="text-body-lg text-cream-100/80 leading-relaxed">
+            Peisajul se schimbă la fiecare câteva luni. Aceasta este harta curentă. O actualizăm pe măsură ce ferestrele se deschid și se închid.
+          </p>
+        </div>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-cream-100 border border-forest-100 card-flat p-7">
-          <h3 class="font-semibold text-ink-900 mb-2">DigiLocal (OUG 56/2024)</h3>
-          <p class="text-sm text-forest-700 mb-3">75.000 - 175.000 RON per comună</p>
-          <p class="text-ink-700 text-[15px] leading-relaxed">
+        <div class="card-secondary">
+          <div class="flex items-start justify-between mb-4 pb-4 border-b border-forest-700">
+            <h3 class="font-sans font-semibold text-lg text-cream-50 tracking-tight">DigiLocal (OUG 56/2024)</h3>
+            <div class="font-mono tabular text-eyebrow text-forest-300">75K—175K RON</div>
+          </div>
+          <p class="text-cream-100/80 text-body-sm leading-relaxed">
             Granturi directe pentru digitalizare în comune. Ferestre deschise în funcție de calendarul OUG. Cea mai accesibilă linie de finanțare în prezent pentru administrațiile mai mici.
           </p>
         </div>
-        <div class="bg-cream-100 border border-forest-100 card-flat p-7">
-          <h3 class="font-semibold text-ink-900 mb-2">PNRR Componenta 7</h3>
-          <p class="text-sm text-forest-700 mb-3">Variabil, până la câteva milioane RON per proiect</p>
-          <p class="text-ink-700 text-[15px] leading-relaxed">
+        <div class="card-secondary">
+          <div class="flex items-start justify-between mb-4 pb-4 border-b border-forest-700">
+            <h3 class="font-sans font-semibold text-lg text-cream-50 tracking-tight">PNRR Componenta 7</h3>
+            <div class="font-mono tabular text-eyebrow text-forest-300">Până la M RON</div>
+          </div>
+          <p class="text-cream-100/80 text-body-sm leading-relaxed">
             Anvelopa „transformare digitală". Eligibilitate mai strictă, cerere mai lungă, scop mai mare. Cel mai potrivit pentru orașe și județe care au deja o strategie de digitalizare sau sunt în curs de a o dezvolta.
           </p>
         </div>
-        <div class="bg-cream-100 border border-forest-100 card-flat p-7">
-          <h3 class="font-semibold text-ink-900 mb-2">Programul Regional Nord-Vest 2021-2027</h3>
-          <p class="text-sm text-forest-700 mb-3">În funcție de proiect</p>
-          <p class="text-ink-700 text-[15px] leading-relaxed">
+        <div class="card-secondary">
+          <div class="flex items-start justify-between mb-4 pb-4 border-b border-forest-700">
+            <h3 class="font-sans font-semibold text-lg text-cream-50 tracking-tight">PR Nord-Vest 2021—2027</h3>
+            <div class="font-mono tabular text-eyebrow text-forest-300">Per proiect</div>
+          </div>
+          <p class="text-cream-100/80 text-body-sm leading-relaxed">
             Program operațional regional care acoperă județele Cluj, Bistrița-Năsăud, Maramureș, Sălaj, Satu Mare și Bihor. Specializare inteligentă, modernizarea administrației publice, servicii pentru cetățeni.
           </p>
         </div>
-        <div class="bg-cream-100 border border-forest-100 card-flat p-7">
-          <h3 class="font-semibold text-ink-900 mb-2">Securitate cibernetică NIS2 (Legea 124/2025)</h3>
-          <p class="text-sm text-forest-700 mb-3">Conformare obligatorie, variază în funcție de categoria entității</p>
-          <p class="text-ink-700 text-[15px] leading-relaxed">
+        <div class="card-secondary">
+          <div class="flex items-start justify-between mb-4 pb-4 border-b border-forest-700">
+            <h3 class="font-sans font-semibold text-lg text-cream-50 tracking-tight">NIS2 (Legea 124/2025)</h3>
+            <div class="font-mono tabular text-eyebrow text-forest-300">Pe categorie</div>
+          </div>
+          <p class="text-cream-100/80 text-body-sm leading-relaxed">
             Administrațiile clasificate ca „entități esențiale" în baza NIS2 au termene de conformare obligatorii. Linii de finanțare dedicate sunt anunțate prin DNSC. Merită evaluată clasificarea înainte ca termenul să devină strategie.
           </p>
         </div>
@@ -108,86 +239,113 @@ import { u } from '../lib/url';
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="border-t border-forest-100 py-20 bg-cream-100">
-    <div class="container-wide max-w-4xl">
-      <p class="text-sm uppercase tracking-widest text-forest-700 font-medium mb-4">Întrebări frecvente</p>
-      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-ink-900 mb-12 leading-tight">
-        Ce ni se întreabă cel mai des.
-      </h2>
+  <SectionBreath label="Întrebări frecvente" tone="light" />
 
-      <div class="space-y-8">
-        <div>
-          <h3 class="text-xl font-semibold text-ink-900 mb-3">„Avem deja Regista / Avansis / CityManager. De ce am avea nevoie de altceva?"</h3>
-          <p class="text-ink-700 leading-relaxed">
-            Probabil nu aveți nevoie de o înlocuire. Aveți nevoie ca sistemul pe care îl aveți să vorbească cu ANAF, cu cadastrul, cu stratul contabil, cu tablourile de bord pe care un Primar le citește efectiv. Majoritatea muncii noastre pentru primării este integrare și strat de date, nu înlocuire.
-          </p>
+  <!-- FAQ -->
+  <section class="surface-light section">
+    <div class="container-page">
+
+      <div class="grid md:grid-cols-12 gap-10 mb-12 md:mb-16">
+        <div class="md:col-span-4">
+          <div class="eyebrow text-forest-700 mb-3">004 · FAQ</div>
+          <h2 class="font-sans font-medium text-display-2 text-ink-900 leading-tight tracking-tight hang">
+            Ce ni se întreabă<br/>cel mai des.
+          </h2>
         </div>
-        <div>
-          <h3 class="text-xl font-semibold text-ink-900 mb-3">„Nu avem buget."</h3>
-          <p class="text-ink-700 leading-relaxed">
-            Merită verificat. Granturile DigiLocal, PNRR Componenta 7, Programul Regional Nord-Vest și liniile de conformare NIS2 au toate ferestre active sau iminente. Evaluarea noastră identifică liniile la care vă calificați în prezent. Dacă răspunsul este niciuna, vă spunem din prima zi.
-          </p>
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold text-ink-900 mb-3">„Sistemele noastre nu sunt online. Personalul nostru nu este pregătit."</h3>
-          <p class="text-ink-700 leading-relaxed">
-            Aceasta este exact poziția de pornire pentru care este construită evaluarea. Pregătirea personalului este inclusă în orice scop de implementare, iar munca tehnică este secvențiată astfel încât schimbarea operațională să fie graduală, nu bruscă.
-          </p>
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold text-ink-900 mb-3">„Cât durează efectiv?"</h3>
-          <p class="text-ink-700 leading-relaxed">
-            Evaluare: 1-2 săptămâni. Cerere de finanțare: 2-4 săptămâni. Implementare: 3-9 luni în funcție de scop. Mentenanță recurentă: continuu, după ce sistemul este în producție.
-          </p>
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold text-ink-900 mb-3">„Veți fragmenta contractul ca să se încadreze sub un prag?"</h3>
-          <p class="text-ink-700 leading-relaxed">
-            Nu. Articolul 11 din Legea 98/2016 interzice divizarea contractelor pentru a evita pragurile de achiziție și nu vom propune asta. Dacă scopul dvs. depășește un prag, derulăm procedura SEAP corectă pentru dimensiunea corectă. Durează cu câteva săptămâni mai mult și rămâne curată.
-          </p>
+      </div>
+
+      <div class="max-w-4xl">
+        <div class="space-y-8">
+          <div class="border-t border-forest-100 pt-8">
+            <h3 class="font-sans font-semibold text-xl text-ink-900 mb-3 tracking-tight">
+              „Avem deja Regista / Avansis / CityManager. De ce am avea nevoie de altceva?"
+            </h3>
+            <p class="text-ink-700 text-body leading-relaxed max-w-3xl">
+              Probabil nu aveți nevoie de o înlocuire. Aveți nevoie ca sistemul pe care îl aveți să vorbească cu ANAF, cu cadastrul, cu stratul contabil, cu tablourile de bord pe care un Primar le citește efectiv. Majoritatea muncii noastre pentru primării este integrare și strat de date, nu înlocuire.
+            </p>
+          </div>
+
+          <div class="border-t border-forest-100 pt-8">
+            <h3 class="font-sans font-semibold text-xl text-ink-900 mb-3 tracking-tight">
+              „Nu avem buget."
+            </h3>
+            <p class="text-ink-700 text-body leading-relaxed max-w-3xl">
+              Merită verificat. Granturile DigiLocal, PNRR Componenta 7, Programul Regional Nord-Vest și liniile de conformare NIS2 au toate ferestre active sau iminente. Evaluarea noastră identifică liniile la care vă calificați în prezent. Dacă răspunsul este niciuna, vă spunem din prima zi.
+            </p>
+          </div>
+
+          <div class="border-t border-forest-100 pt-8">
+            <h3 class="font-sans font-semibold text-xl text-ink-900 mb-3 tracking-tight">
+              „Sistemele noastre nu sunt online. Personalul nostru nu este pregătit."
+            </h3>
+            <p class="text-ink-700 text-body leading-relaxed max-w-3xl">
+              Aceasta este exact poziția de pornire pentru care este construită evaluarea. Pregătirea personalului este inclusă în orice scop de implementare, iar munca tehnică este secvențiată astfel încât schimbarea operațională să fie graduală, nu bruscă.
+            </p>
+          </div>
+
+          <div class="border-t border-forest-100 pt-8">
+            <h3 class="font-sans font-semibold text-xl text-ink-900 mb-3 tracking-tight">
+              „Cât durează efectiv?"
+            </h3>
+            <p class="text-ink-700 text-body leading-relaxed max-w-3xl">
+              Evaluare: 1-2 săptămâni. Cerere de finanțare: 2-4 săptămâni. Implementare: 3-9 luni în funcție de scop. Mentenanță recurentă: continuu, după ce sistemul este în producție.
+            </p>
+          </div>
+
+          <div class="border-t border-forest-100 pt-8">
+            <h3 class="font-sans font-semibold text-xl text-ink-900 mb-3 tracking-tight">
+              „Veți fragmenta contractul ca să se încadreze sub un prag?"
+            </h3>
+            <p class="text-ink-700 text-body leading-relaxed max-w-3xl">
+              Nu. Articolul 11 din Legea 98/2016 interzice divizarea contractelor pentru a evita pragurile de achiziție și nu vom propune asta. Dacă scopul dvs. depășește un prag, derulăm procedura SEAP corectă pentru dimensiunea corectă. Durează cu câteva săptămâni mai mult și rămâne curată.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Compliance bar -->
-  <section class="py-14 bg-forest-800 text-cream-50">
-    <div class="container-wide">
-      <div class="grid md:grid-cols-4 gap-6 text-center md:text-left">
+  <!-- Compliance ribbon -->
+  <section class="surface-dark py-12 md:py-16">
+    <div class="container-page">
+      <dl class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6">
         <div>
-          <div class="text-xs uppercase tracking-widest text-forest-300 mb-2">Achiziții</div>
-          <div class="font-medium">Înregistrat SEAP, DUAE-ready</div>
+          <dt class="eyebrow text-forest-300 mb-2">Achiziții</dt>
+          <dd class="text-cream-50 text-body font-medium">Înregistrat SEAP, DUAE-ready</dd>
         </div>
         <div>
-          <div class="text-xs uppercase tracking-widest text-forest-300 mb-2">Conformare legală</div>
-          <div class="font-medium">Specializat pe Legea 242/2022</div>
+          <dt class="eyebrow text-forest-300 mb-2">Conformare legală</dt>
+          <dd class="text-cream-50 text-body font-medium">Specializat pe Legea 242/2022</dd>
         </div>
         <div>
-          <div class="text-xs uppercase tracking-widest text-forest-300 mb-2">Integritate contractuală</div>
-          <div class="font-medium">Articolul 11, Legea 98/2016</div>
+          <dt class="eyebrow text-forest-300 mb-2">Integritate contractuală</dt>
+          <dd class="text-cream-50 text-body font-medium">Articolul 11, Legea 98/2016</dd>
         </div>
         <div>
-          <div class="text-xs uppercase tracking-widest text-forest-300 mb-2">Protecția datelor</div>
-          <div class="font-medium">GDPR, rezidență în România</div>
+          <dt class="eyebrow text-forest-300 mb-2">Protecția datelor</dt>
+          <dd class="text-cream-50 text-body font-medium">GDPR, rezidență în România</dd>
         </div>
-      </div>
+      </dl>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="py-24">
-    <div class="container-wide text-center max-w-2xl mx-auto">
-      <h2 class="text-3xl font-semibold tracking-tight text-ink-900 mb-6 leading-tight">
-        Merită o discuție de jumătate de oră?
+  <section class="surface-light section">
+    <div class="container-page text-center">
+      <div class="eyebrow text-forest-700 mb-6">005</div>
+      <h2 class="font-sans font-medium text-display-2 text-ink-900 leading-tight mb-10 hang max-w-2xl mx-auto tracking-tight">
+        Merită o discuție<br/>de jumătate de oră?
       </h2>
-      <p class="text-lg text-ink-600 mb-10">
+      <p class="text-body-lg text-ink-700 max-w-xl mx-auto mb-12">
         Spuneți-ne primăria, scopul aproximativ al ceea ce aveți în vedere, și ce s-a încercat înainte (dacă este cazul). Revenim cu liniile de finanțare care par a fi o potrivire și cu ce ar acoperi o evaluare.
       </p>
       <a href={u('/contact')} class="btn-primary">
         Începeți o discuție
-        <span aria-hidden="true">→</span>
+        <svg class="btn-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+          <path d="M0 5h12M8 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        </svg>
       </a>
     </div>
   </section>
+
 </BaseLayout>

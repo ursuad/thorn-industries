@@ -8,130 +8,210 @@ import { u } from '../../lib/url';
   description="Adrian Ursu founded Thorn to bring EU-grade engineering to Romanian public administration and B2B companies. Operated as a service of Tech Camp Pro SRL."
   lang="en"
 >
-  <!-- Page header -->
-  <section class="container-wide pt-20 pb-12">
-    <p class="text-sm uppercase tracking-widest text-forest-700 font-medium mb-6">About</p>
-    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-ink-900 leading-tight mb-6 max-w-3xl">
-      A small Romanian company taking a deliberate path.
-    </h1>
-    <p class="text-lg text-ink-700 max-w-2xl leading-relaxed">
-      Thorn was founded in 2026 to bring EU-grade data and software engineering to Romanian public administration and mid-size B2B companies. We're small by design and we plan to stay that way.
-    </p>
-  </section>
 
-  <!-- Why -->
-  <section class="border-t border-forest-100 py-20 bg-cream-100">
-    <div class="container-wide max-w-3xl">
-      <h2 class="text-3xl font-semibold tracking-tight text-ink-900 mb-6 leading-tight">
-        Why we exist
-      </h2>
-      <div class="space-y-5 text-ink-700 leading-relaxed">
-        <p>
-          Two observations led to this company.
-        </p>
-        <p>
-          The first: Romanian public administration has access to substantial digitalisation funding, mostly through PNRR, Regional Programmes and dedicated lines like DigiLocal. The money is often unspent, or spent on the wrong thing, because the gap between "we need to digitalise" and "here is a properly scoped project that earns the grant" is wider than it looks. Most consultancies either don't engage at this end of the market or they show up with a sales motion rather than an engineering one.
-        </p>
-        <p>
-          The second: there's a wave of mid-size Romanian and EU B2B companies sitting on substantial integration debt and reporting layers that nobody trusts. The work to fix this is well within the reach of a small senior engineering team. The market keeps offering them either large consultancies (expensive, generic) or single freelancers (good engineering, no continuity). There's a gap in the middle.
-        </p>
-        <p>
-          We work in that gap. Three services, plain pricing, named accountability. The same engineering quality that gets shipped at companies like Sainsbury's, Centrica and Toyota, applied at a scale and price point that mid-size Romanian and EU buyers can actually consume.
+  <!-- HERO -->
+  <section class="surface-light pt-12 md:pt-20 pb-16 md:pb-24">
+    <div class="container-page">
+      <div class="grid md:grid-cols-12 gap-y-8 md:gap-x-10">
+        <div class="md:col-span-9">
+          <div class="eyebrow text-forest-700 mb-8 md:mb-10">
+            <span class="font-mono">001</span>
+            <span class="mx-3 text-ink-300">·</span>
+            About
+          </div>
+          <h1 class="font-sans font-medium text-display-1 text-ink-900 hang tracking-tight">
+            A small<br/>Romanian company<br/>
+            <span class="text-ink-400">on a deliberate path.</span>
+          </h1>
+        </div>
+
+        <aside class="md:col-span-3 md:pt-32 md:border-l md:border-forest-100 md:pl-6">
+          <div class="eyebrow text-ink-500 mb-3">Founded</div>
+          <div class="font-mono tabular text-ink-900 text-body-sm mb-6">2026</div>
+
+          <div class="eyebrow text-ink-500 mb-3">Headcount</div>
+          <div class="font-mono tabular text-ink-900 text-body-sm mb-6">02</div>
+
+          <div class="eyebrow text-ink-500 mb-3">Operated by</div>
+          <div class="text-ink-900 text-body-sm leading-relaxed">
+            Tech Camp Pro SRL
+          </div>
+        </aside>
+      </div>
+
+      <div class="mt-12 md:mt-16 max-w-2xl">
+        <p class="text-body-lg text-ink-700 leading-relaxed">
+          Thorn was founded in 2026 to bring EU-grade data and software engineering to Romanian public administration and mid-size B2B companies. We're small by design and we plan to stay that way.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Team -->
-  <section class="py-20">
-    <div class="container-wide">
-      <div class="max-w-2xl mb-12">
-        <h2 class="text-3xl font-semibold tracking-tight text-ink-900 mb-4 leading-tight">
-          The team
-        </h2>
-        <p class="text-lg text-ink-600">
-          Small by design. Either of us is reachable directly from the first conversation.
-        </p>
+  <!-- Why we exist -->
+  <section class="surface-medium section">
+    <div class="container-page">
+      <div class="grid md:grid-cols-12 gap-10">
+        <div class="md:col-span-4">
+          <div class="eyebrow text-forest-700 mb-3">002 · Premise</div>
+          <h2 class="font-sans font-medium text-display-2 text-ink-900 leading-tight tracking-tight hang">
+            Why we exist.
+          </h2>
+        </div>
+        <div class="md:col-span-8 space-y-5">
+          <p class="text-body-lg text-ink-700 leading-relaxed">
+            Two observations led to this company.
+          </p>
+          <p class="text-body text-ink-700 leading-relaxed">
+            The first: Romanian public administration has access to substantial digitalisation funding, mostly through PNRR, Regional Programmes and dedicated lines like DigiLocal. The money is often unspent, or spent on the wrong thing, because the gap between "we need to digitalise" and "here is a properly scoped project that earns the grant" is wider than it looks. Most consultancies either don't engage at this end of the market or they show up with a sales motion rather than an engineering one.
+          </p>
+          <p class="text-body text-ink-700 leading-relaxed">
+            The second: there's a wave of mid-size Romanian and EU B2B companies sitting on substantial integration debt and reporting layers that nobody trusts. The work to fix this is well within the reach of a small senior engineering team. The market keeps offering them either large consultancies (expensive, generic) or single freelancers (good engineering, no continuity). There's a gap in the middle.
+          </p>
+          <p class="text-body text-ink-700 leading-relaxed">
+            We work in that gap. Three services, plain pricing, named accountability. The same engineering quality that gets shipped at companies like Sainsbury's, Centrica and Toyota, applied at a scale and price point that mid-size Romanian and EU buyers can actually consume.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team — dark inversion -->
+  <section class="surface-dark section">
+    <div class="container-page">
+      <div class="grid md:grid-cols-12 gap-10 mb-12 md:mb-16">
+        <div class="md:col-span-4">
+          <div class="eyebrow text-forest-300 mb-3">003 · Team</div>
+          <h2 class="font-sans font-medium text-display-2 text-cream-50 leading-tight tracking-tight hang">
+            Two people.<br/>
+            <span class="text-forest-300">Direct line each.</span>
+          </h2>
+        </div>
+        <div class="md:col-span-8 md:pt-4">
+          <p class="text-body-lg text-cream-100/80 leading-relaxed">
+            Small by design. Either of us is reachable directly from the first conversation.
+          </p>
+        </div>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8">
-        <article class="bg-cream-100 border border-forest-100 card-flat p-8">
-          <div class="w-20 h-20 rounded-full bg-forest-200 mb-5"></div>
-          <h3 class="text-2xl font-semibold text-ink-900 mb-1">Adrian Ursu</h3>
-          <p class="text-sm text-forest-700 mb-5">Founder · Principal architect</p>
-          <div class="space-y-3 text-ink-700 text-[15px] leading-relaxed">
-            <p>
-              Fifteen years building data platforms and integration architecture. Senior engineering at consultancies including OpenCredo and Mesh-AI, delivering for clients like Sainsbury's, Metro, Demica, Centrica and Toyota Connected Europe.
-            </p>
-            <p>
-              Technical focus: cloud data platforms (Snowflake, BigQuery), integration design (API-first, event-driven), architecture for systems that survive team turnover. Based in Cluj-Napoca. Leads technical delivery on every Thorn engagement.
-            </p>
+      <div class="grid md:grid-cols-2 gap-6 md:gap-12">
+
+        <article class="card-primary">
+          <div class="flex items-baseline justify-between mb-8 pb-6 border-b border-forest-700">
+            <div>
+              <div class="eyebrow text-forest-300 mb-2">Founder</div>
+              <h3 class="font-sans font-semibold text-3xl text-cream-50 leading-tight tracking-tight">Adrian Ursu</h3>
+            </div>
+            <div class="font-mono text-[11px] tracking-[0.15em] text-forest-400 text-right">
+              Cluj-Napoca<br/>
+              Principal architect
+            </div>
           </div>
+          <p class="text-cream-100/80 text-body-sm leading-relaxed mb-6">
+            Fifteen years building data platforms and integration architecture. Senior engineering at consultancies including OpenCredo and Mesh-AI, delivering for clients like Sainsbury's, Metro, Demica, Centrica and Toyota Connected Europe.
+          </p>
+          <p class="text-cream-100/80 text-body-sm leading-relaxed mb-6">
+            Technical focus: cloud data platforms (Snowflake, BigQuery), integration design (API-first, event-driven), architecture for systems that survive team turnover. Leads technical delivery on every Thorn engagement.
+          </p>
+          <dl class="grid grid-cols-[auto,1fr] gap-x-6 gap-y-2 text-body-sm font-mono pt-6 border-t border-forest-700">
+            <dt class="text-forest-400">Email</dt>
+            <dd>
+              <a href="mailto:adrian@thornindustries.ro" class="text-cream-50 no-underline hover:text-forest-300">
+                adrian@thornindustries.ro
+              </a>
+            </dd>
+          </dl>
         </article>
 
-        <article class="bg-cream-100 border border-forest-100 card-flat p-8">
-          <div class="w-20 h-20 rounded-full bg-forest-200 mb-5"></div>
-          <h3 class="text-2xl font-semibold text-ink-900 mb-1">Ioana Drăghici</h3>
-          <p class="text-sm text-forest-700 mb-5">Sales lead</p>
-          <div class="space-y-3 text-ink-700 text-[15px] leading-relaxed">
-            <p>
-              Business operations and sales background. Multi-year experience running a Romanian SME with day-to-day responsibility for client relationships, supplier coordination, and operational continuity through grant-funded growth.
-            </p>
-            <p>
-              Based in Iași. Primary contact for first-line discovery conversations and for public-sector engagements across Romania.
-            </p>
+        <article class="card-primary">
+          <div class="flex items-baseline justify-between mb-8 pb-6 border-b border-forest-700">
+            <div>
+              <div class="eyebrow text-forest-300 mb-2">Sales lead</div>
+              <h3 class="font-sans font-semibold text-3xl text-cream-50 leading-tight tracking-tight">Ioana Drăghici</h3>
+            </div>
+            <div class="font-mono text-[11px] tracking-[0.15em] text-forest-400 text-right">
+              Iași<br/>
+              Public sector
+            </div>
           </div>
+          <p class="text-cream-100/80 text-body-sm leading-relaxed mb-6">
+            Business operations and sales background. Multi-year experience running a Romanian SME with day-to-day responsibility for client relationships, supplier coordination, and operational continuity through grant-funded growth.
+          </p>
+          <p class="text-cream-100/80 text-body-sm leading-relaxed mb-6">
+            Primary contact for first-line discovery conversations and for public-sector engagements across Romania.
+          </p>
+          <dl class="grid grid-cols-[auto,1fr] gap-x-6 gap-y-2 text-body-sm font-mono pt-6 border-t border-forest-700">
+            <dt class="text-forest-400">Email</dt>
+            <dd>
+              <a href="mailto:ioana@thornindustries.ro" class="text-cream-50 no-underline hover:text-forest-300">
+                ioana@thornindustries.ro
+              </a>
+            </dd>
+          </dl>
         </article>
+
       </div>
     </div>
   </section>
 
   <!-- Company facts -->
-  <section class="border-t border-forest-100 py-16 bg-cream-100">
-    <div class="container-wide max-w-4xl">
-      <h2 class="text-2xl font-semibold tracking-tight text-ink-900 mb-8">Company facts</h2>
-      <div class="grid sm:grid-cols-2 gap-x-12 gap-y-6 text-[15px]">
-        <div>
-          <div class="text-sm text-ink-500 mb-1">Trading name</div>
-          <div class="text-ink-900 font-medium">Thorn</div>
+  <section class="surface-light section">
+    <div class="container-page">
+      <div class="grid md:grid-cols-12 gap-10">
+        <div class="md:col-span-4">
+          <div class="eyebrow text-forest-700 mb-3">004 · Company</div>
+          <h2 class="font-sans font-medium text-display-3 text-ink-900 leading-tight tracking-tight">
+            Facts.
+          </h2>
         </div>
-        <div>
-          <div class="text-sm text-ink-500 mb-1">Operated by</div>
-          <div class="text-ink-900 font-medium">Tech Camp Pro SRL</div>
-        </div>
-        <div>
-          <div class="text-sm text-ink-500 mb-1">VAT</div>
-          <div class="text-ink-900 font-medium">RO__________</div>
-        </div>
-        <div>
-          <div class="text-sm text-ink-500 mb-1">Registered office</div>
-          <div class="text-ink-900 font-medium">Str. Traian Vuia 95, Cluj-Napoca</div>
-        </div>
-        <div>
-          <div class="text-sm text-ink-500 mb-1">Founded</div>
-          <div class="text-ink-900 font-medium">2026</div>
-        </div>
-        <div>
-          <div class="text-sm text-ink-500 mb-1">SEAP status</div>
-          <div class="text-ink-900 font-medium">Registered, DUAE-ready</div>
+        <div class="md:col-span-8">
+          <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-6 text-body">
+            <div class="border-t border-forest-100 pt-4">
+              <dt class="eyebrow text-ink-500 mb-2">Trading name</dt>
+              <dd class="text-ink-900 font-medium">Thorn</dd>
+            </div>
+            <div class="border-t border-forest-100 pt-4">
+              <dt class="eyebrow text-ink-500 mb-2">Operated by</dt>
+              <dd class="text-ink-900 font-medium">Tech Camp Pro SRL</dd>
+            </div>
+            <div class="border-t border-forest-100 pt-4">
+              <dt class="eyebrow text-ink-500 mb-2">VAT</dt>
+              <dd class="font-mono tabular text-ink-900 font-medium">RO__________</dd>
+            </div>
+            <div class="border-t border-forest-100 pt-4">
+              <dt class="eyebrow text-ink-500 mb-2">Registered office</dt>
+              <dd class="text-ink-900 font-medium">Str. Traian Vuia 95, Cluj-Napoca</dd>
+            </div>
+            <div class="border-t border-forest-100 pt-4">
+              <dt class="eyebrow text-ink-500 mb-2">Founded</dt>
+              <dd class="font-mono tabular text-ink-900 font-medium">2026</dd>
+            </div>
+            <div class="border-t border-forest-100 pt-4">
+              <dt class="eyebrow text-ink-500 mb-2">SEAP status</dt>
+              <dd class="text-ink-900 font-medium">Registered, DUAE-ready</dd>
+            </div>
+          </dl>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="py-24">
-    <div class="container-wide text-center max-w-2xl mx-auto">
-      <h2 class="text-3xl font-semibold tracking-tight text-ink-900 mb-6 leading-tight">
+  <section class="surface-medium section">
+    <div class="container-page text-center">
+      <div class="eyebrow text-forest-700 mb-6">005</div>
+      <h2 class="font-sans font-medium text-display-2 text-ink-900 leading-tight mb-10 hang max-w-2xl mx-auto tracking-tight">
         Want to know more?
       </h2>
-      <p class="text-lg text-ink-600 mb-10">
+      <p class="text-body-lg text-ink-700 max-w-xl mx-auto mb-12">
         Write us with whatever's on your mind. We tend to reply within a working day.
       </p>
       <a href={u('/en/contact')} class="btn-primary">
         Start a conversation
-        <span aria-hidden="true">→</span>
+        <svg class="btn-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+          <path d="M0 5h12M8 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        </svg>
       </a>
     </div>
   </section>
+
 </BaseLayout>

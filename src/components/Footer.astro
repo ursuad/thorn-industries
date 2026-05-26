@@ -8,29 +8,39 @@ const { lang = 'ro' } = Astro.props;
 
 const text = {
   ro: {
-    tagline: 'Construim infrastructura digitală pentru administrația publică și companii B2B din România.',
+    tagline: 'Inginerie de date și software pentru administrația publică și companii B2B din România.',
     contact: 'Contact',
-    address: 'Sediu social: Str. Traian Vuia 95, Cluj-Napoca, jud. Cluj',
-    company: 'Operat de Tech Camp Pro SRL · CUI RO__________',
-    rights: '© 2026 Thorn. Toate drepturile rezervate.',
+    nav: 'Navigare',
+    company: 'Companie',
+    address: 'Str. Traian Vuia 95, Cluj-Napoca',
+    operatedBy: 'Operat de Tech Camp Pro SRL',
+    cui: 'CUI RO__________',
+    seap: 'Înregistrat SEAP',
+    rights: 'Toate drepturile rezervate.',
     links: [
       { href: '/servicii', label: 'Servicii' },
       { href: '/primarii', label: 'Primării' },
       { href: '/companii', label: 'Companii' },
+      { href: '/cum-lucram', label: 'Cum lucrăm' },
       { href: '/despre', label: 'Despre' },
       { href: '/contact', label: 'Contact' },
     ],
   },
   en: {
-    tagline: 'Digital infrastructure for Romanian public administration and B2B companies.',
+    tagline: 'Data and software engineering for Romanian public administration and B2B companies.',
     contact: 'Contact',
-    address: 'Registered office: Str. Traian Vuia 95, Cluj-Napoca, Romania',
-    company: 'Operated by Tech Camp Pro SRL · VAT RO__________',
-    rights: '© 2026 Thorn. All rights reserved.',
+    nav: 'Navigation',
+    company: 'Company',
+    address: 'Str. Traian Vuia 95, Cluj-Napoca',
+    operatedBy: 'Operated by Tech Camp Pro SRL',
+    cui: 'VAT RO__________',
+    seap: 'SEAP registered',
+    rights: 'All rights reserved.',
     links: [
       { href: '/en/services', label: 'Services' },
       { href: '/en/public-sector', label: 'Public sector' },
       { href: '/en/companies', label: 'Companies' },
+      { href: '/en/how-we-work', label: 'How we work' },
       { href: '/en/about', label: 'About' },
       { href: '/en/contact', label: 'Contact' },
     ],
@@ -38,30 +48,73 @@ const text = {
 };
 
 const t = text[lang];
+const year = new Date().getFullYear();
 ---
 
-<footer class="border-t border-forest-100 bg-cream-100 mt-24">
-  <div class="container-wide py-12 grid md:grid-cols-3 gap-10">
-    <div>
-      <div class="font-semibold text-forest-900 mb-3">Thorn</div>
-      <p class="text-sm text-ink-600 leading-relaxed">{t.tagline}</p>
+<footer class="surface-dark mt-section">
+  <div class="container-page py-16 md:py-20">
+
+    <!-- Top: oversized wordmark + tagline -->
+    <div class="grid md:grid-cols-12 gap-10 pb-12 border-b border-forest-700">
+      <div class="md:col-span-7">
+        <div class="font-sans font-semibold text-display-3 text-cream-50 leading-[1.05] mb-6 hang tracking-tight">
+          Thorn.
+        </div>
+        <p class="text-cream-100/80 text-body-lg leading-relaxed max-w-md">
+          {t.tagline}
+        </p>
+      </div>
+      <div class="md:col-span-5 md:pl-8 md:border-l md:border-forest-700">
+        <div class="eyebrow text-forest-300 mb-4">{t.contact}</div>
+        <a
+          href="mailto:contact@thornindustries.ro"
+          class="text-cream-50 text-body-lg no-underline hover:text-forest-300 transition-colors block mb-1"
+        >
+          contact@thornindustries.ro
+        </a>
+        <div class="text-cream-100/60 text-body-sm leading-relaxed">
+          {t.address}<br />
+          {t.operatedBy}
+        </div>
+      </div>
     </div>
-    <div>
-      <div class="text-sm font-medium text-ink-800 mb-3">{lang === 'ro' ? 'Navigare' : 'Navigation'}</div>
-      <ul class="space-y-2">
-        {t.links.map((l) => (
-          <li><a href={u(l.href)} class="text-sm text-ink-600 no-underline hover:text-forest-800">{l.label}</a></li>
-        ))}
-      </ul>
+
+    <!-- Middle: nav + company columns -->
+    <div class="grid md:grid-cols-12 gap-10 py-12 border-b border-forest-700">
+      <div class="md:col-span-6">
+        <div class="eyebrow text-forest-300 mb-5">{t.nav}</div>
+        <ul class="grid grid-cols-2 gap-y-2 gap-x-8">
+          {t.links.map((l) => (
+            <li>
+              <a
+                href={u(l.href)}
+                class="text-cream-100 text-body-sm no-underline hover:text-cream-50 transition-colors"
+              >
+                {l.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="md:col-span-6">
+        <div class="eyebrow text-forest-300 mb-5">{t.company}</div>
+        <dl class="grid grid-cols-2 gap-y-2 gap-x-8 text-body-sm">
+          <dt class="text-cream-100/60">{lang === 'ro' ? 'CUI' : 'VAT'}</dt>
+          <dd class="font-mono tabular text-cream-100">{t.cui.replace(/^(VAT |CUI )/, '')}</dd>
+          <dt class="text-cream-100/60">SEAP</dt>
+          <dd class="text-cream-100">{t.seap}</dd>
+          <dt class="text-cream-100/60">{lang === 'ro' ? 'GDPR' : 'GDPR'}</dt>
+          <dd class="text-cream-100">{lang === 'ro' ? 'Conform' : 'Compliant'}</dd>
+        </dl>
+      </div>
     </div>
-    <div>
-      <div class="text-sm font-medium text-ink-800 mb-3">{t.contact}</div>
-      <ul class="space-y-2 text-sm text-ink-600">
-        <li><a href="mailto:contact@thornindustries.ro" class="no-underline hover:text-forest-800">contact@thornindustries.ro</a></li>
-        <li>{t.address}</li>
-        <li class="text-ink-500">{t.company}</li>
-      </ul>
+
+    <!-- Bottom: tiny print -->
+    <div class="pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-body-sm text-cream-100/50">
+      <div>© {year} Thorn. {t.rights}</div>
+      <div class="font-mono text-[11px] tracking-[0.15em] uppercase">
+        v0.3
+      </div>
     </div>
   </div>
-  <div class="container-wide pb-8 text-xs text-ink-500">{t.rights}</div>
 </footer>
