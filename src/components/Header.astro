@@ -1,5 +1,5 @@
 ---
-import { u } from '../lib/url';
+import { u, altPath } from '../lib/url';
 
 interface Props {
   lang?: 'ro' | 'en';
@@ -25,7 +25,7 @@ const nav = {
 
 const contactLabel = lang === 'ro' ? 'Contact' : 'Contact';
 const items = nav[lang];
-const altHref = lang === 'ro' ? '/en/' : '/';
+const altHref = altPath(Astro.url.pathname); // same page in the other language
 const altLabel = lang === 'ro' ? 'EN' : 'RO';
 const homeHref = lang === 'ro' ? '/' : '/en/';
 const contactHref = lang === 'ro' ? '/contact' : '/en/contact';

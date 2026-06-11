@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { u, langPair } from '../lib/url';
 
 interface Props {
   title: string;
@@ -14,6 +15,10 @@ const {
   description = 'Platforme de date, software custom și consultanță în digitalizare pentru primării și companii B2B din România.',
   lang = 'ro',
 } = Astro.props;
+
+const site = (Astro.site?.toString() ?? 'https://thorn.ro').replace(/\/$/, '');
+const pair = langPair(Astro.url.pathname);
+const canonical = `${site}${u(lang === 'ro' ? pair.ro : pair.en)}`;
 ---
 
 <!doctype html>
@@ -24,10 +29,20 @@ const {
     <meta name="theme-color" content="#243e2f" />
     <meta name="description" content={description} />
 
+    <!-- Icons + canonical + language alternates -->
+    <link rel="icon" type="image/svg+xml" href={u('/favicon.svg')} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="ro" href={`${site}${u(pair.ro)}`} />
+    <link rel="alternate" hreflang="en" href={`${site}${u(pair.en)}`} />
+    <link rel="alternate" hreflang="x-default" href={`${site}${u(pair.ro)}`} />
+
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="Thorn" />
+    <meta property="og:locale" content={lang === 'ro' ? 'ro_RO' : 'en_GB'} />
 
     <!-- Preconnect to font CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
