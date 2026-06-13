@@ -57,8 +57,8 @@ const year = new Date().getFullYear();
     <!-- Top: oversized wordmark + tagline -->
     <div class="grid md:grid-cols-12 gap-10 pb-12 border-b border-forest-700">
       <div class="md:col-span-7">
-        <div class="font-sans font-semibold text-display-3 text-cream-50 leading-[1.05] mb-6 hang tracking-tight">
-          Thorn.
+        <div class="font-sans text-display-3 text-cream-50 leading-[1.05] mb-6 hang tracking-tight">
+          <span class="font-semibold">Thorn</span><span class="font-normal text-cream-100/70"> Industries.</span>
         </div>
         <p class="text-cream-100/80 text-body-lg leading-relaxed max-w-md">
           {t.tagline}
@@ -111,7 +111,7 @@ const year = new Date().getFullYear();
 
     <!-- Bottom: tiny print -->
     <div class="pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-body-sm text-cream-100/50">
-      <div>© {year} Thorn. {t.rights}</div>
+      <div>© {year} Thorn Industries. {t.rights}</div>
       <div class="font-mono text-[11px] tracking-[0.15em] uppercase">
         v0.3
       </div>
