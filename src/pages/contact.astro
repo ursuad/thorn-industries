@@ -103,6 +103,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="eyebrow text-forest-700 mb-6">003 · Trimiteți un mesaj</div>
 
           <form
+            id="contact-form"
             action="https://formspree.io/f/mzdqkjvw"
             method="POST"
             class="space-y-8"
@@ -156,10 +157,63 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               </p>
             </div>
           </form>
+
+          <!-- Success panel (revealed by JS after a successful submit) -->
+          <div id="contact-success" hidden class="rounded-xl border border-forest-200 bg-forest-50 p-8 md:p-10">
+            <div class="eyebrow text-forest-700 mb-4">Mesaj trimis</div>
+            <h2 class="font-sans font-medium text-2xl text-ink-900 tracking-tight mb-3">
+              Mulțumim. Am primit mesajul.
+            </h2>
+            <p class="text-body text-ink-700 leading-relaxed max-w-md">
+              Vă răspundem în aceeași zi lucrătoare, de regulă mai repede. Mesajul a ajuns într-o căsuță pe care o citim amândoi.
+            </p>
+          </div>
+
+          <!-- Error panel (revealed by JS if the submit fails) -->
+          <div id="contact-error" hidden class="rounded-xl border border-amber-200 bg-amber-50 p-6 mt-6">
+            <p class="text-body-sm text-ink-700 leading-relaxed">
+              Ceva nu a funcționat la trimitere. Încercați din nou sau scrieți-ne direct la
+              <a href="mailto:contact@thorn.ro" class="text-forest-800 underline">contact@thorn.ro</a>.
+            </p>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
+
+  <script>
+    // Submit the contact form in the background (AJAX) so the visitor stays
+    // on thorn.ro and sees an inline confirmation instead of Formspree's
+    // generic thank-you page. No external library — plain fetch.
+    const form = document.getElementById('contact-form') as HTMLFormElement | null;
+    const success = document.getElementById('contact-success');
+    const errorBox = document.getElementById('contact-error');
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errorBox?.setAttribute('hidden', '');
+      const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+      if (btn) { btn.disabled = true; btn.style.opacity = '0.6'; }
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+        if (res.ok) {
+          form.hidden = true;
+          success?.removeAttribute('hidden');
+          success?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          throw new Error('Formspree returned ' + res.status);
+        }
+      } catch (err) {
+        errorBox?.removeAttribute('hidden');
+        if (btn) { btn.disabled = false; btn.style.opacity = '1'; }
+      }
+    });
+  </script>
 
 </BaseLayout>
