@@ -1,4 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#243e2f"/>
-  <text x="32" y="45" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="40" font-weight="600" fill="#fdfcf8" text-anchor="middle">T</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Thorn Industries">
+  <path fill="#243e2f" fill-rule="evenodd" d="M14 0h36a14 14 0 0 1 14 14v36a14 14 0 0 1-14 14H14A14 14 0 0 1 0 50V14A14 14 0 0 1 14 0Zm-1 13v37h19V41l19-11V13H13Z"/>
 </svg>
