@@ -1,5 +1,6 @@
 ---
 import { u, altPath } from '../lib/url';
+import Logo from './Logo.astro';
 
 interface Props {
   lang?: 'ro' | 'en';
@@ -35,9 +36,10 @@ const menuCloseLabel = lang === 'ro' ? 'Închide' : 'Close';
 
 <header class="sticky top-0 z-40 border-b border-forest-100 bg-cream-50/85 backdrop-blur-md">
   <div class="container-page flex items-center justify-between py-4 md:py-5">
-    <!-- Wordmark -->
-    <a href={u(homeHref)} class="no-underline group flex items-baseline gap-2 -ml-1 px-1 py-1">
-      <span class="font-sans text-xl md:text-[22px] tracking-tight text-forest-900 leading-none">
+    <!-- Logo + wordmark -->
+    <a href={u(homeHref)} class="no-underline group flex items-center gap-2.5 -ml-1 px-1 py-1 text-forest-900">
+      <Logo class="h-6 w-6 md:h-[26px] md:w-[26px] shrink-0" />
+      <span class="font-sans text-xl md:text-[22px] tracking-tight leading-none">
         <span class="font-semibold">Thorn</span><span class="font-normal text-forest-500"> Industries</span>
       </span>
     </a>
@@ -97,8 +99,9 @@ const menuCloseLabel = lang === 'ro' ? 'Închide' : 'Close';
   <div class="container-page flex items-center justify-between py-4">
     <a
       href={u(homeHref)}
-      class="no-underline flex items-baseline gap-2 -ml-1 px-1 py-1 text-cream-50"
+      class="no-underline flex items-center gap-2.5 -ml-1 px-1 py-1 text-cream-50"
     >
+      <Logo class="h-6 w-6 shrink-0" />
       <span class="font-sans text-xl tracking-tight leading-none"><span class="font-semibold">Thorn</span><span class="font-normal opacity-70"> Industries</span></span>
     </a>
     <button

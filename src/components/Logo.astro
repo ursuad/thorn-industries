@@ -1,0 +1,25 @@
+---
+/**
+ * Thorn Industries mark. Inline SVG so it inherits `currentColor`
+ * (forest-900 in the header, cream-50 in the mobile drawer) and stays
+ * crisp at any size. Geometry matches public/favicon.svg.
+ */
+interface Props {
+  /** Tailwind size classes for the square mark, e.g. "h-6 w-6". */
+  class?: string;
+}
+const { class: cls = 'h-6 w-6' } = Astro.props;
+---
+
+<svg
+  class={cls}
+  viewBox="0 0 64 64"
+  fill="currentColor"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path
+    fill-rule="evenodd"
+    d="M14 0h36a14 14 0 0 1 14 14v36a14 14 0 0 1-14 14H14A14 14 0 0 1 0 50V14A14 14 0 0 1 14 0Zm-1 13v37h19V41l19-11V13H13Z"
+  />
+</svg>
