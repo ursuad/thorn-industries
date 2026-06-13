@@ -19,6 +19,10 @@ const {
 const site = (Astro.site?.toString() ?? 'https://thorn.ro').replace(/\/$/, '');
 const pair = langPair(Astro.url.pathname);
 const canonical = `${site}${u(lang === 'ro' ? pair.ro : pair.en)}`;
+
+// Cloudflare Web Analytics: token injected at build time via CF_ANALYTICS_TOKEN.
+// Absent (e.g. local dev or PR builds) -> snippet is simply not rendered.
+const cfAnalyticsToken = import.meta.env.CF_ANALYTICS_TOKEN ?? '';
 ---
 
 <!doctype html>
@@ -116,5 +120,14 @@ const canonical = `${site}${u(lang === 'ro' ? pair.ro : pair.en)}`;
         });
       });
     </script>
+
+    {cfAnalyticsToken && (
+      <script
+        is:inline
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon={`{"token": "${cfAnalyticsToken}"}`}
+      />
+    )}
   </body>
 </html>

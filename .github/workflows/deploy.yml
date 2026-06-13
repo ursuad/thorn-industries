@@ -28,6 +28,8 @@ jobs:
         env:
           BASE_PATH: ''
           SITE_URL: https://thorn.ro
+          # Cloudflare Web Analytics beacon token (repo secret). Empty if unset -> no beacon.
+          CF_ANALYTICS_TOKEN: ${{ secrets.CF_ANALYTICS_TOKEN }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
