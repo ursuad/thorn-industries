@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Contact · Thorn Industries"
-  description="Get in touch with Thorn. Email or contact form, replies within a working day."
+  description="Email us at contact@thorn.ro, or use the form on this page. We reply the same working day."
   lang="en"
 >
 
@@ -27,7 +27,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <aside class="md:col-span-3 md:pt-32 md:border-l md:border-forest-100 md:pl-6">
           <div class="eyebrow text-ink-500 mb-3">Reply time</div>
           <div class="text-ink-900 text-body-sm mb-6 leading-relaxed">
-            Within a working day,<br/>
+            Same working day,<br/>
             usually faster
           </div>
 
@@ -62,7 +62,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               <a href="mailto:contact@thorn.ro" class="font-sans font-semibold text-2xl text-ink-900 no-underline hover:text-forest-800 transition-colors tracking-tight block">
                 contact@thorn.ro
               </a>
-              <p class="text-body-sm text-ink-500 mt-2">Replies within a working day.</p>
+              <p class="text-body-sm text-ink-500 mt-2">We reply the same working day.</p>
             </div>
 
             <div class="pt-8 border-t border-forest-100">
@@ -71,8 +71,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                 ioana@thorn.ro
               </a>
               <p class="text-body-sm text-ink-500 mt-2">
-                Ioana Drăghici, Sales lead<br/>
-                Direct line for primării conversations
+                Ioana Drăghici, commercial side<br/>
+                Direct line for conversations with local councils
               </p>
             </div>
 
@@ -83,7 +83,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               </a>
               <p class="text-body-sm text-ink-500 mt-2">
                 Adrian Ursu, Founder & Principal architect<br/>
-                Direct line for technical scoping
+                Direct line for technical conversations
               </p>
             </div>
 
@@ -128,7 +128,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               <select id="topic" name="topic" class="form-select">
                 <option>Public-sector engagement</option>
                 <option>B2B data or integration work</option>
-                <option>Consultancy assessment</option>
+                <option>Technical assessment</option>
                 <option>General enquiry</option>
               </select>
             </div>
@@ -153,7 +153,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                 </svg>
               </button>
               <p class="text-body-sm text-ink-500 mt-6 max-w-md">
-                We reply directly, not through automated funnels. Your message goes to one inbox we both read.
+                We reply directly, not through automated systems. Your message goes to one inbox we both read.
               </p>
             </div>
           </form>
@@ -172,7 +172,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <!-- Error panel (revealed by JS if the submit fails) -->
           <div id="contact-error" hidden class="rounded-xl border border-amber-200 bg-amber-50 p-6 mt-6">
             <p class="text-body-sm text-ink-700 leading-relaxed">
-              Something went wrong sending that. Please try again, or email us directly at
+              We couldn't send that message. Please try again, or email us directly at
               <a href="mailto:contact@thorn.ro" class="text-forest-800 underline">contact@thorn.ro</a>.
             </p>
           </div>
@@ -185,7 +185,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <script>
     // Submit the contact form in the background (AJAX) so the visitor stays
     // on thorn.ro and sees an inline confirmation instead of Formspree's
-    // generic thank-you page. No external library — plain fetch.
+    // generic thank-you page. No external library, just plain fetch.
     const form = document.getElementById('contact-form') as HTMLFormElement | null;
     const success = document.getElementById('contact-success');
     const errorBox = document.getElementById('contact-error');
