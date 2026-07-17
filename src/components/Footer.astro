@@ -14,7 +14,8 @@ const text = {
     company: 'Companie',
     address: 'Str. Traian Vuia 95, Cluj-Napoca',
     operatedBy: 'Operat de Tech Camp Pro SRL',
-    cui: 'CUI RO__________',
+    cuiLabel: 'CUI',
+    cui: '53945382',
     seap: 'Înregistrați SEAP',
     rights: 'Toate drepturile rezervate.',
     links: [
@@ -33,7 +34,8 @@ const text = {
     company: 'Company',
     address: 'Str. Traian Vuia 95, Cluj-Napoca',
     operatedBy: 'Operated by Tech Camp Pro SRL',
-    cui: 'VAT RO__________',
+    cuiLabel: 'Company no.',
+    cui: '53945382',
     seap: 'SEAP registered',
     rights: 'All rights reserved.',
     links: [
@@ -99,8 +101,8 @@ const year = new Date().getFullYear();
       <div class="md:col-span-6">
         <div class="eyebrow text-forest-300 mb-5">{t.company}</div>
         <dl class="grid grid-cols-2 gap-y-2 gap-x-8 text-body-sm">
-          <dt class="text-cream-100/60">{lang === 'ro' ? 'CUI' : 'VAT'}</dt>
-          <dd class="font-mono tabular text-cream-100">{t.cui.replace(/^(VAT |CUI )/, '')}</dd>
+          <dt class="text-cream-100/60">{t.cuiLabel}</dt>
+          <dd class="font-mono tabular text-cream-100">{t.cui}</dd>
           <dt class="text-cream-100/60">SEAP</dt>
           <dd class="text-cream-100">{t.seap}</dd>
           <dt class="text-cream-100/60">{lang === 'ro' ? 'GDPR' : 'GDPR'}</dt>
