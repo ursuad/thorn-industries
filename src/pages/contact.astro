@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Contact · Thorn Industries"
-  description="Contactați Thorn. Email sau formular de contact, răspunsuri într-o zi lucrătoare."
+  description="Scrieți-ne direct, la contact@thorn.ro sau prin formularul de pe pagină. Răspundem în aceeași zi lucrătoare."
   lang="ro"
 >
 
@@ -41,7 +41,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div class="mt-12 md:mt-16 max-w-2xl">
         <p class="text-body-lg text-ink-700 leading-relaxed">
-          Cu cât sunteți mai concret, cu atât primul nostru răspuns vă va fi mai folositor. Două paragrafe care descriu problema sunt de ajuns ca să primiți un răspuns serios.
+          Cu cât scrieți mai concret, cu atât primul nostru răspuns e mai util. Două paragrafe despre problemă sunt de ajuns ca să primiți un răspuns serios.
         </p>
       </div>
     </div>
@@ -71,7 +71,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 ioana@thorn.ro
               </a>
               <p class="text-body-sm text-ink-500 mt-2">
-                Ioana Drăghici, Sales lead<br/>
+                Ioana Drăghici, partea comercială<br/>
                 Linia directă pentru discuții cu primării
               </p>
             </div>
@@ -82,8 +82,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 adrian@thorn.ro
               </a>
               <p class="text-body-sm text-ink-500 mt-2">
-                Adrian Ursu, Fondator și arhitect principal<br/>
-                Linia directă pentru definirea scopului tehnic
+                Adrian Ursu, fondator și arhitect principal<br/>
+                Linia directă pentru discuțiile tehnice
               </p>
             </div>
 
@@ -126,21 +126,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div>
               <label for="topic" class="form-label">Subiect</label>
               <select id="topic" name="topic" class="form-select">
-                <option>Angajament în sectorul public</option>
+                <option>Proiect în sectorul public</option>
                 <option>Date sau integrare B2B</option>
-                <option>Evaluare de consultanță</option>
+                <option>Evaluare tehnică</option>
                 <option>Întrebare generală</option>
               </select>
             </div>
 
             <div>
-              <label for="message" class="form-label">Ce aveți în minte?</label>
+              <label for="message" class="form-label">Despre ce e vorba?</label>
               <textarea
                 id="message"
                 name="message"
                 rows="6"
                 required
-                placeholder="Câteva paragrafe despre problemă, despre ce ați încercat și despre cum ar arăta succesul."
+                placeholder="Câteva paragrafe: care e problema, ce ați încercat până acum și cum ar arăta o rezolvare bună."
                 class="form-textarea"
               ></textarea>
             </div>
@@ -172,7 +172,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <!-- Error panel (revealed by JS if the submit fails) -->
           <div id="contact-error" hidden class="rounded-xl border border-amber-200 bg-amber-50 p-6 mt-6">
             <p class="text-body-sm text-ink-700 leading-relaxed">
-              Ceva nu a funcționat la trimitere. Încercați din nou sau scrieți-ne direct la
+              Nu am putut trimite mesajul. Încercați din nou sau scrieți-ne direct la
               <a href="mailto:contact@thorn.ro" class="text-forest-800 underline">contact@thorn.ro</a>.
             </p>
           </div>
@@ -185,7 +185,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <script>
     // Submit the contact form in the background (AJAX) so the visitor stays
     // on thorn.ro and sees an inline confirmation instead of Formspree's
-    // generic thank-you page. No external library — plain fetch.
+    // generic thank-you page. No external library, just plain fetch.
     const form = document.getElementById('contact-form') as HTMLFormElement | null;
     const success = document.getElementById('contact-success');
     const errorBox = document.getElementById('contact-error');
