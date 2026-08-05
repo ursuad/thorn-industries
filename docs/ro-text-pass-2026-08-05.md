@@ -1,4 +1,4 @@
-# thorn.ro — textele în română, pentru trecerea Ioanei (5 aug 2026)
+# thorn.ro — textele în română, pentru trecerea Ioanei (5 aug 2026, v2 — include modificările de azi)
 
 > Pentru fiecare pagină: textul actual, bloc cu bloc. Rescrieți liber, natural, sub fiecare bloc, după marcajul „IOANA:". Ce rămâne gol înseamnă că textul actual rămâne. Reguli: fără em dash, diacritice complete (ș și ț cu virgulă), dumneavoastră peste tot, ghilimele „așa". Nu adăugăm fapte noi (cifre, clienți, prețuri).
 
@@ -13,7 +13,7 @@
 IOANA:
 
 
-**[paragraf]** O firmă mică de inginerie din România, pentru administrația publică și pentru companii B2B medii. Trei servicii, prețuri publicate, un om care răspunde, cu nume și prenume. Munca o fac oamenii pe care îi puteți suna direct.
+**[paragraf]** O firmă mică de inginerie din România, pentru administrația publică și pentru companii B2B medii. Trei servicii, prețuri publicate, un om care răspunde, cu nume și prenume. Munca o fac oamenii pe care îi puteți suna direct. Lucrăm pe rezultat: stabilim împreună livrabilul și prețul, apoi îl livrăm.
 
 IOANA:
 
@@ -193,7 +193,7 @@ IOANA:
 IOANA:
 
 
-**[paragraf]** Nu vindem pachete. Cele mai multe proiecte încep cu o evaluare, pentru că limpezește lucrurile înainte să intre banii în joc. De acolo încolo construim ce e de construit și scoatem la lumină datele care contează. AI-ul nu se împiedică de model. Se împiedică de datele de dedesubt.
+**[paragraf]** Nu vindem pachete. Cele mai multe proiecte încep cu o evaluare, pentru că limpezește lucrurile înainte să intre banii în joc. De acolo încolo construim ce e de construit și scoatem la lumină datele care contează. AI-ul nu se împiedică de model. Se împiedică de datele de dedesubt. Lucrăm pe rezultat: stabilim împreună livrabilul, prețul și cine îl validează, apoi îl livrăm.
 
 IOANA:
 
@@ -233,7 +233,7 @@ IOANA:
 IOANA:
 
 
-**[paragraf]** Se încadrează în pragul de Achiziție Directă (până la 270.120 RON). O singură achiziție, fără divizarea contractului.
+**[paragraf]** Pentru sectorul public: se încadrează în pragul de Achiziție Directă (până la 270.120 RON), o singură achiziție, fără divizarea contractului. Pentru companii: contract direct, aceleași cifre.
 
 IOANA:
 
@@ -338,7 +338,7 @@ IOANA:
 IOANA:
 
 
-**[paragraf]** Pentru fiecare primărie. Găzduire, actualizări de securitate, actualizări cerute de lege, suport în timpul programului de lucru, două modificări mici pe trimestru.
+**[paragraf]** Pentru fiecare beneficiar. Găzduire, actualizări de securitate, actualizări cerute de lege, suport în timpul programului de lucru, două modificări mici pe trimestru.
 
 IOANA:
 
