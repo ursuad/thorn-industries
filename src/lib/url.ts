@@ -14,6 +14,7 @@ export function u(path: string): string {
 export const pagePairs: Record<string, string> = {
   '/': '/en/',
   '/servicii': '/en/services',
+  '/portofoliu': '/en/portfolio',
   '/primarii': '/en/public-sector',
   '/companii': '/en/companies',
   '/cum-lucram': '/en/how-we-work',

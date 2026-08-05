@@ -1,0 +1,203 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { u } from '../lib/url';
+import SectionBreath from '../components/SectionBreath.astro';
+---
+
+<BaseLayout
+  title="Portofoliu · Thorn Industries"
+  description="Platforme construite și operate de noi, live acum: Evenimente Cluj (agregare de date din 19 surse publice) și Earth Patchers (aplicație educațională bilingvă). Nu capturi de ecran. Linkuri."
+  lang="ro"
+>
+
+  <!-- HERO -->
+  <section class="surface-light pt-12 md:pt-20 pb-16 md:pb-24">
+    <div class="container-page">
+      <div class="eyebrow text-forest-700 mb-8 md:mb-10">
+        <span class="font-mono">001</span>
+        <span class="mx-3 text-ink-300">·</span>
+        Portofoliu
+      </div>
+      <h1 class="font-sans font-medium text-display-1 text-ink-900 hang max-w-4xl">
+        Lucruri pe care<br/>
+        le puteți deschide<br/>
+        <span class="text-ink-400">chiar acum.</span>
+      </h1>
+      <div class="mt-12 md:mt-16 max-w-2xl">
+        <p class="text-body-lg text-ink-700 leading-relaxed">
+          Nu vă arătăm capturi de ecran și promisiuni. Vă dăm linkuri. Platformele de mai jos sunt live, construite și operate de noi, de la cod până la găzduire.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE 1: EVENIMENTE CLUJ -->
+  <section class="surface-medium section">
+    <div class="container-page">
+      <div class="grid md:grid-cols-12 gap-10 mb-12 md:mb-16">
+        <div class="md:col-span-3">
+          <div class="eyebrow text-forest-700 mb-3">002</div>
+          <div class="text-ink-500 text-body-sm font-mono">Studiu de caz</div>
+        </div>
+        <div class="md:col-span-9">
+          <h2 class="font-sans font-medium text-display-2 text-ink-900 leading-[1.05] hang tracking-tight">
+            Evenimente Cluj.<br/>
+            <span class="text-ink-400">Agenda orașului, într-un singur loc.</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-10">
+        <div class="md:col-span-7">
+          <p class="text-body-lg text-ink-700 leading-relaxed mb-6">
+            Ce se întâmplă în oraș săptămâna asta? Răspunsul era împrăștiat pe zeci de site-uri, afișe și grupuri. Fiecare instituție publică în felul ei, iar o parte din agenda orașului nu ajungea nicăieri centralizat.
+          </p>
+          <p class="text-ink-700 text-body leading-relaxed mb-6">
+            Am construit un portal care adună automat evenimentele din 19 surse publice, elimină duplicatele și le publică într-o singură agendă. Biletele trec printr-o platformă de ticketing pe care o găzduim noi. Aproximativ 90 de evenimente live în acest moment.
+          </p>
+          <p class="text-ink-700 text-body leading-relaxed mb-10">
+            Aceeași inginerie o punem la lucru și pentru dvs.: colectăm date din surse care nu cooperează între ele, le curățăm, le deduplicăm și le publicăm. Totul auto-găzduit, fără abonamente la platforme străine.
+          </p>
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="https://evenimente.iotcafe.net" target="_blank" rel="noopener" class="btn-primary">
+              Deschideți portalul
+              <svg class="btn-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                <path d="M0 5h12M8 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              </svg>
+            </a>
+            <a href="https://events.iotcafe.net" target="_blank" rel="noopener" class="btn-secondary">
+              Platforma de bilete
+            </a>
+          </div>
+        </div>
+
+        <aside class="md:col-span-4 md:col-start-9 md:border-l md:border-forest-100 md:pl-6">
+          <dl class="space-y-6 text-body-sm">
+            <div>
+              <dt class="eyebrow text-ink-500 mb-2">Surse monitorizate</dt>
+              <dd class="font-mono tabular text-ink-900">19</dd>
+            </div>
+            <div>
+              <dt class="eyebrow text-ink-500 mb-2">Evenimente live</dt>
+              <dd class="font-mono tabular text-ink-900">~90</dd>
+            </div>
+            <div>
+              <dt class="eyebrow text-ink-500 mb-2">Ce a cerut</dt>
+              <dd class="text-ink-700 leading-relaxed">Colectare din surse eterogene, deduplicare, taxonomie de etichete, publicare automată</dd>
+            </div>
+            <div>
+              <dt class="eyebrow text-ink-500 mb-2">Găzduire</dt>
+              <dd class="text-ink-700 leading-relaxed">Self-hosted, pe infrastructura noastră</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <SectionBreath label="Al doilea studiu de caz" tone="light" />
+
+  <!-- CASE 2: EARTH PATCHERS -->
+  <section class="surface-light section">
+    <div class="container-page">
+      <div class="grid md:grid-cols-12 gap-10 mb-12 md:mb-16">
+        <div class="md:col-span-3">
+          <div class="eyebrow text-forest-700 mb-3">003</div>
+          <div class="text-ink-500 text-body-sm font-mono">Studiu de caz</div>
+        </div>
+        <div class="md:col-span-9">
+          <h2 class="font-sans font-medium text-display-2 text-ink-900 leading-[1.05] hang tracking-tight">
+            Earth Patchers.<br/>
+            <span class="text-ink-400">De la idee la aplicație live, în câteva zile.</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-10">
+        <div class="md:col-span-7">
+          <p class="text-body-lg text-ink-700 leading-relaxed mb-6">
+            Un proiect educațional avea nevoie de mai mult decât un site de prezentare: o aplicație în care copiii și familiile primesc misiuni pentru natură, le fac în lumea reală și primesc validare pentru ce au făcut.
+          </p>
+          <p class="text-ink-700 text-body leading-relaxed mb-6">
+            Am livrat aplicația completă: misiuni bilingve, română și engleză, flux de validare cu dovezi, panou de administrare din care echipa proiectului își editează singură conținutul, email de pe domeniul propriu și găzduire pe infrastructura noastră, cu copii de siguranță zilnice.
+          </p>
+          <p class="text-ink-700 text-body leading-relaxed mb-10">
+            De la specificații la aplicație live au trecut câteva zile. Apoi am iterat pe feedback real de la utilizatori, în aceeași săptămână. Așa arată „livrare" în practica noastră.
+          </p>
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="https://app.earthpatchers.org" target="_blank" rel="noopener" class="btn-primary">
+              Deschideți aplicația
+              <svg class="btn-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                <path d="M0 5h12M8 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <aside class="md:col-span-4 md:col-start-9 md:border-l md:border-forest-100 md:pl-6">
+          <dl class="space-y-6 text-body-sm">
+            <div>
+              <dt class="eyebrow text-ink-500 mb-2">Misiuni la lansare</dt>
+              <dd class="font-mono tabular text-ink-900">51, bilingve</dd>
+            </div>
+            <div>
+              <dt class="eyebrow text-ink-500 mb-2">Ce a cerut</dt>
+              <dd class="text-ink-700 leading-relaxed">Conturi, misiuni, validare cu dovezi, panou de administrare, email de pe domeniul propriu</dd>
+            </div>
+            <div>
+              <dt class="eyebrow text-ink-500 mb-2">Găzduire</dt>
+              <dd class="text-ink-700 leading-relaxed">Kubernetes, pe infrastructura noastră, cu backup zilnic</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENTERPRISE -->
+  <section class="surface-dark section">
+    <div class="container-page">
+      <div class="grid md:grid-cols-12 gap-10">
+        <div class="md:col-span-3">
+          <div class="eyebrow text-forest-300 mb-3">004 · Referințe enterprise</div>
+        </div>
+        <div class="md:col-span-9">
+          <h2 class="font-sans font-medium text-display-2 text-cream-50 leading-[1.05] hang tracking-tight mb-8">
+            Cincisprezece ani de platforme de date.<br/>
+            <span class="text-forest-300">Studiile de caz vi le prezentăm direct.</span>
+          </h2>
+          <p class="text-cream-100/80 text-body-lg leading-relaxed max-w-2xl mb-10">
+            Înainte de Thorn, munca noastră a livrat pentru Sainsbury's, Metro, Demica, Centrica și Toyota Connected Europe, prin firme de consultanță din Londra ca OpenCredo și Mesh-AI. Proiectele recente, inclusiv AI aplicat pe date de produs la scară enterprise, vi le prezentăm într-o discuție, cu cifre.
+          </p>
+          <a href={u('/contact')} class="btn-primary">
+            Programați o discuție
+            <svg class="btn-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+              <path d="M0 5h12M8 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="surface-light section">
+    <div class="container-page text-center">
+      <div class="eyebrow text-forest-700 mb-6">005</div>
+      <h2 class="font-sans font-medium text-display-2 text-ink-900 leading-[1.02] mb-10 hang max-w-3xl mx-auto tracking-tight">
+        Vreți așa ceva<br/>
+        <span class="text-forest-800">și pentru dvs.?</span>
+      </h2>
+      <p class="text-body-lg text-ink-700 max-w-xl mx-auto mb-12">
+        Scrieți-ne ce vreți să construiți. Vă spunem direct ce se poate, în cât timp și cu ce buget.
+      </p>
+      <a href={u('/contact')} class="btn-primary">
+        Contactați-ne
+        <svg class="btn-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+          <path d="M0 5h12M8 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

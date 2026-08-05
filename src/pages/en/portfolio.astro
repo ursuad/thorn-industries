@@ -1,0 +1,203 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { u } from '../../lib/url';
+import SectionBreath from '../../components/SectionBreath.astro';
+---
+
+<BaseLayout
+  title="Portfolio · Thorn Industries"
+  description="Platforms we built and operate, live now: Evenimente Cluj (data aggregation from 19 public sources) and Earth Patchers (bilingual educational app). No screenshots. Links."
+  lang="en"
+>
+
+  <!-- HERO -->
+  <section class="surface-light pt-12 md:pt-20 pb-16 md:pb-24">
+    <div class="container-page">
+      <div class="eyebrow text-forest-700 mb-8 md:mb-10">
+        <span class="font-mono">001</span>
+        <span class="mx-3 text-ink-300">·</span>
+        Portfolio
+      </div>
+      <h1 class="font-sans font-medium text-display-1 text-ink-900 hang max-w-4xl">
+        Things you can<br/>
+        open<br/>
+        <span class="text-ink-400">right now.</span>
+      </h1>
+      <div class="mt-12 md:mt-16 max-w-2xl">
+        <p class="text-body-lg text-ink-700 leading-relaxed">
+          We will not show you screenshots and promises. We give you links. The platforms below are live, built and operated by us, from the code to the hosting.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE 1: EVENIMENTE CLUJ -->
+  <section class="surface-medium section">
+    <div class="container-page">
+      <div class="grid md:grid-cols-12 gap-10 mb-12 md:mb-16">
+        <div class="md:col-span-3">
+          <div class="eyebrow text-forest-700 mb-3">002</div>
+          <div class="text-ink-500 text-body-sm font-mono">Case study</div>
+        </div>
+        <div class="md:col-span-9">
+          <h2 class="font-sans font-medium text-display-2 text-ink-900 leading-[1.05] hang tracking-tight">
+            Evenimente Cluj.<br/>
+            <span class="text-ink-400">The city's agenda, in one place.</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-10">
+        <div class="md:col-span-7">
+          <p class="text-body-lg text-ink-700 leading-relaxed mb-6">
+            What is on in the city this week? The answer was scattered across dozens of websites, posters and groups. Every venue publishes its own way, and part of the city's agenda never reached any central place.
+          </p>
+          <p class="text-ink-700 text-body leading-relaxed mb-6">
+            We built a portal that automatically collects events from 19 public sources, removes duplicates and publishes them as a single agenda. Tickets run through a ticketing platform we host ourselves. Roughly 90 events live right now.
+          </p>
+          <p class="text-ink-700 text-body leading-relaxed mb-10">
+            We put the same engineering to work for you: collecting data from sources that do not cooperate with each other, cleaning it, deduplicating it, publishing it. All self-hosted, no subscriptions to foreign platforms.
+          </p>
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="https://evenimente.iotcafe.net" target="_blank" rel="noopener" class="btn-primary">
+              Open the portal
+              <svg class="btn-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                <path d="M0 5h12M8 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              </svg>
+            </a>
+            <a href="https://events.iotcafe.net" target="_blank" rel="noopener" class="btn-secondary">
+              The ticketing platform
+            </a>
+          </div>
+        </div>
+
+        <aside class="md:col-span-4 md:col-start-9 md:border-l md:border-forest-100 md:pl-6">
+          <dl class="space-y-6 text-body-sm">
+            <div>
+              <dt class="eyebrow text-ink-500 mb-2">Sources monitored</dt>
+              <dd class="font-mono tabular text-ink-900">19</dd>
+            </div>
+            <div>
+              <dt class="eyebrow text-ink-500 mb-2">Events live</dt>
+              <dd class="font-mono tabular text-ink-900">~90</dd>
+            </div>
+            <div>
+              <dt class="eyebrow text-ink-500 mb-2">What it took</dt>
+              <dd class="text-ink-700 leading-relaxed">Collection from heterogeneous sources, deduplication, a tag taxonomy, automated publishing</dd>
+            </div>
+            <div>
+              <dt class="eyebrow text-ink-500 mb-2">Hosting</dt>
+              <dd class="text-ink-700 leading-relaxed">Self-hosted, on our infrastructure</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <SectionBreath label="Second case study" tone="light" />
+
+  <!-- CASE 2: EARTH PATCHERS -->
+  <section class="surface-light section">
+    <div class="container-page">
+      <div class="grid md:grid-cols-12 gap-10 mb-12 md:mb-16">
+        <div class="md:col-span-3">
+          <div class="eyebrow text-forest-700 mb-3">003</div>
+          <div class="text-ink-500 text-body-sm font-mono">Case study</div>
+        </div>
+        <div class="md:col-span-9">
+          <h2 class="font-sans font-medium text-display-2 text-ink-900 leading-[1.05] hang tracking-tight">
+            Earth Patchers.<br/>
+            <span class="text-ink-400">From idea to live app, in days.</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-10">
+        <div class="md:col-span-7">
+          <p class="text-body-lg text-ink-700 leading-relaxed mb-6">
+            An educational project needed more than a brochure site: an app where children and families receive missions for nature, do them in the real world and get validation for what they did.
+          </p>
+          <p class="text-ink-700 text-body leading-relaxed mb-6">
+            We delivered the complete app: bilingual missions in Romanian and English, a validation flow with proof, an admin panel from which the project team edits its own content, email from the project's own domain, and hosting on our infrastructure with daily backups.
+          </p>
+          <p class="text-ink-700 text-body leading-relaxed mb-10">
+            From specifications to a live app took days. Then we iterated on real user feedback, within the same week. This is what "delivery" looks like in our practice.
+          </p>
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="https://app.earthpatchers.org" target="_blank" rel="noopener" class="btn-primary">
+              Open the app
+              <svg class="btn-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                <path d="M0 5h12M8 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <aside class="md:col-span-4 md:col-start-9 md:border-l md:border-forest-100 md:pl-6">
+          <dl class="space-y-6 text-body-sm">
+            <div>
+              <dt class="eyebrow text-ink-500 mb-2">Missions at launch</dt>
+              <dd class="font-mono tabular text-ink-900">51, bilingual</dd>
+            </div>
+            <div>
+              <dt class="eyebrow text-ink-500 mb-2">What it took</dt>
+              <dd class="text-ink-700 leading-relaxed">Accounts, missions, proof-based validation, an admin panel, email on the project's own domain</dd>
+            </div>
+            <div>
+              <dt class="eyebrow text-ink-500 mb-2">Hosting</dt>
+              <dd class="text-ink-700 leading-relaxed">Kubernetes, on our infrastructure, daily backups</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENTERPRISE -->
+  <section class="surface-dark section">
+    <div class="container-page">
+      <div class="grid md:grid-cols-12 gap-10">
+        <div class="md:col-span-3">
+          <div class="eyebrow text-forest-300 mb-3">004 · Enterprise references</div>
+        </div>
+        <div class="md:col-span-9">
+          <h2 class="font-sans font-medium text-display-2 text-cream-50 leading-[1.05] hang tracking-tight mb-8">
+            Fifteen years of data platforms.<br/>
+            <span class="text-forest-300">The case studies we present to you directly.</span>
+          </h2>
+          <p class="text-cream-100/80 text-body-lg leading-relaxed max-w-2xl mb-10">
+            Before Thorn, our work delivered for Sainsbury's, Metro, Demica, Centrica and Toyota Connected Europe, through London consultancies like OpenCredo and Mesh-AI. The recent projects, including AI applied to product data at enterprise scale, we present in a conversation, with numbers.
+          </p>
+          <a href={u('/en/contact')} class="btn-primary">
+            Book a conversation
+            <svg class="btn-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+              <path d="M0 5h12M8 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="surface-light section">
+    <div class="container-page text-center">
+      <div class="eyebrow text-forest-700 mb-6">005</div>
+      <h2 class="font-sans font-medium text-display-2 text-ink-900 leading-[1.02] mb-10 hang max-w-3xl mx-auto tracking-tight">
+        Want something like this<br/>
+        <span class="text-forest-800">for yourself?</span>
+      </h2>
+      <p class="text-body-lg text-ink-700 max-w-xl mx-auto mb-12">
+        Write to us about what you want to build. We will tell you plainly what is possible, how long it takes and at what budget.
+      </p>
+      <a href={u('/en/contact')} class="btn-primary">
+        Contact us
+        <svg class="btn-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+          <path d="M0 5h12M8 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
