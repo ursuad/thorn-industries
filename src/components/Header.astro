@@ -38,13 +38,13 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isCurrent = (href: string) => currentPath === u(href).replace(/\/$/, '') || (href === '/' && currentPath === '');
 ---
 
-<header class="sticky top-0 z-40 border-b border-forest-100 bg-cream-50/85 backdrop-blur-md">
+<header class="sticky top-0 z-40 border-b border-[#e3e6ee] bg-white/90 backdrop-blur-md">
   <div class="container-page flex items-center justify-between py-4 md:py-5">
     <!-- Logo + wordmark -->
-    <a href={u(homeHref)} class="no-underline group flex items-center gap-2.5 -ml-1 px-1 py-1 text-forest-900">
+    <a href={u(homeHref)} class="no-underline group flex items-center gap-2.5 -ml-1 px-1 py-1 text-[#111318]">
       <Logo class="h-6 w-6 md:h-[26px] md:w-[26px] shrink-0" />
       <span class="font-sans text-xl md:text-[22px] tracking-tight leading-none">
-        <span class="font-semibold">Thorn</span><span class="font-normal text-forest-500"> Industries</span>
+        <span class="font-semibold">Thorn</span><span class="font-normal text-[#687083]"> Industries</span>
       </span>
     </a>
 
@@ -54,21 +54,20 @@ const isCurrent = (href: string) => currentPath === u(href).replace(/\/$/, '') |
         <a
           href={u(item.href)}
           aria-current={isCurrent(item.href) ? 'page' : undefined}
-          class="text-[14px] text-ink-700 no-underline hover:text-forest-900 transition-colors"
+          class="text-[14px] text-[#525866] no-underline hover:text-[#2f63ff] transition-colors"
         >
           {item.label}
         </a>
       ))}
       <a
         href={u(contactHref)}
-        class="text-[14px] text-ink-700 no-underline hover:text-forest-900 transition-colors"
+        class="text-[13px] font-semibold text-white bg-[#2f63ff] rounded px-4 py-2.5 no-underline hover:bg-[#1649e8] transition-colors"
       >
         {contactLabel}
       </a>
-      <span class="text-ink-300" aria-hidden="true">·</span>
       <a
         href={u(altHref)}
-        class="font-mono text-[11px] tracking-[0.15em] text-ink-500 no-underline hover:text-forest-800 transition-colors"
+        class="font-mono text-[11px] tracking-[0.15em] text-[#687083] no-underline hover:text-[#2f63ff] transition-colors"
         aria-label={lang === 'ro' ? 'Schimbați limba în engleză' : 'Switch language to Romanian'}
       >
         {altLabel}
@@ -79,7 +78,7 @@ const isCurrent = (href: string) => currentPath === u(href).replace(/\/$/, '') |
     <button
       id="mobile-nav-toggle"
       type="button"
-      class="md:hidden inline-flex items-center gap-2 -mr-2 px-3 py-2 text-ink-800 hover:text-forest-900"
+      class="md:hidden inline-flex items-center gap-2 -mr-2 px-3 py-2 text-[#252936] hover:text-[#2f63ff]"
       aria-expanded="false"
       aria-controls="mobile-nav-drawer"
       aria-label={menuOpenLabel}
@@ -96,7 +95,7 @@ const isCurrent = (href: string) => currentPath === u(href).replace(/\/$/, '') |
 <!-- Mobile drawer overlay (always rendered for transitions) -->
 <div
   id="mobile-nav-drawer"
-  class="fixed inset-0 z-50 bg-forest-900 text-cream-100 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
+  class="fixed inset-0 z-50 bg-[#111318] text-white opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
   role="dialog"
   aria-modal="true"
   aria-label={lang === 'ro' ? 'Navigare' : 'Navigation'}
