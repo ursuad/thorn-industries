@@ -6,7 +6,7 @@ import SectionBreath from '../components/SectionBreath.astro';
 
 <BaseLayout
   title="Servicii · Thorn Industries"
-  description="Trei servicii: evaluare de digitalizare cu preț fix, software și integrări, platforme de date și analiză. AI pe datele pe care le aveți deja. Prețuri publicate, potrivite cu pragurile de achiziție publică din România."
+  description="Trei servicii cu rezultate și prețuri clare: evaluare de digitalizare, software la comandă și integrări, platforme de date și analiză."
   lang="ro"
 >
 
@@ -21,14 +21,14 @@ import SectionBreath from '../components/SectionBreath.astro';
             Servicii
           </div>
           <h1 class="font-sans font-medium text-display-1 text-ink-900 hang tracking-tight">
-            Trei servicii.<br/>
-            <span class="text-ink-400">Fiecare cu prețul lui.</span>
+            De la evaluare la implementare.<br/>
+            <span class="text-ink-400">Servicii cu rezultate și prețuri clare.</span>
           </h1>
         </div>
 
         <aside class="md:col-span-3 md:pt-32 md:border-l md:border-forest-100 md:pl-6">
-          <div class="eyebrow text-ink-500 mb-3">Format</div>
-          <div class="font-mono tabular text-ink-900 text-body-sm mb-6">Preț fix, pe rezultat</div>
+          <div class="eyebrow text-ink-500 mb-3">Mod de lucru</div>
+          <div class="font-mono tabular text-ink-900 text-body-sm mb-6">Preț stabilit de la început</div>
 
           <div class="eyebrow text-ink-500 mb-3">Companii</div>
           <div class="text-ink-900 text-body-sm mb-6 leading-relaxed">
@@ -37,22 +37,27 @@ import SectionBreath from '../components/SectionBreath.astro';
 
           <div class="eyebrow text-ink-500 mb-3">Sector public</div>
           <div class="text-ink-900 text-body-sm mb-6 leading-relaxed">
-            Se depune prin SEAP<br/>
-            DUAE pregătit
+            Procedura de achiziție potrivită
           </div>
 
-          <div class="eyebrow text-ink-500 mb-3">Faza inițială</div>
+          <div class="eyebrow text-ink-500 mb-3">Primul pas</div>
           <div class="text-ink-900 text-body-sm leading-relaxed">
-            Plătită, nu gratuită
+            Evaluarea situației actuale
           </div>
         </aside>
       </div>
 
       <div class="mt-12 md:mt-16 max-w-2xl">
         <p class="text-body-lg text-ink-700 leading-relaxed">
-          Nu vindem pachete. Cele mai multe proiecte încep cu o evaluare, pentru că limpezește lucrurile înainte să intre banii în joc. De acolo încolo construim ce e de construit și scoatem la lumină datele care contează. AI-ul nu se împiedică de model. Se împiedică de datele de dedesubt. Lucrăm pe rezultat: stabilim împreună livrabilul, prețul și cine îl validează, apoi îl livrăm.
+          Începem prin a înțelege problema, sistemele existente și rezultatul pe care îl urmăriți. Stabilim ce vom face, cât va costa și ce vom livra. Apoi construim soluția și rămânem implicați până când aceasta funcționează în activitatea de zi cu zi.
         </p>
       </div>
+
+      <nav class="mt-10 grid sm:grid-cols-3 gap-3 max-w-4xl" aria-label="Navigare între servicii">
+        <a href="#consultanta" class="btn-secondary justify-center text-center">Evaluare de digitalizare</a>
+        <a href="#software" class="btn-secondary justify-center text-center">Software la comandă</a>
+        <a href="#date" class="btn-secondary justify-center text-center">Platforme de date</a>
+      </nav>
     </div>
   </section>
 
@@ -67,7 +72,7 @@ import SectionBreath from '../components/SectionBreath.astro';
             Evaluare de<br/>digitalizare
           </h2>
           <p class="text-ink-600 text-body leading-relaxed">
-            Un raport scris pe care Consiliul Local sau consiliul de administrație îl poate aproba direct. Una până la trei săptămâni. Preț fix, perimetru fix, livrabil fix. AI pe datele pe care le aveți deja. Nu începem prin a vă cere date noi, ne uităm la ce e deja în sistemele dvs.
+            Analizăm sistemele, fluxurile de date și blocajele organizației. În una până la trei săptămâni primiți un raport clar, cu priorități, costuri estimate și pașii recomandați. Evaluăm inclusiv ce puteți face cu AI folosind datele existente.
           </p>
         </div>
 
@@ -90,17 +95,17 @@ import SectionBreath from '../components/SectionBreath.astro';
               <div>
                 <div class="font-mono tabular text-2xl text-ink-900 mb-1">8K</div>
                 <div class="font-mono text-eyebrow text-ink-500 mb-2">RON</div>
-                <div class="text-body-sm text-ink-700 leading-snug">Perimetru mic:<br/>un sistem, o echipă</div>
+                <div class="text-body-sm text-ink-700 leading-snug">Un sistem,<br/>o singură echipă</div>
               </div>
               <div>
                 <div class="font-mono tabular text-2xl text-ink-900 mb-1">20-25K</div>
                 <div class="font-mono text-eyebrow text-ink-500 mb-2">RON</div>
-                <div class="text-body-sm text-ink-700 leading-snug">Organizație medie,<br/>proiect obișnuit</div>
+                <div class="text-body-sm text-ink-700 leading-snug">Mai multe fluxuri<br/>sau echipe</div>
               </div>
               <div>
                 <div class="font-mono tabular text-2xl text-ink-900 mb-1">40K</div>
                 <div class="font-mono text-eyebrow text-ink-500 mb-2">RON</div>
-                <div class="text-body-sm text-ink-700 leading-snug">Perimetru mare,<br/>sisteme multiple</div>
+                <div class="text-body-sm text-ink-700 leading-snug">Mai multe sisteme<br/>și departamente</div>
               </div>
             </div>
             <p class="mt-6 pt-6 border-t border-forest-100 text-body-sm text-ink-500 leading-relaxed">
@@ -109,7 +114,7 @@ import SectionBreath from '../components/SectionBreath.astro';
           </div>
 
           <div class="card-secondary">
-            <div class="eyebrow text-forest-700 mb-4">Ce nu facem aici</div>
+            <div class="eyebrow text-forest-700 mb-4">Ce nu facem</div>
             <ul class="space-y-3 text-ink-800 text-body-sm leading-relaxed">
               <li class="flex gap-3"><span class="text-rust-400 mt-2">·</span><span>Nu scriem cereri de finanțare hotărâte dinainte, fără o analiză independentă</span></li>
               <li class="flex gap-3"><span class="text-rust-400 mt-2">·</span><span>Nu certificăm munca altei firme de consultanță</span></li>
@@ -132,10 +137,10 @@ import SectionBreath from '../components/SectionBreath.astro';
           <div class="step-numeral-lg mb-6">02</div>
           <div class="eyebrow text-forest-700 mb-3">Software</div>
           <h2 class="font-sans font-semibold text-display-3 text-ink-900 leading-tight tracking-tight mb-5">
-            Software custom<br/>și integrări
+            Software la comandă<br/>și integrări
           </h2>
           <p class="text-ink-600 text-body leading-relaxed">
-            Module care rezolvă probleme reale din activitatea dvs. de zi cu zi. Construite pe standarde deschise. Mentenanța intră în contract.
+            Dezvoltăm aplicațiile și integrările de care aveți nevoie în activitatea de zi cu zi. Folosim standarde deschise, iar mentenanța este prevăzută clar în contract.
           </p>
         </div>
 
@@ -201,7 +206,7 @@ import SectionBreath from '../components/SectionBreath.astro';
             Platforme de date<br/>și analiză
           </h2>
           <p class="text-cream-100/70 text-body leading-relaxed">
-            Stratul de raportare care transformă datele din activitatea de zi cu zi în decizii de conducere.
+            Centralizăm datele din sistemele organizației și le transformăm în rapoarte și indicatori ușor de urmărit. Astfel, echipa de conducere lucrează cu informații actuale și coerente.
           </p>
         </div>
 
@@ -210,11 +215,11 @@ import SectionBreath from '../components/SectionBreath.astro';
             <div class="eyebrow text-forest-300 mb-4">Ce livrăm</div>
             <dl class="space-y-5 text-body-sm">
               <div class="grid sm:grid-cols-[200px,1fr] gap-3 sm:gap-6">
-                <dt class="text-forest-300 font-medium">Temelia de date</dt>
+                <dt class="text-forest-300 font-medium">Date centralizate și de încredere</dt>
                 <dd class="text-cream-100/80 leading-relaxed">Aducem datele din sistemele care le produc într-un singur loc de încredere, cu reguli de guvernanță de la bun început.</dd>
               </div>
               <div class="grid sm:grid-cols-[200px,1fr] gap-3 sm:gap-6">
-                <dt class="text-forest-300 font-medium">Tablouri de bord pe care oamenii chiar le deschid</dt>
+                <dt class="text-forest-300 font-medium">Rapoarte și indicatori ușor de urmărit</dt>
                 <dd class="text-cream-100/80 leading-relaxed">Construite împreună cu oamenii care le folosesc, nu pentru ei. Două-trei vizualizări de bază, actualizate în fiecare noapte, care răspund la întrebările puse în ședințe.</dd>
               </div>
               <div class="grid sm:grid-cols-[200px,1fr] gap-3 sm:gap-6">
@@ -225,21 +230,21 @@ import SectionBreath from '../components/SectionBreath.astro';
           </div>
 
           <div class="card-secondary">
-            <div class="eyebrow text-forest-300 mb-4">Tarife</div>
+            <div class="eyebrow text-forest-300 mb-4">Tarife orientative</div>
             <div class="grid sm:grid-cols-2 gap-6">
               <div>
                 <div class="font-mono tabular text-2xl text-cream-50 mb-1">€8K</div>
                 <div class="font-mono text-eyebrow text-forest-400 mb-2">De la</div>
-                <div class="text-body-sm text-cream-100/70 leading-snug">Un tablou de bord pilot,<br/>pe o singură sursă de date</div>
+                <div class="text-body-sm text-cream-100/70 leading-snug">Centralizarea unei surse de date<br/>și realizarea unui prim raport interactiv</div>
               </div>
               <div>
                 <div class="font-mono tabular text-2xl text-cream-50 mb-1">€60K</div>
                 <div class="font-mono text-eyebrow text-forest-400 mb-2">Până la</div>
-                <div class="text-body-sm text-cream-100/70 leading-snug">Platformă pe mai multe surse,<br/>cu guvernanță și 3-5 tablouri de bord</div>
+                <div class="text-body-sm text-cream-100/70 leading-snug">Platformă care reunește mai multe surse de date,<br/>cu reguli clare de acces și 3-5 rapoarte interactive</div>
               </div>
             </div>
             <p class="mt-6 pt-6 border-t border-forest-700 text-body-sm text-cream-100/60 leading-relaxed">
-              Pentru clienți din sectorul privat nu se aplică praguri SEAP. Pentru clienți din sectorul public potrivim aceeași lucrare cu procedura de achiziție corectă.
+              Prețul depinde de numărul surselor, volumul și calitatea datelor, frecvența actualizării și complexitatea rapoartelor. Pentru sectorul public stabilim procedura de achiziție potrivită valorii proiectului.
             </p>
           </div>
         </div>
@@ -255,7 +260,7 @@ import SectionBreath from '../components/SectionBreath.astro';
         Nu știți sigur ce serviciu vi se potrivește?
       </h2>
       <p class="text-body-lg text-ink-700 max-w-xl mx-auto mb-12">
-        Spuneți-ne problema, cu cuvintele dvs. Vă spunem cu ce am începe, cu ce nu și cât ar costa.
+        Descrieți-ne pe scurt ce doriți să îmbunătățiți. Vă spunem ce serviciu se potrivește, care este primul pas și la ce cost să vă așteptați.
       </p>
       <a href={u('/contact')} class="btn-primary">
         Începeți o discuție
