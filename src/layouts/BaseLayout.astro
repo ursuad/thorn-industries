@@ -8,17 +8,44 @@ interface Props {
   title: string;
   description?: string;
   lang?: 'ro' | 'en';
+  noindex?: boolean;
 }
 
 const {
   title,
-  description = 'Platforme de date, software custom și consultanță în digitalizare pentru primării și companii B2B din România.',
+  description = 'Platforme de date, software la comandă și consultanță în digitalizare pentru administrația publică și companii B2B.',
   lang = 'ro',
+  noindex = false,
 } = Astro.props;
 
 const site = (Astro.site?.toString() ?? 'https://thorn.ro').replace(/\/$/, '');
 const pair = langPair(Astro.url.pathname);
 const canonical = `${site}${u(lang === 'ro' ? pair.ro : pair.en)}`;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Thorn Industries',
+  legalName: 'Tech Camp Pro SRL',
+  url: site,
+  email: 'contact@thorn.ro',
+  taxID: '53945382',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Str. Traian Vuia 95',
+    addressLocality: 'Cluj-Napoca',
+    addressCountry: 'RO',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'România',
+  },
+  knowsAbout: [
+    'Inginerie de date',
+    'Dezvoltare software la comandă',
+    'Integrări software',
+    'Consultanță în digitalizare',
+  ],
+};
 
 // Cloudflare Web Analytics: token injected at build time via CF_ANALYTICS_TOKEN.
 // Absent (e.g. local dev or PR builds) -> snippet is simply not rendered.
@@ -32,6 +59,7 @@ const cfAnalyticsToken = import.meta.env.CF_ANALYTICS_TOKEN ?? '';
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#243e2f" />
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
 
     <!-- Icons + canonical + language alternates -->
     <link rel="icon" type="image/svg+xml" href={u('/favicon.svg')} />
@@ -47,6 +75,14 @@ const cfAnalyticsToken = import.meta.env.CF_ANALYTICS_TOKEN ?? '';
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content="Thorn Industries" />
     <meta property="og:locale" content={lang === 'ro' ? 'ro_RO' : 'en_GB'} />
+    <meta property="og:locale:alternate" content={lang === 'ro' ? 'en_GB' : 'ro_RO'} />
+
+    <!-- Link previews -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
     <!-- Preconnect to font CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
