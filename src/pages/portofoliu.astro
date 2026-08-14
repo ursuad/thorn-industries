@@ -46,6 +46,12 @@ import SectionBreath from '../components/SectionBreath.astro';
         </div>
       </div>
 
+      <figure class="project-showcase project-showcase-events mb-12 md:mb-16">
+        <div class="showcase-orbit"></div>
+        <img src={u('/images/evenimente-screen.jpg')} alt="Interfața platformei Evenimente Cluj" loading="lazy" />
+        <figcaption>19 surse publice centralizate</figcaption>
+      </figure>
+
       <div class="grid md:grid-cols-12 gap-10">
         <div class="md:col-span-7">
           <p class="text-body-lg text-ink-700 leading-relaxed mb-6">
@@ -107,6 +113,12 @@ import SectionBreath from '../components/SectionBreath.astro';
           </h2>
         </div>
       </div>
+
+      <figure class="project-showcase project-showcase-earth mb-12 md:mb-16">
+        <div class="showcase-orbit"></div>
+        <img src={u('/images/earthpatchers-screen.jpg')} alt="Interfața aplicației EarthPatchers" loading="lazy" />
+        <figcaption>51 de misiuni bilingve</figcaption>
+      </figure>
 
       <div class="grid md:grid-cols-12 gap-10">
         <div class="md:col-span-7">
@@ -196,3 +208,15 @@ import SectionBreath from '../components/SectionBreath.astro';
   </section>
 
 </BaseLayout>
+
+<style>
+  .project-showcase{height:560px;position:relative;overflow:hidden;border-radius:16px;display:flex;align-items:center;justify-content:center;isolation:isolate}
+  .project-showcase-events{background:radial-gradient(circle at 75% 20%,rgba(47,99,255,.22),transparent 30%),linear-gradient(145deg,#f7f9ff,#e8edff)}
+  .project-showcase-earth{background:radial-gradient(circle at 20% 78%,rgba(47,99,255,.2),transparent 28%),linear-gradient(145deg,#f8f9ff,#e5ebff)}
+  .project-showcase img{height:88%;width:auto;max-width:78%;object-fit:contain;position:relative;z-index:2;border-radius:9px;box-shadow:0 30px 65px rgba(35,50,94,.24);animation:portfolioFloat 6s ease-in-out infinite}
+  .project-showcase figcaption{position:absolute;left:28px;bottom:25px;z-index:3;background:#2f63ff;color:white;border-radius:5px;padding:11px 15px;font:500 10px "JetBrains Mono",monospace;letter-spacing:.08em}
+  .showcase-orbit{position:absolute;width:560px;height:310px;border:1px solid rgba(47,99,255,.28);border-radius:50%;transform:rotate(-14deg)}
+  .showcase-orbit:after{content:'';position:absolute;inset:45px -80px;border:1px dashed rgba(47,99,255,.28);border-radius:50%;transform:rotate(28deg)}
+  @keyframes portfolioFloat{0%,100%{transform:translateY(7px) rotateY(-1deg)}50%{transform:translateY(-11px) rotateY(1deg)}}
+  @media(max-width:640px){.project-showcase{height:430px;border-radius:10px}.project-showcase img{height:84%;max-width:86%}.project-showcase figcaption{left:16px;bottom:16px}.showcase-orbit{width:390px;height:220px}}
+</style>
