@@ -47,5 +47,18 @@ export function langPair(pathname: string): { ro: string; en: string } {
 export function altPath(pathname: string): string {
   const p = stripBase(pathname);
   const pair = langPair(pathname);
-  return p.startsWith('/en') ? pair.ro : pair.en;
+  // Match the /en/ segment, not the prefix: a future /energie must not read as English.
+  return p.startsWith('/en/') ? pair.ro : pair.en;
+}
+
+/**
+ * Absolute path in the form the host actually serves it (with trailing slash).
+ *
+ * GitHub Pages 301s /servicii to /servicii/, so canonical and hreflang have to
+ * carry the slash or they point at a redirect — which is also the form the
+ * sitemap emits.
+ */
+export function slashed(path: string): string {
+  const p = u(path);
+  return p.endsWith('/') ? p : `${p}/`;
 }

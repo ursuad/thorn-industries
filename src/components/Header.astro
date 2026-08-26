@@ -75,21 +75,31 @@ const isCurrent = (href: string) => currentPath === u(href).replace(/\/$/, '') |
       </a>
     </nav>
 
-    <!-- Mobile toggle -->
-    <button
-      id="mobile-nav-toggle"
-      type="button"
-      class="md:hidden inline-flex items-center gap-2 -mr-2 px-3 py-2 text-ink-800 hover:text-forest-900"
-      aria-expanded="false"
-      aria-controls="mobile-nav-drawer"
-      aria-label={menuOpenLabel}
-    >
-      <span class="text-eyebrow">{menuOpenLabel}</span>
-      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
-        <line x1="0" y1="2" x2="20" y2="2" stroke="currentColor" stroke-width="1.5" />
-        <line x1="0" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.5" />
-      </svg>
-    </button>
+    <!-- Mobile: language toggle sits outside the drawer, so a visitor who cannot
+         read the current language never has to open a menu to escape it. -->
+    <div class="md:hidden flex items-center gap-1 -mr-2">
+      <a
+        href={u(altHref)}
+        class="font-mono text-[12px] tracking-[0.15em] text-ink-500 no-underline border border-forest-200 rounded-full px-3 py-1.5 hover:text-forest-800 hover:border-forest-400 transition-colors"
+        aria-label={lang === 'ro' ? 'Schimbați limba în engleză' : 'Switch language to Romanian'}
+      >
+        {altLabel}
+      </a>
+      <button
+        id="mobile-nav-toggle"
+        type="button"
+        class="inline-flex items-center gap-2 px-3 py-2 text-ink-800 hover:text-forest-900"
+        aria-expanded="false"
+        aria-controls="mobile-nav-drawer"
+        aria-label={menuOpenLabel}
+      >
+        <span class="text-eyebrow">{menuOpenLabel}</span>
+        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
+          <line x1="0" y1="2" x2="20" y2="2" stroke="currentColor" stroke-width="1.5" />
+          <line x1="0" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.5" />
+        </svg>
+      </button>
+    </div>
   </div>
 </header>
 
