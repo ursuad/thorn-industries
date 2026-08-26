@@ -102,15 +102,9 @@ const cfAnalyticsToken = import.meta.env.CF_ANALYTICS_TOKEN ?? '';
 
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
-    <!-- Preconnect to font CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Inter + JetBrains Mono -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-    />
+    <!-- Inter + JetBrains Mono are self-hosted (src/styles/fonts.css). No font CDN:
+         loading them from Google handed every visitor's IP address to Google. -->
+    <link rel="preload" href={u('/fonts/inter-latin.woff2')} as="font" type="font/woff2" crossorigin />
 
     <title>{title}</title>
   </head>
