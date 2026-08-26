@@ -5,9 +5,9 @@ import SectionBreath from '../components/SectionBreath.astro';
 ---
 
 <BaseLayout
-  title="Portofoliu · Thorn Industries"
-  description="Aplicații construite și administrate de Thorn Industries: Evenimente Cluj, o platformă care centralizează date din 19 surse publice, și Earth Patchers, o aplicație educațională bilingvă."
-  lang="ro"
+  title="Portfolio · Thorn Industries"
+  description="Platforms we built and operate, live now: Evenimente Cluj (data aggregation from 19 public sources) and Earth Patchers (bilingual educational app). No screenshots. Links."
+  lang="en"
 >
 
   <!-- HERO -->
@@ -16,15 +16,16 @@ import SectionBreath from '../components/SectionBreath.astro';
       <div class="eyebrow text-forest-700 mb-8 md:mb-10">
         <span class="font-mono">001</span>
         <span class="mx-3 text-ink-300">·</span>
-        Portofoliu
+        Portfolio
       </div>
       <h1 class="font-sans font-medium text-display-1 text-ink-900 hang max-w-4xl">
-        Proiecte pe care<br/>
-        <span class="text-ink-400">le puteți vedea în funcțiune.</span>
+        Things you can<br/>
+        open<br/>
+        <span class="text-ink-400">right now.</span>
       </h1>
       <div class="mt-12 md:mt-16 max-w-2xl">
         <p class="text-body-lg text-ink-700 leading-relaxed">
-          Mai jos găsiți aplicații construite și administrate de noi. Le puteți deschide, testa și vedea cum funcționează în condiții reale.
+          We will not show you screenshots and promises. We give you links. The platforms below are live, built and operated by us, from the code to the hosting.
         </p>
       </div>
     </div>
@@ -36,12 +37,12 @@ import SectionBreath from '../components/SectionBreath.astro';
       <div class="grid md:grid-cols-12 gap-10 mb-12 md:mb-16">
         <div class="md:col-span-3">
           <div class="eyebrow text-forest-700 mb-3">002</div>
-          <div class="text-ink-500 text-body-sm font-mono">Studiu de caz</div>
+          <div class="text-ink-500 text-body-sm font-mono">Case study</div>
         </div>
         <div class="md:col-span-9">
           <h2 class="font-sans font-medium text-display-2 text-ink-900 leading-[1.05] hang tracking-tight">
             Evenimente Cluj.<br/>
-            <span class="text-ink-400">Agenda orașului, centralizată automat.</span>
+            <span class="text-ink-400">The city's agenda, in one place.</span>
           </h2>
         </div>
       </div>
@@ -49,23 +50,23 @@ import SectionBreath from '../components/SectionBreath.astro';
       <div class="grid md:grid-cols-12 gap-10">
         <div class="md:col-span-7">
           <p class="text-body-lg text-ink-700 leading-relaxed mb-6">
-            Informațiile despre evenimente erau răspândite pe site-urile instituțiilor, ale organizatorilor și în diferite comunități online. Pentru locuitori era dificil să afle, într-un singur loc, ce se întâmplă în oraș.
+            What is on in the city this week? The answer was scattered across dozens of websites, posters and groups. Every venue publishes its own way, and part of the city's agenda never reached any central place.
           </p>
           <p class="text-ink-700 text-body leading-relaxed mb-6">
-            Am construit o platformă care colectează automat evenimente din 19 surse publice, elimină înregistrările duplicate și publică informațiile într-o agendă unică. Platforma include și un sistem de emitere și administrare a biletelor, găzduit de noi.
+            We built a portal that automatically collects events from 19 public sources, removes duplicates and publishes them as a single agenda. Tickets run through a ticketing platform we host ourselves. Roughly 90 events live right now.
           </p>
           <p class="text-ink-700 text-body leading-relaxed mb-10">
-            Același tip de soluție poate centraliza informații din surse diferite, le poate verifica și publica automat într-un format ușor de folosit.
+            We put the same engineering to work for you: collecting data from sources that do not cooperate with each other, cleaning it, deduplicating it, publishing it. All self-hosted, no subscriptions to foreign platforms.
           </p>
           <div class="flex flex-wrap items-center gap-3">
             <a href="https://evenimente.iotcafe.net" target="_blank" rel="noopener" class="btn-primary">
-              Deschideți portalul
+              Open the portal
               <svg class="btn-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
                 <path d="M0 5h12M8 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/>
               </svg>
             </a>
             <a href="https://events.iotcafe.net" target="_blank" rel="noopener" class="btn-secondary">
-              Platforma de bilete
+              The ticketing platform
             </a>
           </div>
         </div>
@@ -73,16 +74,20 @@ import SectionBreath from '../components/SectionBreath.astro';
         <aside class="md:col-span-4 md:col-start-9 md:border-l md:border-forest-100 md:pl-6">
           <dl class="space-y-6 text-body-sm">
             <div>
-              <dt class="eyebrow text-ink-500 mb-2">Surse monitorizate</dt>
+              <dt class="eyebrow text-ink-500 mb-2">Sources monitored</dt>
               <dd class="font-mono tabular text-ink-900">19</dd>
             </div>
             <div>
-              <dt class="eyebrow text-ink-500 mb-2">Ce a cerut</dt>
-              <dd class="text-ink-700 leading-relaxed">Colectare din surse eterogene, deduplicare, taxonomie de etichete, publicare automată</dd>
+              <dt class="eyebrow text-ink-500 mb-2">Events live</dt>
+              <dd class="font-mono tabular text-ink-900">~90</dd>
             </div>
             <div>
-              <dt class="eyebrow text-ink-500 mb-2">Găzduire</dt>
-              <dd class="text-ink-700 leading-relaxed">Self-hosted, pe infrastructura noastră</dd>
+              <dt class="eyebrow text-ink-500 mb-2">What it took</dt>
+              <dd class="text-ink-700 leading-relaxed">Collection from heterogeneous sources, deduplication, a tag taxonomy, automated publishing</dd>
+            </div>
+            <div>
+              <dt class="eyebrow text-ink-500 mb-2">Hosting</dt>
+              <dd class="text-ink-700 leading-relaxed">Self-hosted, on our infrastructure</dd>
             </div>
           </dl>
         </aside>
@@ -90,7 +95,7 @@ import SectionBreath from '../components/SectionBreath.astro';
     </div>
   </section>
 
-  <SectionBreath label="Al doilea studiu de caz" tone="light" />
+  <SectionBreath label="Second case study" tone="light" />
 
   <!-- CASE 2: EARTH PATCHERS -->
   <section class="surface-light section">
@@ -98,12 +103,12 @@ import SectionBreath from '../components/SectionBreath.astro';
       <div class="grid md:grid-cols-12 gap-10 mb-12 md:mb-16">
         <div class="md:col-span-3">
           <div class="eyebrow text-forest-700 mb-3">003</div>
-          <div class="text-ink-500 text-body-sm font-mono">Studiu de caz</div>
+          <div class="text-ink-500 text-body-sm font-mono">Case study</div>
         </div>
         <div class="md:col-span-9">
           <h2 class="font-sans font-medium text-display-2 text-ink-900 leading-[1.05] hang tracking-tight">
             Earth Patchers.<br/>
-            <span class="text-ink-400">O platformă educațională construită și lansată în câteva zile.</span>
+            <span class="text-ink-400">From idea to live app, in days.</span>
           </h2>
         </div>
       </div>
@@ -111,17 +116,17 @@ import SectionBreath from '../components/SectionBreath.astro';
       <div class="grid md:grid-cols-12 gap-10">
         <div class="md:col-span-7">
           <p class="text-body-lg text-ink-700 leading-relaxed mb-6">
-            Proiectul avea nevoie de o aplicație în care copiii și familiile să primească misiuni pentru protejarea naturii, să le realizeze în lumea reală și să trimită dovezi pentru validare.
+            An educational project needed more than a brochure site: an app where children and families receive missions for nature, do them in the real world and get validation for what they did.
           </p>
           <p class="text-ink-700 text-body leading-relaxed mb-6">
-            Am construit aplicația în română și engleză, sistemul de conturi și validare, precum și un panou din care echipa poate administra singură conținutul. Platforma este găzduită și monitorizată de noi, cu copii de siguranță zilnice.
+            We delivered the complete app: bilingual missions in Romanian and English, a validation flow with proof, an admin panel from which the project team edits its own content, email from the project's own domain, and hosting on our infrastructure with daily backups.
           </p>
           <p class="text-ink-700 text-body leading-relaxed mb-10">
-            După lansare, am îmbunătățit aplicația pe baza feedbackului primit de la utilizatori.
+            From specifications to a live app took days. Then we iterated on real user feedback, within the same week. This is what "delivery" looks like in our practice.
           </p>
           <div class="flex flex-wrap items-center gap-3">
             <a href="https://app.earthpatchers.org" target="_blank" rel="noopener" class="btn-primary">
-              Deschideți aplicația
+              Open the app
               <svg class="btn-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
                 <path d="M0 5h12M8 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/>
               </svg>
@@ -132,16 +137,16 @@ import SectionBreath from '../components/SectionBreath.astro';
         <aside class="md:col-span-4 md:col-start-9 md:border-l md:border-forest-100 md:pl-6">
           <dl class="space-y-6 text-body-sm">
             <div>
-              <dt class="eyebrow text-ink-500 mb-2">Misiuni la lansare</dt>
-              <dd class="font-mono tabular text-ink-900">51, bilingve</dd>
+              <dt class="eyebrow text-ink-500 mb-2">Missions at launch</dt>
+              <dd class="font-mono tabular text-ink-900">51, bilingual</dd>
             </div>
             <div>
-              <dt class="eyebrow text-ink-500 mb-2">Ce a cerut</dt>
-              <dd class="text-ink-700 leading-relaxed">Conturi, misiuni, validare cu dovezi, panou de administrare, email de pe domeniul propriu</dd>
+              <dt class="eyebrow text-ink-500 mb-2">What it took</dt>
+              <dd class="text-ink-700 leading-relaxed">Accounts, missions, proof-based validation, an admin panel, email on the project's own domain</dd>
             </div>
             <div>
-              <dt class="eyebrow text-ink-500 mb-2">Găzduire</dt>
-              <dd class="text-ink-700 leading-relaxed">Kubernetes, pe infrastructura noastră, cu backup zilnic</dd>
+              <dt class="eyebrow text-ink-500 mb-2">Hosting</dt>
+              <dd class="text-ink-700 leading-relaxed">Kubernetes, on our infrastructure, daily backups</dd>
             </div>
           </dl>
         </aside>
@@ -154,18 +159,18 @@ import SectionBreath from '../components/SectionBreath.astro';
     <div class="container-page">
       <div class="grid md:grid-cols-12 gap-10">
         <div class="md:col-span-3">
-          <div class="eyebrow text-forest-300 mb-3">004 · Referințe enterprise</div>
+          <div class="eyebrow text-forest-300 mb-3">004 · Enterprise references</div>
         </div>
         <div class="md:col-span-9">
           <h2 class="font-sans font-medium text-display-2 text-cream-50 leading-[1.05] hang tracking-tight mb-8">
-            Experiență în platforme de date<br/>
-            <span class="text-forest-300">pentru organizații mari.</span>
+            Fifteen years of data platforms.<br/>
+            <span class="text-forest-300">The case studies we present to you directly.</span>
           </h2>
           <p class="text-cream-100/80 text-body-lg leading-relaxed max-w-2xl mb-10">
-            Înainte de lansarea Thorn, am lucrat la proiecte pentru Sainsbury's, Metro, Demica, Centrica și Toyota Connected Europe, prin firme de consultanță precum OpenCredo și Mesh-AI. Experiența acumulată în platforme de date și AI este aplicată acum proiectelor Thorn.
+            Before Thorn, our work delivered for Sainsbury's, Metro, Demica, Centrica and Toyota Connected Europe, through London consultancies like OpenCredo and Mesh-AI. The recent projects, including AI applied to product data at enterprise scale, we present in a conversation, with numbers.
           </p>
           <a href={u('/contact')} class="btn-primary">
-            Programați o discuție
+            Book a conversation
             <svg class="btn-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
               <path d="M0 5h12M8 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/>
             </svg>
@@ -180,14 +185,14 @@ import SectionBreath from '../components/SectionBreath.astro';
     <div class="container-page text-center">
       <div class="eyebrow text-forest-700 mb-6">005</div>
       <h2 class="font-sans font-medium text-display-2 text-ink-900 leading-[1.02] mb-10 hang max-w-3xl mx-auto tracking-tight">
-        Aveți în plan<br/>
-        <span class="text-forest-800">un proiect asemănător?</span>
+        Want something like this<br/>
+        <span class="text-forest-800">for yourself?</span>
       </h2>
       <p class="text-body-lg text-ink-700 max-w-xl mx-auto mb-12">
-        Descrieți-ne pe scurt ce doriți să construiți. Vă spunem ce presupune proiectul, cât poate dura și care este bugetul orientativ.
+        Write to us about what you want to build. We will tell you plainly what is possible, how long it takes and at what budget.
       </p>
       <a href={u('/contact')} class="btn-primary">
-        Contactați-ne
+        Contact us
         <svg class="btn-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
           <path d="M0 5h12M8 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/>
         </svg>

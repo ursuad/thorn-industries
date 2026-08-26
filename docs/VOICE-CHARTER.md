@@ -371,8 +371,8 @@ The site renders the literal unfilled placeholder `RO__________` in **four** pla
 |---|---|---|---|
 | `src/components/Footer.astro` | `text.ro.cui` | **`CUI`** | **`53945382`** |
 | `src/components/Footer.astro` | `text.en.cui` | **`Company no.`** | **`53945382`** |
-| `src/pages/despre.astro` | `dt` „CUI" / `dd` | **`CUI`** | **`53945382`** |
-| `src/pages/en/about.astro` | `dt` currently reads **`VAT`** | **`Company no.`** (change the `dt`) | **`53945382`** |
+| `src/pages/ro/despre.astro` | `dt` „CUI" / `dd` | **`CUI`** | **`53945382`** |
+| `src/pages/about.astro` | `dt` currently reads **`VAT`** | **`Company no.`** (change the `dt`) | **`53945382`** |
 
 ### The three strings that must never ship
 

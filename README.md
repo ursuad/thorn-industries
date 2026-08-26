@@ -10,8 +10,8 @@ npm install   # one-off
 npm run dev   # http://localhost:4321/
 ```
 
-- RO is at `/` (primary)
-- EN is at `/en/` (toggle in header)
+- EN is at `/` (primary)
+- RO is at `/ro/` (toggle in header)
 
 ## Production build
 
@@ -37,9 +37,9 @@ src/
 │   ├── Header.astro       # nav + lang toggle
 │   └── Footer.astro       # contact + nav + company info
 ├── pages/
-│   ├── index.astro        # RO home (primary entry)
-│   └── en/
-│       └── index.astro    # EN home
+│   ├── index.astro        # EN home (primary entry)
+│   └── ro/
+│       └── index.astro    # RO home
 └── styles/
     └── global.css         # Tailwind base + custom components (btn-primary, btn-ghost)
 ```
@@ -48,9 +48,9 @@ src/
 
 For now copy lives inline in each `.astro` page. Workflow:
 
-1. Adrian drafts EN copy first in the `/en/` route
+1. Adrian drafts EN copy first in the `/` route
 2. EN copy goes through Gemini/GPT translation prompt (see `../copy/translation-prompt.md` — to be created)
-3. Romanian draft lands in the `/` route
+3. Romanian draft lands in the `/ro/` route
 4. Ioana copy-edits RO for native tone before publish
 
 ## Pages to build (v1 scope)
