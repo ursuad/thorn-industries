@@ -9,6 +9,8 @@ interface Props {
   description?: string;
   lang?: 'ro' | 'en';
   noindex?: boolean;
+  /** Link-preview card. Base-relative; resolved to an absolute URL below. */
+  image?: string;
 }
 
 const {
@@ -16,11 +18,14 @@ const {
   description = 'Platforme de date, software la comandă și consultanță în digitalizare pentru administrația publică și companii B2B.',
   lang = 'ro',
   noindex = false,
+  image = '/og-default.png',
 } = Astro.props;
 
 const site = (Astro.site?.toString() ?? 'https://thorn.ro').replace(/\/$/, '');
 const pair = langPair(Astro.url.pathname);
 const canonical = `${site}${u(lang === 'ro' ? pair.ro : pair.en)}`;
+// WhatsApp, Slack and Teams only fetch absolute og:image URLs.
+const ogImage = `${site}${u(image)}`;
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
@@ -37,14 +42,22 @@ const structuredData = {
   },
   areaServed: {
     '@type': 'Country',
-    name: 'România',
+    name: lang === 'ro' ? 'România' : 'Romania',
   },
-  knowsAbout: [
-    'Inginerie de date',
-    'Dezvoltare software la comandă',
-    'Integrări software',
-    'Consultanță în digitalizare',
-  ],
+  knowsAbout:
+    lang === 'ro'
+      ? [
+          'Inginerie de date',
+          'Dezvoltare software la comandă',
+          'Integrări software',
+          'Consultanță în digitalizare',
+        ]
+      : [
+          'Data engineering',
+          'Custom software development',
+          'Software integrations',
+          'Digitalisation consultancy',
+        ],
 };
 
 // Cloudflare Web Analytics: token injected at build time via CF_ANALYTICS_TOKEN.
@@ -76,11 +89,16 @@ const cfAnalyticsToken = import.meta.env.CF_ANALYTICS_TOKEN ?? '';
     <meta property="og:site_name" content="Thorn Industries" />
     <meta property="og:locale" content={lang === 'ro' ? 'ro_RO' : 'en_GB'} />
     <meta property="og:locale:alternate" content={lang === 'ro' ? 'en_GB' : 'ro_RO'} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Thorn Industries" />
 
     <!-- Link previews -->
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
 
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
