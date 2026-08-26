@@ -146,7 +146,7 @@ const isCurrent = (href: string) => (currentPath || '/') === (u(href).replace(/\
             aria-current={isCurrent(item.href) ? 'page' : undefined}
             class="font-sans text-3xl md:text-4xl font-medium tracking-tight text-cream-50 no-underline flex items-baseline gap-4 py-3 hover:text-forest-300 transition-colors"
           >
-            <span class="font-mono text-[12px] tracking-[0.15em] text-forest-400 w-8">
+            <span class="font-mono text-[12px] tracking-[0.15em] text-forest-300 w-8">
               {String(i + 1).padStart(2, '0')}
             </span>
             <span>{item.label}</span>
@@ -159,7 +159,7 @@ const isCurrent = (href: string) => (currentPath || '/') === (u(href).replace(/\
           aria-current={isCurrent(contactHref) ? 'page' : undefined}
           class="font-sans text-3xl md:text-4xl font-medium tracking-tight text-cream-50 no-underline flex items-baseline gap-4 py-3 hover:text-forest-300 transition-colors"
         >
-          <span class="font-mono text-[12px] tracking-[0.15em] text-forest-400 w-8">
+          <span class="font-mono text-[12px] tracking-[0.15em] text-forest-300 w-8">
             {String(items.length + 1).padStart(2, '0')}
           </span>
           <span>{contactLabel}</span>

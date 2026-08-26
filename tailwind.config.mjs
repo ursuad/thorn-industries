@@ -32,7 +32,7 @@ export default {
           700: '#3d3d3d',
           600: '#525252',
           500: '#6b6b6b',
-          400: '#9a9a9a',
+          400: '#8a8a8a', // darkened 2026-08-26: #9a9a9a gave 2.63:1 on cream, under the 3:1 WCAG AA floor for large text
           300: '#c2c2c2',
         },
         // Rust accent — used sparingly for editorial moments
