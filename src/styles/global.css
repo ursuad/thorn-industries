@@ -273,6 +273,15 @@
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
   .scroll-lock { overflow: hidden; }
+
+  /* Off-screen until focused by keyboard (WCAG 2.4.1 Bypass Blocks). */
+  .skip-link {
+    @apply absolute left-4 z-[60] -translate-y-24 rounded-b-lg bg-forest-800 px-5 py-3 text-cream-50 no-underline;
+    transition: transform 150ms ease;
+  }
+  .skip-link:focus {
+    @apply translate-y-0;
+  }
 }
 
 /* ============================================

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#243e2f"/>
+
+  <!-- subtle corner rule, mirrors the site's hairline borders -->
+  <rect x="0" y="0" width="1200" height="6" fill="#4d7a5c"/>
+
+  <!-- mark -->
+  <g transform="translate(96, 150) scale(1.75)">
+    <path fill="#fdfcf8" fill-rule="evenodd"
+      d="M14 0h36a14 14 0 0 1 14 14v36a14 14 0 0 1-14 14H14A14 14 0 0 1 0 50V14A14 14 0 0 1 14 0Zm-1 13v37h19V41l19-11V13H13Z"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="96" y="360" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="86" letter-spacing="-2">
+    <tspan fill="#fdfcf8" font-weight="600">Thorn</tspan><tspan dx="26" fill="#9ebca7" font-weight="400">Industries</tspan>
+  </text>
+
+  <!-- hairline -->
+  <rect x="96" y="410" width="1008" height="1" fill="#2c4d39"/>
+
+  <!-- footer row -->
+  <text x="96" y="470" font-family="JetBrains Mono, SF Mono, Menlo, monospace" font-size="26" letter-spacing="3" fill="#9ebca7">thorn.ro</text>
+  <text x="1104" y="470" text-anchor="end" font-family="JetBrains Mono, SF Mono, Menlo, monospace" font-size="26" letter-spacing="3" fill="#6e987c">CLUJ-NAPOCA</text>
+</svg>

@@ -2,13 +2,15 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { u, langPair } from '../lib/url';
+import { u, langPair, slashed } from '../lib/url';
 
 interface Props {
   title: string;
   description?: string;
   lang?: 'ro' | 'en';
   noindex?: boolean;
+  /** Link-preview card. Base-relative; resolved to an absolute URL below. */
+  image?: string;
 }
 
 const {
@@ -16,11 +18,14 @@ const {
   description = 'Platforme de date, software la comandă și consultanță în digitalizare pentru administrația publică și companii B2B.',
   lang = 'ro',
   noindex = false,
+  image = '/og-default.png',
 } = Astro.props;
 
 const site = (Astro.site?.toString() ?? 'https://thorn.ro').replace(/\/$/, '');
 const pair = langPair(Astro.url.pathname);
-const canonical = `${site}${u(lang === 'ro' ? pair.ro : pair.en)}`;
+const canonical = `${site}${slashed(lang === 'ro' ? pair.ro : pair.en)}`;
+// WhatsApp, Slack and Teams only fetch absolute og:image URLs.
+const ogImage = `${site}${u(image)}`;
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
@@ -37,14 +42,22 @@ const structuredData = {
   },
   areaServed: {
     '@type': 'Country',
-    name: 'România',
+    name: lang === 'ro' ? 'România' : 'Romania',
   },
-  knowsAbout: [
-    'Inginerie de date',
-    'Dezvoltare software la comandă',
-    'Integrări software',
-    'Consultanță în digitalizare',
-  ],
+  knowsAbout:
+    lang === 'ro'
+      ? [
+          'Inginerie de date',
+          'Dezvoltare software la comandă',
+          'Integrări software',
+          'Consultanță în digitalizare',
+        ]
+      : [
+          'Data engineering',
+          'Custom software development',
+          'Software integrations',
+          'Digitalisation consultancy',
+        ],
 };
 
 // Cloudflare Web Analytics: token injected at build time via CF_ANALYTICS_TOKEN.
@@ -64,9 +77,9 @@ const cfAnalyticsToken = import.meta.env.CF_ANALYTICS_TOKEN ?? '';
     <!-- Icons + canonical + language alternates -->
     <link rel="icon" type="image/svg+xml" href={u('/favicon.svg')} />
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang="ro" href={`${site}${u(pair.ro)}`} />
-    <link rel="alternate" hreflang="en" href={`${site}${u(pair.en)}`} />
-    <link rel="alternate" hreflang="x-default" href={`${site}${u(pair.ro)}`} />
+    <link rel="alternate" hreflang="ro" href={`${site}${slashed(pair.ro)}`} />
+    <link rel="alternate" hreflang="en" href={`${site}${slashed(pair.en)}`} />
+    <link rel="alternate" hreflang="x-default" href={`${site}${slashed(pair.en)}`} />
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
@@ -76,11 +89,16 @@ const cfAnalyticsToken = import.meta.env.CF_ANALYTICS_TOKEN ?? '';
     <meta property="og:site_name" content="Thorn Industries" />
     <meta property="og:locale" content={lang === 'ro' ? 'ro_RO' : 'en_GB'} />
     <meta property="og:locale:alternate" content={lang === 'ro' ? 'en_GB' : 'ro_RO'} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Thorn Industries" />
 
     <!-- Link previews -->
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
 
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
@@ -97,8 +115,11 @@ const cfAnalyticsToken = import.meta.env.CF_ANALYTICS_TOKEN ?? '';
     <title>{title}</title>
   </head>
   <body class="min-h-screen flex flex-col">
+    <a href="#main" class="skip-link">
+      {lang === 'ro' ? 'Sari la conținut' : 'Skip to content'}
+    </a>
     <Header lang={lang} />
-    <main class="flex-1">
+    <main id="main" class="flex-1">
       <slot />
     </main>
     <Footer lang={lang} />
