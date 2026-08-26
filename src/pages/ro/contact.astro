@@ -4,8 +4,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Contact · Thorn Industries"
-  description="Email us at contact@thorn.ro, or use the form on this page. We reply the same working day."
-  lang="en"
+  description="Scrieți-ne la contact@thorn.ro sau prin formularul de pe pagină. Vă răspundem direct, de regulă în aceeași zi lucrătoare."
+  lang="ro"
 >
 
   <!-- HERO -->
@@ -19,29 +19,29 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             Contact
           </div>
           <h1 class="font-sans font-medium text-display-1 text-ink-900 hang tracking-tight">
-            Tell us what<br/>
-            <span class="text-ink-400">you're working on.</span>
+            Spuneți-ne<br/>
+            <span class="text-ink-400">ce aveți în plan.</span>
           </h1>
         </div>
 
         <aside class="md:col-span-3 md:pt-32 md:border-l md:border-forest-100 md:pl-6">
-          <div class="eyebrow text-ink-500 mb-3">Reply time</div>
+          <div class="eyebrow text-ink-500 mb-3">Timp de răspuns</div>
           <div class="text-ink-900 text-body-sm mb-6 leading-relaxed">
-            Same working day,<br/>
-            usually faster
+            De regulă,<br/>
+            în aceeași zi lucrătoare
           </div>
 
-          <div class="eyebrow text-ink-500 mb-3">Routing</div>
+          <div class="eyebrow text-ink-500 mb-3">Contact</div>
           <div class="text-ink-900 text-body-sm leading-relaxed">
-            Goes to one inbox<br/>
-            we both read
+            Direct cu<br/>
+            echipa Thorn
           </div>
         </aside>
       </div>
 
       <div class="mt-12 md:mt-16 max-w-2xl">
         <p class="text-body-lg text-ink-700 leading-relaxed">
-          The more concrete you are, the more useful our first reply will be. A two-paragraph description of the problem is plenty to get a real answer back.
+          Descrieți-ne pe scurt situația actuală, rezultatul dorit și orice termen important. Câteva paragrafe sunt suficiente pentru a începe o discuție utilă.
         </p>
       </div>
     </div>
@@ -52,9 +52,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <div class="container-page">
       <div class="grid md:grid-cols-12 gap-10 md:gap-16">
 
-        <!-- Direct channels -->
+        <!-- Canale directe -->
         <div class="md:col-span-5">
-          <div class="eyebrow text-forest-700 mb-6">002 · Direct channels</div>
+          <div class="eyebrow text-forest-700 mb-6">002 · Canale directe</div>
 
           <div class="space-y-10">
             <div>
@@ -62,37 +62,37 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               <a href="mailto:contact@thorn.ro" class="font-sans font-semibold text-2xl text-ink-900 no-underline hover:text-forest-800 transition-colors tracking-tight block">
                 contact@thorn.ro
               </a>
-              <p class="text-body-sm text-ink-500 mt-2">We reply the same working day.</p>
+              <p class="text-body-sm text-ink-500 mt-2">Pentru întrebări generale și proiecte noi.</p>
             </div>
 
             <div class="pt-8 border-t border-forest-100">
-              <div class="eyebrow text-ink-500 mb-3">Public-sector enquiries</div>
+              <div class="eyebrow text-ink-500 mb-3">Business Development Manager</div>
               <a href="mailto:ioana@thorn.ro" class="font-sans font-medium text-lg text-ink-900 no-underline hover:text-forest-800 transition-colors block">
                 ioana@thorn.ro
               </a>
               <p class="text-body-sm text-ink-500 mt-2">
-                Ioana Drăghici, commercial side<br/>
-                Direct line for conversations with local councils
+                Ioana Drăghici<br/>
+                Parteneriate și relația cu clienții
               </p>
             </div>
 
             <div class="pt-8 border-t border-forest-100">
-              <div class="eyebrow text-ink-500 mb-3">Technical & B2B</div>
+              <div class="eyebrow text-ink-500 mb-3">Fondator și arhitect principal</div>
               <a href="mailto:adrian@thorn.ro" class="font-sans font-medium text-lg text-ink-900 no-underline hover:text-forest-800 transition-colors block">
                 adrian@thorn.ro
               </a>
               <p class="text-body-sm text-ink-500 mt-2">
-                Adrian Ursu, Founder & Principal architect<br/>
-                Direct line for technical conversations
+                Adrian Ursu<br/>
+                Discuții tehnice, date, integrări și software
               </p>
             </div>
 
             <div class="pt-8 border-t border-forest-100">
-              <div class="eyebrow text-ink-500 mb-3">Registered office</div>
+              <div class="eyebrow text-ink-500 mb-3">Sediu social</div>
               <p class="text-ink-700 text-body-sm leading-relaxed">
                 Tech Camp Pro SRL<br/>
                 Str. Traian Vuia 95<br/>
-                Cluj-Napoca, Romania
+                Cluj-Napoca, România
               </p>
             </div>
           </div>
@@ -100,7 +100,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
         <!-- Contact form -->
         <div class="md:col-span-7">
-          <div class="eyebrow text-forest-700 mb-6">003 · Send a message</div>
+          <div class="eyebrow text-forest-700 mb-6">003 · Trimiteți un mesaj</div>
 
           <form
             id="contact-form"
@@ -108,71 +108,76 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             method="POST"
             class="space-y-8"
           >
+            <div class="sr-only" aria-hidden="true">
+              <label for="website">Nu completați acest câmp</label>
+              <input id="website" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
+            </div>
             <div>
-              <label for="name" class="form-label">Your name</label>
-              <input id="name" name="name" type="text" required class="form-input" />
+              <label for="name" class="form-label">Numele dvs.</label>
+              <input id="name" name="name" type="text" autocomplete="name" required class="form-input" />
             </div>
 
             <div>
-              <label for="organisation" class="form-label">Organisation</label>
-              <input id="organisation" name="organisation" type="text" class="form-input" />
+              <label for="organisation" class="form-label">Organizație</label>
+              <input id="organisation" name="organisation" type="text" autocomplete="organization" class="form-input" />
             </div>
 
             <div>
               <label for="email" class="form-label">Email</label>
-              <input id="email" name="email" type="email" required class="form-input" />
+              <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required class="form-input" />
             </div>
 
             <div>
-              <label for="topic" class="form-label">Topic</label>
+              <label for="topic" class="form-label">Subiect</label>
               <select id="topic" name="topic" class="form-select">
-                <option>Public-sector engagement</option>
-                <option>B2B data or integration work</option>
-                <option>Technical assessment</option>
-                <option>General enquiry</option>
+                <option>Proiect pentru administrația publică</option>
+                <option>Platformă de date sau integrare</option>
+                <option>Software la comandă</option>
+                <option>Evaluare și consultanță</option>
+                <option>Alt subiect</option>
               </select>
             </div>
 
             <div>
-              <label for="message" class="form-label">What's on your mind?</label>
+              <label for="message" class="form-label">Descrieți proiectul</label>
               <textarea
                 id="message"
                 name="message"
                 rows="6"
                 required
-                placeholder="A couple of paragraphs about the problem, what you've tried, and what good would look like."
+                placeholder="Care este situația actuală, ce doriți să îmbunătățiți și cum ar arăta un rezultat bun?"
                 class="form-textarea"
               ></textarea>
             </div>
 
             <div class="pt-4">
               <button type="submit" class="btn-primary w-full sm:w-auto justify-center">
-                Send message
+                Trimiteți mesajul
                 <svg class="btn-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
                   <path d="M0 5h12M8 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/>
                 </svg>
               </button>
               <p class="text-body-sm text-ink-500 mt-6 max-w-md">
-                We reply directly, not through automated systems. Your message goes to one inbox we both read.
+                Mesajul ajunge direct la echipa Thorn. Vă răspundem, de regulă, în aceeași zi lucrătoare.
               </p>
             </div>
           </form>
 
           <!-- Success panel (revealed by JS after a successful submit) -->
-          <div id="contact-success" hidden class="rounded-xl border border-forest-200 bg-forest-50 p-8 md:p-10">
-            <div class="eyebrow text-forest-700 mb-4">Message sent</div>
+          <div id="contact-success" hidden role="status" aria-live="polite" class="rounded-xl border border-forest-200 bg-forest-50 p-8 md:p-10">
+            <div class="eyebrow text-forest-700 mb-4">Mesaj trimis</div>
             <h2 class="font-sans font-medium text-2xl text-ink-900 tracking-tight mb-3">
-              Thank you. We've got your message.
+              Mulțumim. Am primit mesajul.
             </h2>
             <p class="text-body text-ink-700 leading-relaxed max-w-md">
-              We'll reply the same working day, usually sooner. Your message reached an inbox we both read.
+              Vă răspundem, de regulă, în aceeași zi lucrătoare. Dacă avem nevoie de informații suplimentare, revenim cu întrebările necesare.
             </p>
           </div>
 
           <!-- Error panel (revealed by JS if the submit fails) -->
-          <div id="contact-error" hidden class="rounded-xl border border-amber-200 bg-amber-50 p-6 mt-6">
+          <div id="contact-error" hidden role="alert" aria-live="assertive" class="rounded-xl border border-amber-200 bg-amber-50 p-6 mt-6">
             <p class="text-body-sm text-ink-700 leading-relaxed">
-              We couldn't send that message. Please try again, or email us directly at
+              Nu am putut trimite mesajul. Încercați din nou sau scrieți-ne direct la
               <a href="mailto:contact@thorn.ro" class="text-forest-800 underline">contact@thorn.ro</a>.
             </p>
           </div>
