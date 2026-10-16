@@ -8,6 +8,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "check:site": "node scripts/check-site.mjs",
     "astro": "astro"
   },
   "dependencies": {

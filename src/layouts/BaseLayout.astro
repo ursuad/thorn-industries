@@ -15,7 +15,7 @@ interface Props {
 
 const {
   title,
-  description = 'Data platforms, custom software and digitalisation consultancy for public administration and B2B companies.',
+  description = 'Senior data, platform, integration and AI engineering for European delivery partners and businesses.',
   lang = 'en',
   noindex = false,
   image = '/og-default.png',
@@ -40,10 +40,7 @@ const structuredData = {
     addressLocality: 'Cluj-Napoca',
     addressCountry: 'RO',
   },
-  areaServed: {
-    '@type': 'Country',
-    name: lang === 'ro' ? 'România' : 'Romania',
-  },
+  areaServed: { '@type': 'Place', name: lang === 'ro' ? 'Europa' : 'Europe' },
   knowsAbout:
     lang === 'ro'
       ? [
@@ -129,6 +126,7 @@ const cfAnalyticsToken = import.meta.env.CF_ANALYTICS_TOKEN ?? '';
         if (!toggle || !drawer) return;
 
         const open = () => {
+          drawer.inert = false;
           drawer.classList.remove('opacity-0', 'pointer-events-none');
           drawer.classList.add('opacity-100');
           body.classList.add('scroll-lock');
@@ -141,6 +139,7 @@ const cfAnalyticsToken = import.meta.env.CF_ANALYTICS_TOKEN ?? '';
         };
 
         const close = () => {
+          drawer.inert = true;
           drawer.classList.add('opacity-0', 'pointer-events-none');
           drawer.classList.remove('opacity-100');
           body.classList.remove('scroll-lock');
@@ -168,6 +167,21 @@ const cfAnalyticsToken = import.meta.env.CF_ANALYTICS_TOKEN ?? '';
           if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
             close();
           }
+          if (e.key === 'Tab' && toggle.getAttribute('aria-expanded') === 'true') {
+            const links = [...drawer.querySelectorAll('a, button')];
+            const first = links[0];
+            const last = links[links.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+              e.preventDefault();
+              last?.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+              e.preventDefault();
+              first?.focus();
+            }
+          }
+        });
+        window.matchMedia('(min-width: 1280px)').addEventListener('change', (e) => {
+          if (e.matches && toggle.getAttribute('aria-expanded') === 'true') close();
         });
       });
     </script>

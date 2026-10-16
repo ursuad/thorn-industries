@@ -1,71 +1,43 @@
-# Thorn Industries — Website
+# Thorn Industries website
 
-Astro static site, Tailwind, bilingual RO/EN. Built to be the credibility surface Ioana sends to warm intros.
+Bilingual Astro 5 static site for Thorn Industries, the commercial brand of Tech Camp Pro SRL. English lives at `/`; Romanian at `/ro/`. Production domain: https://thorn.ro/.
 
-## Local development
+## Develop and verify
 
-```bash
-cd data/threads/business/tcp-services/website/site
-npm install   # one-off
-npm run dev   # http://localhost:4321/
+Use Node.js 22, matching the existing deployment workflow, and the locked dependencies:
+
+```sh
+npm ci
+npm run dev
 ```
 
-- EN is at `/` (primary)
-- RO is at `/ro/` (toggle in header)
+Before review:
 
-## Production build
-
-```bash
-npm run build     # outputs to dist/
-npm run preview   # serve dist/ locally to verify
+```sh
+npm run build
+npm run check:site
+npm run preview -- --host 127.0.0.1
 ```
 
-## Stack
+The preview serves the built site at http://127.0.0.1:4321/ without publishing. `check:site` checks generated HTML, local destinations, assets, fragment targets, required bilingual routes, page headings, languages, canonicals and the three intended email addresses. External URL availability is checked separately.
 
-- **Astro** 5.x — static site generator, zero runtime JS by default
-- **Tailwind** 3.x — utility CSS, configured in `tailwind.config.mjs`
-- **Inter + Source Serif 4** — Google Fonts, preconnected in `BaseLayout.astro`
-- **Brand colours** — forest green primary + cream off-white + ink for text (palette in tailwind config)
+## Editing
 
-## File layout
+- `src/content/practice.ts`: paired English/Romanian copy for the seven core pages.
+- `src/components/PracticePage.astro`: shared page composition using the established forest/cream palette, Inter and JetBrains Mono.
+- `src/pages/portfolio.astro` and `src/pages/ro/portofoliu.astro`: independent project examples.
+- `src/lib/url.ts`: URL helpers and language pairs.
+- `astro.config.mjs`: legacy redirects. Preserve them when editing routes.
+- `src/layouts/BaseLayout.astro`: SEO, structured data and navigation behaviour.
 
-```
-src/
-├── layouts/
-│   └── BaseLayout.astro   # html shell + Header + Footer
-├── components/
-│   ├── Header.astro       # nav + lang toggle
-│   └── Footer.astro       # contact + nav + company info
-├── pages/
-│   ├── index.astro        # EN home (primary entry)
-│   └── ro/
-│       └── index.astro    # RO home
-└── styles/
-    └── global.css         # Tailwind base + custom components (btn-primary, btn-ghost)
-```
-
-## Editing copy
-
-For now copy lives inline in each `.astro` page. Workflow:
-
-1. Adrian drafts EN copy first in the `/` route
-2. EN copy goes through Gemini/GPT translation prompt (see `../copy/translation-prompt.md` — to be created)
-3. Romanian draft lands in the `/ro/` route
-4. Ioana copy-edits RO for native tone before publish
-
-## Pages to build (v1 scope)
-
-- [x] Home (RO + EN)
-- [ ] Servicii / Services
-- [ ] Primării / Public sector
-- [ ] Companii / Companies
-- [ ] Cum lucrăm / How we work
-- [ ] Despre / About
-- [ ] Contact
+Fonts are self-hosted. Cloudflare Web Analytics is included only when `CF_ANALYTICS_TOKEN` is supplied at build time. Local builds without that variable contain no analytics beacon. No form service is used; contact links open the visitor's email app.
 
 ## Deployment
 
-Cloudflare Pages or Netlify, both free tier. Wire DNS to `thornindustries.ro` once registered.
+`.github/workflows/deploy.yml` builds with `npm ci` and `npm run build`, then publishes `dist/` through GitHub Actions to GitHub Pages. It runs on **push to `main`** or **manual workflow dispatch**. Branch pushes and pull requests do not trigger this workflow.
 
-Build command: `npm run build`
-Output dir: `dist`
+GitHub Pages uses workflow builds, custom domain `thorn.ro`, HTTPS enforcement, and the existing `public/CNAME`. Review and authorise publication before merging into `main` or manually running the deployment workflow. No hosting or DNS changes are required for this refresh.
+
+## Review handoff
+
+See [the refresh handoff](docs/website-refresh-2026-10-16.md) for scope, claims decisions and validation. Historical copy-pass instructions in `docs/VOICE-CHARTER.md` describe the July pass; the October refresh changes the positioning and page composition while retaining the plain language and Romanian register.
