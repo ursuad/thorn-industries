@@ -11,16 +11,16 @@ const nav = {
   ro: [
     { href: '/ro/servicii', label: 'Servicii' },
     { href: '/ro/portofoliu', label: 'Portofoliu' },
+    { href: '/ro/companii', label: 'Parteneri' },
     { href: '/ro/primarii', label: 'Primării' },
-    { href: '/ro/companii', label: 'Companii' },
     { href: '/ro/cum-lucram', label: 'Cum lucrăm' },
     { href: '/ro/despre', label: 'Despre' },
   ],
   en: [
     { href: '/services', label: 'Services' },
     { href: '/portfolio', label: 'Portfolio' },
+    { href: '/companies', label: 'Partners' },
     { href: '/public-sector', label: 'Public sector' },
-    { href: '/companies', label: 'Companies' },
     { href: '/how-we-work', label: 'How we work' },
     { href: '/about', label: 'About' },
   ],
@@ -49,7 +49,7 @@ const isCurrent = (href: string) => (currentPath || '/') === (u(href).replace(/\
     </a>
 
     <!-- Desktop nav -->
-    <nav class="hidden md:flex items-center gap-8" aria-label={lang === 'ro' ? 'Navigare principală' : 'Main navigation'}>
+    <nav class="hidden xl:flex items-center gap-6" aria-label={lang === 'ro' ? 'Navigare principală' : 'Main navigation'}>
       {items.map((item) => (
         <a
           href={u(item.href)}
@@ -78,7 +78,7 @@ const isCurrent = (href: string) => (currentPath || '/') === (u(href).replace(/\
 
     <!-- Mobile: language toggle sits outside the drawer, so a visitor who cannot
          read the current language never has to open a menu to escape it. -->
-    <div class="md:hidden flex items-center gap-1 -mr-2">
+    <div class="xl:hidden flex items-center gap-1 -mr-2">
       <a
         href={u(altHref)}
         class="font-mono text-[12px] tracking-[0.15em] text-ink-500 no-underline border border-forest-200 rounded-full px-3 py-1.5 hover:text-forest-800 hover:border-forest-400 transition-colors"
@@ -107,7 +107,8 @@ const isCurrent = (href: string) => (currentPath || '/') === (u(href).replace(/\
 <!-- Mobile drawer overlay (always rendered for transitions) -->
 <div
   id="mobile-nav-drawer"
-  class="fixed inset-0 z-50 bg-forest-900 text-cream-100 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
+  class="fixed inset-0 z-50 overflow-y-auto bg-forest-900 text-cream-100 opacity-0 pointer-events-none transition-opacity duration-300 xl:hidden"
+  inert
   role="dialog"
   aria-modal="true"
   aria-label={lang === 'ro' ? 'Navigare' : 'Navigation'}

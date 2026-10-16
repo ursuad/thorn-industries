@@ -8,7 +8,7 @@ const { lang = 'ro' } = Astro.props;
 
 const text = {
   ro: {
-    tagline: 'Soluții de date și software atât pentru companii B2B, cât și pentru administrația publică.',
+    tagline: 'Inginerie de date, infrastructură, integrări și AI pentru parteneri și companii europene.',
     contact: 'Contact',
     nav: 'Navigare',
     company: 'Companie',
@@ -16,19 +16,18 @@ const text = {
     operatedBy: 'Operat de Tech Camp Pro SRL',
     cuiLabel: 'CUI',
     cui: '53945382',
-    seap: 'Înregistrați SEAP',
     rights: 'Toate drepturile rezervate.',
     links: [
       { href: '/ro/servicii', label: 'Servicii' },
       { href: '/ro/primarii', label: 'Primării' },
-      { href: '/ro/companii', label: 'Companii' },
+      { href: '/ro/companii', label: 'Parteneri și companii' },
       { href: '/ro/cum-lucram', label: 'Cum lucrăm' },
       { href: '/ro/despre', label: 'Despre' },
       { href: '/ro/contact', label: 'Contact' },
     ],
   },
   en: {
-    tagline: 'Data and software engineering for Romanian public administration and B2B companies.',
+    tagline: 'Data, platform, integration and AI engineering for delivery partners and European businesses.',
     contact: 'Contact',
     nav: 'Navigation',
     company: 'Company',
@@ -36,12 +35,11 @@ const text = {
     operatedBy: 'Operated by Tech Camp Pro SRL',
     cuiLabel: 'Company no.',
     cui: '53945382',
-    seap: 'SEAP registered',
     rights: 'All rights reserved.',
     links: [
       { href: '/services', label: 'Services' },
       { href: '/public-sector', label: 'Public sector' },
-      { href: '/companies', label: 'Companies' },
+      { href: '/companies', label: 'Partners & businesses' },
       { href: '/how-we-work', label: 'How we work' },
       { href: '/about', label: 'About' },
       { href: '/contact', label: 'Contact' },
@@ -53,7 +51,7 @@ const t = text[lang];
 const year = new Date().getFullYear();
 ---
 
-<footer class="surface-dark mt-section">
+<footer class="surface-dark ">
   <div class="container-page py-16 md:py-20">
 
     <!-- Top: oversized wordmark + tagline -->
@@ -103,10 +101,6 @@ const year = new Date().getFullYear();
         <dl class="grid grid-cols-2 gap-y-2 gap-x-8 text-body-sm">
           <dt class="text-cream-100/60">{t.cuiLabel}</dt>
           <dd class="font-mono tabular text-cream-100">{t.cui}</dd>
-          <dt class="text-cream-100/60">SEAP</dt>
-          <dd class="text-cream-100">{t.seap}</dd>
-          <dt class="text-cream-100/60">{lang === 'ro' ? 'GDPR' : 'GDPR'}</dt>
-          <dd class="text-cream-100">{lang === 'ro' ? 'Conform' : 'Compliant'}</dd>
         </dl>
       </div>
     </div>
@@ -115,7 +109,7 @@ const year = new Date().getFullYear();
     <div class="pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-body-sm text-cream-100/50">
       <div>© {year} Thorn Industries. {t.rights}</div>
       <div class="font-mono text-[11px] tracking-[0.15em] uppercase">
-        v0.3
+        thorn.ro
       </div>
     </div>
   </div>
